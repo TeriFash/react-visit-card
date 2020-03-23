@@ -1,38 +1,150 @@
+:root {
+  --light: #EBECF0;
+  --dark: #393939;
+  --primary: #ee6058;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  overflow: hidden;
+  background-color: var(--dark);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(16px + 2vmin);
+  color: var(--dark);
+  /* border: 10px solid #393939; */
 }
 
-.App-link {
-  color: #61dafb;
+.App-wrapper {
+  background-color: var(--light);
+  flex-direction: column;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-wrapper .bold {
+  display: inline-block;
+  font-weight: normal;
+  color: #505050;
+  will-change: transform;
+}
+
+.Main-text {
+  font-weight: 800;
+  font-size: calc(0.5em + 13vw);
+  margin-bottom: 0;
+  color: var(--dark);
+  user-select: none;
+}
+
+.Main-text .bold:first-child {
+  margin-left: 10px;
+} 
+
+.About-text {
+  padding: 0;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.About-text li {
+  font-weight: 500;
+  font-size: calc(0.5em + 1vw);
+}
+
+.About-text li, 
+.Social-link li {
+  list-style: none;
+}
+
+.About-text li:nth-child(1):after, 
+.About-text li:nth-child(2):after {
+  margin: 0 10px;
+  color: var(--primary);
+  content: '/';
+}
+
+.Social-link {
+  padding: 0;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Social-link li a {
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  display: flex;
+}
+
+.Social-link li a svg {
+  width: 100%;
+  height: 100%;
+}
+
+.Social-link a svg patch, 
+.Social-link a svg {
+  fill:var(--dark);
+  transition: all .4s ease-in;
+}
+
+.Social-link a:hover svg patch, 
+.Social-link a:hover svg {
+  transition: all .4s ease-out;
+  fill: var(--primary);
+}
+
+@media screen and (min-width: 1440px) {
+  
+}
+
+@media screen and (min-width: 940px) {
+  .Main-text {
+    font-size: 140px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 800px) {
+  
+}
+
+@media screen and (min-width: 375px) {
+  
+}
+
+@media screen and (max-width: 800px) {
+  .Main-text {
+    /* background: #000; */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .About-text {
+    flex-direction: column;
+    min-width: 135px;
+  }
+
+  .About-text li {
+    padding: 0 15px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
+
+  .About-text li:after {
+    right: 0;
+    position: absolute;
+    margin: 0 10px;
+    color: var(--primary);
+    content: '/';
   }
 }
