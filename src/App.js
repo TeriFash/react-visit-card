@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import AppHome from './App-home';
-import Cursor from './plugins/cursor-dot';
-import './App.css';
+import RouterAnimated from './layout/Layout-router-animated';
+// import Cursor from './plugins/cursor-dot';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Cursor/>
-        <AppHome/>
-      </div >
-    )
+        {/* <Cursor/> */}
+        <RouterAnimated />
+      </div>
+    );
   }
 }
 
-export default App;
+export default App

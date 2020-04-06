@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 function Cursor() {
-    const cursorDotOutline = React.useRef();
-    const cursorDot = React.useRef();
-    const requestRef = React.useRef();
-    const previousTimeRef = React.useRef();
-    let [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
-    const [width, setWidth] = React.useState(window.innerWidth);
-    const [height, setHeight] = React.useState(window.innerHeight);
-    let cursorVisible = React.useState(false);
-    let cursorEnlarged = React.useState(false);
+    const cursorDotOutline = useRef();
+    const cursorDot = useRef();
+    const requestRef = useRef();
+    const previousTimeRef = useRef();
+    let [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [width, setWidth] = useState(window.innerWidth);
+    const [height, setHeight] = useState(window.innerHeight);
+    let cursorVisible = useState(false);
+    let cursorEnlarged = useState(false);
   
     /**
      * Mouse Moves
@@ -43,7 +43,7 @@ function Cursor() {
     /**
      * Hooks
      */
-    React.useEffect(() => {
+    useEffect(() => {
       document.addEventListener("mousemove", onMouseMove);
       document.addEventListener("mouseenter", onMouseEnter);
       document.addEventListener("mouseleave", onMouseLeave);
@@ -54,6 +54,7 @@ function Cursor() {
       
       // Handle Link Hovers
       handleLinkHovers();
+     
   
       return () => {
         document.removeEventListener("mousemove", onMouseMove);
@@ -63,8 +64,9 @@ function Cursor() {
         document.removeEventListener("mouseup", onMouseUp);
         window.removeEventListener("resize", onResize);
         cancelAnimationFrame(requestRef.current);
+
       };
-    }, []);
+    }, [] );
   
     let { x, y } = mousePosition;
     const winDimensions = { width, height };
