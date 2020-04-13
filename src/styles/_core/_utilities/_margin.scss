@@ -1,0 +1,67 @@
+// .margin {
+//     &--none {
+//         margin: 0 !important;
+//     }
+
+//     @each $size, $value in $margins {
+//         &--#{$size} {
+//             margin: $value;
+//         }
+//     }
+// }
+
+// @each $position in top, right, bottom, left {
+//     .margin-#{$position} {
+//         @each $size, $value in $margins {
+//             &--none {
+//                 margin-#{$position}: 0 !important;
+//             }
+
+//             &--#{$size} {
+//                 margin-#{$position}: $value;
+//             }
+
+//             &--auto {
+//                 margin-#{$position}: auto;
+//             }
+//         }
+//     }
+// }
+
+// .margin-horizontal {
+//     @each $size, $value in $margins {
+//         &--#{$size} {
+//             margin-right: $value;
+//             margin-left: $value;
+//         }
+
+//         &--auto {
+//             margin-right: auto;
+//             margin-left: auto;
+//         }
+
+//         &--none {
+//             margin-right: 0 !important;
+//             margin-left: 0 !important;
+//         }
+//     }
+// }
+
+// .margin-vertical {
+//     @each $size, $value in $margins {
+//         &--#{$size} {
+//             margin-top: $value;
+//             margin-bottom: $value;
+//         }
+
+//         &--auto {
+//             margin-top: auto;
+//             margin-bottom: auto;
+//         }
+
+//         &--none {
+//             margin-top: 0 !important;
+//             margin-bottom: 0 !important;
+//         }
+//     }
+// }

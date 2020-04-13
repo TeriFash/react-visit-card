@@ -6,10 +6,10 @@ import {
   Route
 } from 'react-router-dom'
 
-import AppHome from '../pages/App-home';
-import AppDevelopment from '../pages/App-development';
-import AppSupport from '../pages/App-support';
-import AppConsult from '../pages/App-consult';
+import routes from '../routes.js'
+
+const { AppHome, AppDevelopment, AppSupport, AppAbout } = routes
+
 
 const LayoutRouterAnimation = () => (
   <Router>
@@ -21,12 +21,12 @@ const LayoutRouterAnimation = () => (
                 native
                 items={location}
                 keys={location.pathname.split('/')[1]}
-                // from={{ transform: 'translateY(100px)', opacity: 0 }}
-                // enter={{ transform: 'translateY(0px)', opacity: 1 }}
-                // leave={{ transform: 'translateY(100px)', opacity: 0 }}
-                from={{ opacity: 0, transform: 'scale3d(0.5,0.5,0.5)' }}
-                enter={{ opacity: 1, transform: 'scale3d(1,1,1)' }}
-                leave={{ opacity: 0, transform: 'scale3d(0.5,0.5,0.5)' }}>
+                from={{ transform: 'translateY(100px)', opacity: 0 }}
+                enter={{ transform: 'translateY(0px)', opacity: 1 }}
+                leave={{ transform: 'translateY(100px)', opacity: 0 }}>
+                {/* //from={{ opacity: 0, transform: 'scale3d(0.5,0.5,0.5)' }}
+                // enter={{ opacity: 1, transform: 'scale3d(1,1,1)' }}
+                // leave={{ opacity: 0, transform: 'scale3d(0.5,0.5,0.5)' }}> */}
                 {(loc, state) => style => (
                 <Switch location={state === 'update' ? location : loc}>
                     <Route
@@ -38,9 +38,13 @@ const LayoutRouterAnimation = () => (
                     render={props => GoPageSup({ ...props, style })}
                     />
                     <Route
+                    path="/about"
+                    render={props => GoPageAbout({ ...props, style })}
+                    />
+                    {/* <Route
                     path="/consult"
                     render={props => GoPageCons({ ...props, style })}
-                    />
+                    /> */}
                 
                     {/* <Route
                     render={props => GoPageNon({ ...props, style })}
@@ -64,32 +68,34 @@ const LayoutRouterAnimation = () => (
 const GoPageDev = ({ style }) => (
   <animated.div
     className="MainRoute"
-    style={{ ...style, background: `#EBECF0` }}>
-        
-            <AppDevelopment />
-        
+    style={{ ...style }}>
+      <AppDevelopment />  
   </animated.div>
 )
 
 const GoPageSup = ({ style }) => (
     <animated.div
       className="MainRoute"
-      style={{ ...style, background: `#EBECF0` }}>
-          
-              <AppSupport />
-          
+      style={{ ...style }}>  
+        <AppSupport />
     </animated.div>
 )
 
-const GoPageCons = ({ style }) => (
+const GoPageAbout = ({ style }) => (
     <animated.div
       className="MainRoute"
-      style={{ ...style, background: `#EBECF0` }}>
-          
-              <AppConsult />
-          
+      style={{ ...style }}>
+        <AppAbout />
     </animated.div>
 )
+
+// const GoPageCons = ({ style }) => (
+//   <animated.div
+//     className="MainRoute"
+//     style={{ ...style }}>
+//       <AppConsult />
+//   </animated.div>
+// )
 
 // const GoPageNon = ({ style }) => (
 //     <animated.div

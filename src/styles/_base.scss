@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,800,900&display=swap&subset=latin-ext");
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Ubuntu', 'sans-serif';
+  font-family: $global-font-family;
+}
+
+*[disabled] {
+  pointer-events: none;
+}
+
+html,
+body {
+  // height: 100vh !important;
+  // overflow: auto !important;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Ubuntu', 'sans-serif';
+  font-family: $global-font-family;
+  color: $global-text-color;
+  font-size: $global-font-size;
+  letter-spacing: $global-letter-spacing;
+  background: $global-background;
+  font-weight:  $global-font-weight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  margin: 0;
+}
+
+::selection, 
+::-moz-selection {
+  color: $global-selection-color;
+  background: rgba($global-selection-background, 0.7);
+}
+
+#root {
+  overflow: hidden;
+}

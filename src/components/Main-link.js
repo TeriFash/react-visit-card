@@ -7,7 +7,8 @@ function MyMainLink() {
         <ul className="About-text">
             <li><NavLink to="/development">Development</NavLink></li>
             <li><NavLink to="/support">Support</NavLink></li>
-            <li><NavLink to="/consult">Consult</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+            {/* <li><NavLink to="/consult">Consult</NavLink></li> */}
       </ul>
     );
 }

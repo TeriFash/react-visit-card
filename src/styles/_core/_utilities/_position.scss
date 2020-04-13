@@ -1,0 +1,82 @@
+// .position {
+//     &--absolute {
+//         position: absolute;
+//     }
+
+//     &--relative {
+//         position: relative;
+//     }
+
+//     @each $position in top, right, bottom, left {
+//         &--#{$position} {
+//             #{$position}: 0;
+//         }
+//     }
+
+//     &--cover {
+//         @extend .position--top;
+//         @extend .position--right;
+//         @extend .position--bottom;
+//         @extend .position--left;
+//     }
+
+//     &--x-center {
+//         left: 50%;
+//         transform: translateX(-50%);
+//     }
+
+//     &--y-center {
+//         top: 50%;
+//         transform: translateY(-50%);
+//     }
+
+//     &--top-left {
+//         @extend .position--top;
+//         @extend .position--left;
+//     }
+
+//     &--top-center {
+//         @extend .position--top;
+//         @extend .position--x-center;
+//     }
+
+//     &--top-right {
+//         @extend .position--top;
+//         @extend .position--right;
+//     }
+
+//     &--center {
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//     }
+
+//     &--center-left {
+//         @extend .position--left;
+//         @extend .position--y-center;
+//     }
+
+//     &--center-right {
+//         @extend .position--right;
+//         @extend .position--y-center;
+//     }
+
+//     &--bottom-left {
+//         @extend .position--bottom;
+//         @extend .position--left;
+//     }
+
+//     &--bottom-center {
+//         @extend .position--bottom;
+//         @extend .position--x-center;
+//     }
+
+//     &--bottom-right {
+//         @extend .position--bottom;
+//         @extend .position--right;
+//     }
+// }
+
+// [class^='position-']:not(.position-relative) {
+//     @extend .position--absolute;
+// }

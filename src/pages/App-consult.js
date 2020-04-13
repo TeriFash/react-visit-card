@@ -1,18 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import ReactDOM from 'react-dom';
+import BtnBack from "../components/Btn-back";
+import BtnTile from "../components/Btn-tile";
 
 class AppConsult extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      
-    };
+    this.state = {};
   }
 
   render() {
-    return <h1 className="Consult-page">
-        Consult-page-text
-      </h1>
+    return (
+      <>
+        <BtnBack/>
+        <h1 className="Consult-page">Consult</h1>
+        <BtnTile>
+          <div className="btn-tile">Get list</div>
+        </BtnTile>
+      </>
+    );
   }
 }
 

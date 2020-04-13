@@ -13,25 +13,25 @@ class AppHome extends Component {
     this.state = {
       pos: { x: 0, y: 0 },
       shadow: true,
-      colors: [
-        {
-          "background": "#EBECF0",
-          "text": "#393939",
-          "bold": "#393939"
-        }, 
-        {
-          "background": "#EBECF0",
-          "text": "#393939",
-          "bold": "#393939"
-        }],
-      background: null,
-      text: null,
-      bold: null
+      // colors: [
+      //   {
+      //     "background": "#EBECF0",
+      //     "text": "#393939",
+      //     "bold": "#393939"
+      //   }, 
+      //   {
+      //     "background": "#EBECF0",
+      //     "text": "#393939",
+      //     "bold": "#393939"
+      //   }],
+      // background: null,
+      // text: null,
+      // bold: null
     };
   }
 
   componentDidMount() {
-    this.RandomBackground();
+    //this.RandomBackground();
   }
 
   onMouseMove(e) {
@@ -57,27 +57,27 @@ class AppHome extends Component {
     }
   }
 
-  RandomBackground() {
-    let getRandomInt = (min, max) => {
-      return Math.floor(Math.random() * (max - min + 1) + min);
-    }
+  // RandomBackground() {
+  //   let getRandomInt = (min, max) => {
+  //     return Math.floor(Math.random() * (max - min + 1) + min);
+  //   }
 
-    let RandomID = getRandomInt(0, 1);
+  //   let RandomID = getRandomInt(0, 1);
 
-    this.setState({
-      background: this.state.colors[RandomID].background,
-      text: this.state.colors[RandomID].text,
-      bold: this.state.colors[RandomID].bold
-    })
-  }
+  //   this.setState({
+  //     background: this.state.colors[RandomID].background,
+  //     text: this.state.colors[RandomID].text,
+  //     bold: this.state.colors[RandomID].bold
+  //   })
+  // }
 
   render() {
     let sectionStyle = {
-      backgroundColor: this.state.background,
-      color: this.state.text
+      // backgroundColor: this.state.background,
+      // color: this.state.text
     }
     let boldStyle = {
-      color: this.state.bold
+      //color: this.state.bold
     }
 
     return <div className="Home-page">
