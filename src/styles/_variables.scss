@@ -74,6 +74,16 @@ $global-background: $white !default;
 $global-selection-color: $white !default;
 $global-selection-background: $primary !default;
 
+// $btn-upload-back-wave: #36377a !default;
+// $btn-upload-front-wave: rgb(92, 94, 220) !default;
+// $btn-upload-border: $btn-upload-front-wave !default;
+// $btn-upload-border-active: #36377a !default;
+
+$btn-upload-back-wave: var(--btn-upload-back-wave)!default;
+$btn-upload-front-wave: var(--btn-upload-front-wave)!default;
+$btn-upload-border: $btn-upload-front-wave!default;
+$btn-upload-border-active: var(--btn-upload-border-active)!default;
+
 :root {
     // Custom variable values only support SassScript inside `#{}`.
     @each $color, $value in $colors {

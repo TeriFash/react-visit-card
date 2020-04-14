@@ -3,7 +3,11 @@
     --light: #EBECF0;
     --dark: #393939;
     --primary: #ee6058;
-    
+
+    --btn-upload-back-wave: #36377a;
+    --btn-upload-front-wave: rgb(92, 94, 220);
+    --btn-upload-border: $btn-upload-front-wave;
+    --btn-upload-border-active: #36377a;
 }
 
 .App-dark {
@@ -11,7 +15,11 @@
     --light: #393939;
     --dark: #EBECF0;
     --primary: #ee6058;
-    
+
+    --btn-upload-back-wave: #EBECF0;
+    --btn-upload-front-wave: rgb(92, 94, 220);
+    --btn-upload-border: $btn-upload-front-wave;
+    --btn-upload-border-active: #EBECF0;
 }
 
 .App {
