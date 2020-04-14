@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import ReactDOM from 'react-dom';
 import BtnBack from "../components/Btn-back";
-import BtnTile from "../components/Btn-tile";
+// import BtnTile from "../components/Btn-tilt";
 
 class AppConsult extends Component {
   constructor(props) {
@@ -14,9 +14,9 @@ class AppConsult extends Component {
       <>
         <BtnBack/>
         <h1 className="Consult-page">Consult</h1>
-        <BtnTile>
+        {/* <BtnTile>
           <div className="btn-tile">Get list</div>
-        </BtnTile>
+        </BtnTile> */}
       </>
     );
   }

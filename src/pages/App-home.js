@@ -80,7 +80,7 @@ class AppHome extends Component {
       //color: this.state.bold
     }
 
-    return <div className="Home-page">
+    return <div className="App-route Home-page">
       <div className="Main-wrapper" onMouseMove={this.onMouseMove.bind(this)} style={sectionStyle}>
         <h1 className="Main-text" ref={this.sectionMain}>Teri
           <span className="bold" ref={this.playword_1} style={boldStyle}>Fash</span>

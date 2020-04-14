@@ -1,10 +1,11 @@
-.Tile-root {
+.Tilt-root {
     background-color: rgb(92, 94, 220);
     padding: 0.5em 2em;
     cursor: pointer;
     margin-left: 20px;
 
     &::after {
+      z-index: -1;
       width: 150%;
       height: 150%;
       content: '';
@@ -15,7 +16,15 @@
     }
   }
   
-  .btn-tile {
+  .btn-tilt {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+    letter-spacing: 0.1em;
+  }
+
+  .btn-download {
+    text-decoration: none;
     text-transform: uppercase;
     color: $white;
     letter-spacing: 0.1em;

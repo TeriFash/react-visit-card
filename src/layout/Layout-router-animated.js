@@ -67,7 +67,7 @@ const LayoutRouterAnimation = () => (
 
 const GoPageDev = ({ style }) => (
   <animated.div
-    className="MainRoute"
+    className="App-route"
     style={{ ...style }}>
       <AppDevelopment />  
   </animated.div>
@@ -75,7 +75,7 @@ const GoPageDev = ({ style }) => (
 
 const GoPageSup = ({ style }) => (
     <animated.div
-      className="MainRoute"
+      className="App-route"
       style={{ ...style }}>  
         <AppSupport />
     </animated.div>
@@ -83,7 +83,7 @@ const GoPageSup = ({ style }) => (
 
 const GoPageAbout = ({ style }) => (
     <animated.div
-      className="MainRoute"
+      className="App-route"
       style={{ ...style }}>
         <AppAbout />
     </animated.div>
@@ -91,7 +91,7 @@ const GoPageAbout = ({ style }) => (
 
 // const GoPageCons = ({ style }) => (
 //   <animated.div
-//     className="MainRoute"
+//     className="App-Route"
 //     style={{ ...style }}>
 //       <AppConsult />
 //   </animated.div>
@@ -99,7 +99,7 @@ const GoPageAbout = ({ style }) => (
 
 // const GoPageNon = ({ style }) => (
 //     <animated.div
-//       className="MainRoute"
+//       className="App-route"
 //       style={{ ...style, background: `#EBECF0` }}>
 //           <div className="MainRouteItem">
 //             <main className="App-wrapper No-match-page">
