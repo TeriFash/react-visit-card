@@ -12,21 +12,7 @@ class AppHome extends Component {
     this.playword_2 = createRef();
     this.state = {
       pos: { x: 0, y: 0 },
-      shadow: true,
-      // colors: [
-      //   {
-      //     "background": "#EBECF0",
-      //     "text": "#393939",
-      //     "bold": "#393939"
-      //   }, 
-      //   {
-      //     "background": "#EBECF0",
-      //     "text": "#393939",
-      //     "bold": "#393939"
-      //   }],
-      // background: null,
-      // text: null,
-      // bold: null
+      shadow: true
     };
   }
 

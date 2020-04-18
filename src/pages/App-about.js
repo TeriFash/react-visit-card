@@ -11,9 +11,9 @@ class AppAbout extends Component {
   render() {
     return (
       <>
-        <BtnBack/>
+        {/* <BtnBack/> */}
         <h1 className="About-page">About me</h1>
-        <BtnTilt />
+        {/* <BtnTilt /> */}
       </>
     );
   }

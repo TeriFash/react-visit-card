@@ -8,9 +8,10 @@ import {
 } from "react-spring";
 import { devData } from "../store/data";
 
+// import './FlipperСard.scss'
 const data = devData;
 
-export default function FlipperСard() {
+const FlipperСard = function() {
   const [open, set] = useState(false);
 
   setTimeout(() => {
@@ -58,3 +59,5 @@ export default function FlipperСard() {
     </animated.div>
   );
 }
+
+export default FlipperСard;

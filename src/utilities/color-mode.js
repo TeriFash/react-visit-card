@@ -1,28 +1,27 @@
-import React, {Component} from "react";
-// import { render } from "react-dom";
+import React, { Component } from "react";
 
 const ThemeContext = React.createContext();
 const ThemeConsumer = ThemeContext.Consumer;
 
 class ThemeProvider extends Component {
-    toggleTheme = evt => {
-      this.setState({ theme: evt.target.checked ? "App-light" : "App-dark" });
-    };
-  
-    state = {
-      theme: "App-light",
-      toggleTheme: this.toggleTheme
-    };
-  
-    render() {
-      return (
-        <ThemeContext.Provider value={this.state}>
-          {this.props.children}
-        </ThemeContext.Provider>
-      );
-    }
+  toggleTheme = (evt) => {
+    this.setState({ theme: evt.target.checked ? "App-light" : "App-dark" });
+  };
+
+  state = {
+    theme: "App-light",
+    toggleTheme: this.toggleTheme,
+  };
+
+  render() {
+    return (
+      <ThemeContext.Provider value={this.state}>
+        {this.props.children}
+      </ThemeContext.Provider>
+    );
   }
-  
+}
+
 class Slider extends Component {
   render() {
     return (
@@ -41,15 +40,15 @@ class Slider extends Component {
     );
   }
 }
-  
-const SliderWrapper = () => (<Slider />);
 
-const AppTheme = ({children, ...props}) => (
+const SliderWrapper = () => <Slider />;
+
+const AppTheme = ({ children, ...props }) => (
   <ThemeProvider>
     <ThemeConsumer>
       {({ theme }) => (
-        <div className={(`${props.className} ${theme}`)}>
-          { children }
+        <div className={`${props.className} ${theme}`}>
+          {children}
           <SliderWrapper />
         </div>
       )}
@@ -57,4 +56,4 @@ const AppTheme = ({children, ...props}) => (
   </ThemeProvider>
 );
 
-export default AppTheme
+export default AppTheme;

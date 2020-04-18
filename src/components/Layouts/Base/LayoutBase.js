@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-// import ReactDOM from 'react-dom';
 
-import BtnBack from "../components/Btn-back";
 
 class LayoutMain extends Component {
   constructor(props) {
@@ -29,7 +27,7 @@ class LayoutMain extends Component {
 
     return (
       <section className={`App-wrapper ${page}`}>
-        {!isBackShow && <BtnBack />}
+        {/* {!isBackShow && <BtnBack />} */}
         {headerBlock}
         {this.props.children}
       </section>

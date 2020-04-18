@@ -1,5 +1,5 @@
 import React, { Component, createRef } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default class BtnBack extends Component {
   constructor(props) {
@@ -35,10 +35,10 @@ export default class BtnBack extends Component {
         ref={this.btnRef}
         className="btn btn-left-back slide-left"
       >
-        <NavLink to="/">{this.name}</NavLink>
+        {/* <NavLink to="/">{this.name}</NavLink> */}
       </div>
     );
   }
 }
 
-const NavLink = (props) => <Link {...props} />;
+// const NavLink = (props) => <Link {...props} />;
