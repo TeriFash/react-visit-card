@@ -1,7 +1,5 @@
 import React, { Component, createRef } from "react";
 import ReactDOM from "react-dom";
-// import MainSocialLink from "../MainSocialLink";
-// import MainLink from "../MainLink";
 
 // import './MainContainer.scss'
 
@@ -53,26 +51,20 @@ class MainContainer extends Component {
     };
 
     return (
-        <div
-          className="Main-wrapper"
-          onMouseMove={this.onMouseMove.bind(this)}
-          style={sectionStyle}
-        >
-          <h1 className="Main-text" ref={this.sectionMain}>
-            Teri
-            <span className="bold" ref={this.playword_1} style={boldStyle}>
-              Fash
-            </span>
-            <span className="bold" ref={this.playword_2} style={boldStyle}>
-              .
-            </span>
-          </h1>
-
-          {this.props.children}
-
-          {/* <MainLink />
-          <MainSocialLink /> */}
-        </div>
+      <section
+        className={`Main-container ${this.props.className || ''}`}
+        onMouseMove={this.onMouseMove.bind(this)}
+        style={sectionStyle}
+      >
+        <h1 className="Main-text" ref={this.sectionMain}>
+          Teri
+          <span className="bold" ref={this.playword_1} style={boldStyle}>
+            Fash
+          </span>
+          <span className="bold" ref={this.playword_2} style={boldStyle}></span>
+        </h1>
+        {this.props.children}
+      </section>
     );
   }
 }

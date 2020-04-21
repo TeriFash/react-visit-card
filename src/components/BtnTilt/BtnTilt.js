@@ -1,7 +1,7 @@
 import React from "react";
-import MoveTilt from "./Move-tilt";
-import CvLink from "./Cv-link";
-import BtnUpload from "./Btn-upload";
+import MoveTilt from "../MoveTilt";
+import CvLink from "../CvLink";
+import BtnUpload from "../BtnUpload";
 
 // import './BtnTilt.scss'
 

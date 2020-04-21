@@ -1,0 +1,50 @@
+.Main-social-link {
+    padding: 0;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    & li {
+      list-style: none;
+  
+      a {
+        height: 40px;
+        width: 40px;
+        margin: 10px;
+        display: flex;
+  
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+  
+        svg,
+        patch {
+          fill: var(--dark);
+          transition: all 0.4s ease-in;
+        }
+  
+        &:hover {
+          svg,
+          patch {
+            transition: all 0.4s ease-out;
+            fill: var(--primary);
+          }
+        }
+      }
+    }
+  }
+  
+  // .Main-social-link a svg patch,
+  // .Main-social-link a svg {
+  //   fill: var(--dark);
+  //   transition: all 0.4s ease-in;
+  // }
+  
+  // .Main-social-link a:hover svg patch,
+  // .Main-social-link a:hover svg {
+  //   transition: all 0.4s ease-out;
+  //   fill: var(--primary);
+  // }
+  

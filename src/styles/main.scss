@@ -5,11 +5,10 @@
 @import 'variables';
 @import 'base';
 
+
 // Modules
-  @import 'plugins/index';      // plugins
-  @import 'components/index';   // components
-  @import 'layout/index';       // layout
-  @import 'pages/index';        // pages
+  @import './plugins';      // plugins
+  @import './components';   // components
+  @import './pages';        // pages
 
 // Helpers
-// @import 'media';

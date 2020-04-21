@@ -1,2 +1,1 @@
-
-export { default } from './../LayoutBase';
+export { default } from "./../LayoutBase";

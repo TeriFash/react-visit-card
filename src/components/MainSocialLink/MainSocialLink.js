@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 
 
-function MySocialLink() {
+function FnMainSocialLink() {
     return(
-        <ul className="Social-link">
+        <ul className="Main-social-link">
             <li>
                 <a href="https://linkedin.com/in/viktor-gura-006aa513a/" title="Linkedin" target="_blank" rel="noopener noreferrer">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1000 1000" enableBackground="new 0 0 1000 1000" space="preserve">
@@ -30,7 +30,7 @@ function MySocialLink() {
     );
 }
 
-class SocialLink extends Component {
+class MainSocialLink extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,10 +39,10 @@ class SocialLink extends Component {
   }
 
   render() {
-    return <MySocialLink />
+    return( <FnMainSocialLink /> )
   }
 }
 
-export default SocialLink;
+export default MainSocialLink;
 
 

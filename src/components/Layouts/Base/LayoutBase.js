@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
+// import './LayoutBase.scss'
 
-class LayoutMain extends Component {
+class LayoutBase extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,12 +14,12 @@ class LayoutMain extends Component {
 
   render() {
     const isTitle = this.title;
-    const isBackShow = this.back === "hide";
+    // const isBackShow = this.back === "hide";
     const page = this.page;
     let headerBlock;
 
     if (isTitle) {
-      headerBlock = (  
+      headerBlock = (
         <span className={`${page}-header`}>{this.props.headerSlot}</span>
       );
     } else {
@@ -35,4 +36,4 @@ class LayoutMain extends Component {
   }
 }
 
-export default LayoutMain;
+export default LayoutBase;

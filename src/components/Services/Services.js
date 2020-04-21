@@ -5,19 +5,15 @@ import React, { Component } from "react";
 class Services extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
+    this.state = {};
   }
 
   render() {
     return (
       <>
-      
-       <section className="Services-page page-wrapper">
-          <h1 >Services</h1>
+        <section className="Services-page page-wrapper">
+          <h1>Services</h1>
         </section>
-      
       </>
     );
   }

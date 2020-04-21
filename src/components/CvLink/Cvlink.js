@@ -7,9 +7,9 @@ const downloadUrl =
 
 export default function CvLink(props) {
   const { type, ...rest } = props;
-  const look = type === "look"
+  const look = type === "look";
   const url = look ? lookUrl : downloadUrl;
-  const slot = look ? "Look me resume" : props.children;
+  const slot = look ? "Look my resume" : props.children;
 
   return (
     <a href={url} {...rest} download>

@@ -14,21 +14,14 @@ class Home extends Component {
 
   render() {
     return (
-      <section className="Home-page page-wrapper">
-        <div className="page-child">
-          <MainInjection />
-        </div>
-        {this.props.children}
-      </section>
+      <>
+        <MainContainer className="Home-page page-wrapper">
+          <MainLink />
+          <MainSocialLink />
+        </MainContainer>
+      </>
     );
   }
 }
-
-const MainInjection = () => (
-  <MainContainer>
-    <MainLink />
-    <MainSocialLink />
-  </MainContainer>
-);
 
 export default Home;

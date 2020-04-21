@@ -1,8 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,800,900&display=swap&subset=latin-ext");
-
 * {
   box-sizing: border-box;
-  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Ubuntu', 'sans-serif';
   font-family: $global-font-family;
 }
 
@@ -17,7 +14,6 @@ body {
 }
 
 body {
-  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Ubuntu', 'sans-serif';
   font-family: $global-font-family;
   color: $global-text-color;
   font-size: $global-font-size;
@@ -38,4 +34,30 @@ body {
 
 #root {
   overflow: hidden;
+}
+
+.App {
+  position: relative;
+  overflow: hidden;
+  // background-color: $global-background;
+  background-color: $global-background;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(16px + 2vmin);
+  color: var(--dark);
+  /* border: 10px solid #393939; */
+}
+
+.App-wrapper {
+  background-color: var(--light);
+  flex-direction: column;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }

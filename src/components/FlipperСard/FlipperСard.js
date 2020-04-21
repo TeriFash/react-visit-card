@@ -6,7 +6,7 @@ import {
   config,
   animated,
 } from "react-spring";
-import { devData } from "../store/data";
+import { devData } from "../../store/data";
 
 // import './FlipperСard.scss'
 const data = devData;
