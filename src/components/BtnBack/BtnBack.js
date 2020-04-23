@@ -6,6 +6,7 @@ export default class BtnBack extends Component {
     super(props);
 
     this.btnRef = createRef();
+    this.navigate = useNavigate();
     this.name = this.props.name || "Back";
     this.viewTime = this.props.viewTime || 3000;
   }
