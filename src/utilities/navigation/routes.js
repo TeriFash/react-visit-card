@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
+import {useSpring, animated} from 'react-spring'
 // import { animated, useSpring } from 'react-spring/renderprops'
 import HomeComponent from "../../components/Home";
-import {useSpring, animated} from 'react-spring'
 import DevComponent from "../../components/Development";
 import ServicesComponent from "../../components/Services";
 import AboutComponent from "../../components/About";
@@ -117,7 +117,6 @@ import BtnHome from "../../components/BtnHome";
 function Main() {
   // let navigate = useNavigate();
   const anim = useSpring({opacity: 1, from: {opacity: 0}})
-
 
   return (
     <>
