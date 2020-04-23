@@ -8,6 +8,8 @@ import ServicesComponent from "../../components/Services";
 import AboutComponent from "../../components/About";
 
 import BtnHome from "../../components/BtnHome";
+import ThemeSwitcher from "../../components/ThemeSwitcher";
+
 
 // const Main = () => <h1> Main page</h1>;
 // const Home = () => <h1> Home page</h1>;
@@ -144,6 +146,7 @@ function Home() {
   return (
     <>
     <main className="App-wrapper">
+    <ThemeSwitcher />
       <HomeComponent />
     </main>
       {/* <nav>

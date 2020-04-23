@@ -11,8 +11,16 @@ class ThemeSwitcher extends Component {
     this.toggleTheme = this.toggleTheme.bind(this);
   }
 
+  componentDidMount() {
+    this.setTheme()
+  }
+
+  setTheme() {
+    document.documentElement.setAttribute("data-theme", this.state.theme)
+  }
+
   toggleTheme() {
-    const themes = ["light", "medium", "dark"];
+    const themes = ["dark", "light"];
 
     const currentPosition = themes.indexOf(this.state.theme);
     let newPosition = currentPosition + 1;
@@ -44,7 +52,6 @@ const ThemeSwitcherRadioButton = ({ toggleTheme }) => (
     <input
       onChange={(e) => toggleTheme()}
       type="checkbox"
-      // checked={theme === "App-light"}
     />
     <span className="Theme-slider Theme-round" />
   </label>
