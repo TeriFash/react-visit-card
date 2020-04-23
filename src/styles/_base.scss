@@ -61,3 +61,18 @@ body {
   justify-content: center;
   position: relative;
 }
+
+.animated-conteiner {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Not-found-page {
+  a {
+    color: var(--dark);
+    text-decoration: none;
+  }
+}

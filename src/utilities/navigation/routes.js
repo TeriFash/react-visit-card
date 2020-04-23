@@ -1,13 +1,13 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
+// import { animated, useSpring } from 'react-spring/renderprops'
 import HomeComponent from "../../components/Home";
+import {useSpring, animated} from 'react-spring'
 import DevComponent from "../../components/Development";
 import ServicesComponent from "../../components/Services";
 import AboutComponent from "../../components/About";
 
 import BtnHome from "../../components/BtnHome";
-
-const NotFound = () => <h1> NotFound 404 page </h1>;
 
 // const Main = () => <h1> Main page</h1>;
 // const Home = () => <h1> Home page</h1>;
@@ -94,8 +94,6 @@ const NotFound = () => <h1> NotFound 404 page </h1>;
 
 // Code for example start
 
-// import { Navigate, useNavigate } from 'react-router-dom';
-
 // function Declarative() {
 //   return <Navigate to="/home" replace state={state} />;
 // }
@@ -117,6 +115,10 @@ const NotFound = () => <h1> NotFound 404 page </h1>;
 
 
 function Main() {
+  // let navigate = useNavigate();
+  const anim = useSpring({opacity: 1, from: {opacity: 0}})
+
+
   return (
     <>
       {/* <header className="App-header"> 
@@ -129,14 +131,17 @@ function Main() {
       </nav> */}
 
       <main className="App-wrapper content-container">
-        <BtnHome />
-        <Outlet />
+        <animated.div style={anim} className="animated-conteiner">
+          <BtnHome />
+          <Outlet />
+        </animated.div>
       </main>
     </>
   );
 }
 
 function Home() {
+
   return (
     <>
     <main className="App-wrapper">
@@ -183,6 +188,24 @@ function About() {
         <Link to="/">Home</Link>
       </nav> */}
     </React.Fragment>
+  );
+}
+
+function NotFound() {
+  return (
+    <main className="App-wrapper">
+      {/* <h2>Who are we?</h2> */}
+      <section className="Not-found-page page-wrapper">
+        <h1>NotFound 404 page</h1>
+
+        
+        <Link to="/">Go Home</Link>
+      
+      </section>
+      {/* <nav>
+        <Link to="/">Home</Link>
+      </nav> */}
+    </main>
   );
 }
 

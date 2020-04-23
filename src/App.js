@@ -28,7 +28,7 @@ function App() {
           <Route path="services" element={<Services />} />
           <Route path="story" element={<About />} />
         </Route>
-        <Route path="home" redirectTo="/" />
+        {/* <Route path="home" redirectTo="/" /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
