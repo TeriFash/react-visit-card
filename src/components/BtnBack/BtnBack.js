@@ -34,7 +34,7 @@ export default class BtnBack extends Component {
       <div
         {...this.props}
         ref={this.btnRef}
-        className="btn btn-left-back slide-left"
+        className="btn-back is-left slide-left"
       >
         {/* <NavLink to="/">{this.name}</NavLink> */}
       </div>

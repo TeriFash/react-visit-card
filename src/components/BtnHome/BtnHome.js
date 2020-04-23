@@ -10,9 +10,9 @@ const BtnHome = () => {
     navigate('/');
   }
   return (
-    <div className="btn btn-left-back"> 
+    <div className="btn-home is-left"> 
       <button ref={btnRef} onClick={handleSubmit}> Back </button>
-     </div>
+    </div>
   );
 }
 

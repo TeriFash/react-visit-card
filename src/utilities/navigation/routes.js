@@ -1,13 +1,12 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
-import {useSpring, animated} from 'react-spring'
-// import { animated, useSpring } from 'react-spring/renderprops'
 import HomeComponent from "../../components/Home";
 import DevComponent from "../../components/Development";
 import ServicesComponent from "../../components/Services";
 import AboutComponent from "../../components/About";
 
 import BtnHome from "../../components/BtnHome";
+import ArticleList from "../../components/ArticleList";
 import ThemeSwitcher from "../../components/ThemeSwitcher";
 
 
@@ -118,7 +117,6 @@ import ThemeSwitcher from "../../components/ThemeSwitcher";
 
 function Main() {
   // let navigate = useNavigate();
-  const anim = useSpring({opacity: 1, from: {opacity: 0}})
 
   return (
     <>
@@ -132,10 +130,10 @@ function Main() {
       </nav> */}
 
       <main className="App-wrapper content-container">
-        <animated.div style={anim} className="animated-conteiner">
+        
           <BtnHome />
           <Outlet />
-        </animated.div>
+   
       </main>
     </>
   );
@@ -171,7 +169,10 @@ function Development() {
 function Services() {
   return (
     <>
-      <ServicesComponent />
+      <ServicesComponent>
+        <ArticleList />
+      </ServicesComponent>
+
 
       {/* <nav>
         <Link to="about">Home</Link>

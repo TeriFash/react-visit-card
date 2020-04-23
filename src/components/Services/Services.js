@@ -13,6 +13,7 @@ class Services extends Component {
       <>
         <section className="Services-page page-wrapper">
           <h1>Services</h1>
+          {this.props.children}
         </section>
       </>
     );

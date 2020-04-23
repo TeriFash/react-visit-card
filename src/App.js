@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, {useState, useEffect} from "react";
+import { Routes, Route, useParams } from "react-router-dom";
 import {
   About,
   Services,
@@ -8,6 +8,26 @@ import {
   Main,
   NotFound
 } from "./utilities/navigation/routes.js";
+
+import postData from "./store/articles/art-one";
+import ArticleListItem from "./components/ArticleListItem";
+
+
+const DetailedPost = () => {
+  const { id } = useParams();
+  const [post, setPost] = useState({
+    title: "",
+    author: "",
+    content: ""
+  });
+
+  useEffect(() => {
+    const requiredPost = postData.find(postItem => postItem.id === id);
+    setPost(requiredPost);
+  }, [id]);
+
+  return <ArticleListItem {...post} />;
+};
 
 
 function App() {
@@ -26,6 +46,7 @@ function App() {
         <Route path="me" element={<Main />}>
           <Route path="dev" element={<Development />} />
           <Route path="services" element={<Services />} />
+          <Route path="services/:id" element={<DetailedPost />} />
           <Route path="story" element={<About />} />
         </Route>
         {/* <Route path="home" redirectTo="/" /> */}

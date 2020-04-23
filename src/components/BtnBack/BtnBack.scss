@@ -1,10 +1,5 @@
-.btn {
-    a {
-      color: var(--dark);
-      text-decoration: none;
-    }
-  
-    &.btn-left-back {
+.btn-back {
+    &.is-left {
       left: 40px;
       top: 20px;
       position: absolute;
@@ -26,19 +21,18 @@
     }
   }
   
-  .slide-left {
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-    transform: translateX(-140px);
-  
-    &.is-view {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  
-    &.is-hide {
-      transform: translateX(-140px);
-      opacity: 0;
-    }
+.slide-left {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-140px);
+
+  &.is-view {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
+
+  &.is-hide {
+    transform: translateX(-140px);
+    opacity: 0;
+  }
+}

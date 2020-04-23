@@ -13,38 +13,25 @@
         width: 40px;
         margin: 10px;
         display: flex;
+        color: transparent;
   
         svg {
           width: 100%;
           height: 100%;
         }
   
-        svg,
-        patch {
-          fill: var(--dark);
-          transition: all 0.4s ease-in;
+        svg, path {
+          fill: $global-text-color;
+          transition: fill 0.4s ease-in;
         }
   
         &:hover {
-          svg,
-          patch {
-            transition: all 0.4s ease-out;
-            fill: var(--primary);
+          svg, path {
+            transition: fill 0.4s ease-out;
+            fill: $primary;
           }
         }
       }
     }
   }
-  
-  // .Main-social-link a svg patch,
-  // .Main-social-link a svg {
-  //   fill: var(--dark);
-  //   transition: all 0.4s ease-in;
-  // }
-  
-  // .Main-social-link a:hover svg patch,
-  // .Main-social-link a:hover svg {
-  //   transition: all 0.4s ease-out;
-  //   fill: var(--primary);
-  // }
   

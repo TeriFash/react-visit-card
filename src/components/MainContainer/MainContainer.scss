@@ -11,13 +11,12 @@
     font-weight: 800;
     font-size: calc(0.5em + 13vw);
     margin-bottom: 0;
-    color: var(--dark);
+    color: $global-text-color;
     user-select: none;
   
     .bold {
       display: inline-block;
       font-weight: normal;
-      // color: #505050;
       will-change: transform;
   
       &:first-child {

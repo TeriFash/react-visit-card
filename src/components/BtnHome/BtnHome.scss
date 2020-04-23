@@ -1,10 +1,10 @@
-.btn {
+.btn-home {
     a, button {
       font-size: 90%;
       background: none;
       border: none;
       outline: none;
-      color: var(--dark);
+      color: $global-text-color;
       text-decoration: none;
       padding: 0;
 
@@ -15,7 +15,7 @@
       }
     }
   
-    &.btn-left-back {
+    &.is-left {
       left: 40px;
       top: 20px;
       position: absolute;
@@ -39,27 +39,23 @@
 
       &:hover {
         left: 35px;
-        
-        // &::after {
-        //   left: -35px;
-        // }
       }
     }
   }
   
-  .slide-left {
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-    transform: translateX(-140px);
-  
-    &.is-view {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  
-    &.is-hide {
-      transform: translateX(-140px);
-      opacity: 0;
-    }
+.slide-left {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-140px);
+
+  &.is-view {
+    transform: translateX(0);
+    opacity: 1;
   }
+
+  &.is-hide {
+    transform: translateX(-140px);
+    opacity: 0;
+  }
+}
   

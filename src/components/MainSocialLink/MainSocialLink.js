@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 
+class MainSocialLink extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      
+    };
+  }
 
-function FnMainSocialLink() {
-    return(
+  render() {
+    return( 
         <ul className="Main-social-link">
             <li>
                 <a href="https://linkedin.com/in/viktor-gura-006aa513a/" title="Linkedin" target="_blank" rel="noopener noreferrer">
@@ -27,22 +34,8 @@ function FnMainSocialLink() {
                 </a>
             </li>
         </ul>
-    );
-}
-
-class MainSocialLink extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      
-    };
-  }
-
-  render() {
-    return( <FnMainSocialLink /> )
+     );
   }
 }
 
 export default MainSocialLink;
-
-

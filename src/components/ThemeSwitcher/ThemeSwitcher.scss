@@ -1,5 +1,58 @@
-.theme-switcher--wrapper {
+.Theme-switcher--wrapper {
     position: absolute;
     right: 40px;
     top: 40px;
 }
+
+.Theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+    & input {
+        display: none;
+      }
+
+    & .Theme-slider {
+        opacity: 0.3;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($dark, 0.2);
+        transition: 0.4s;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: $light;
+            transition: 0.4s;
+          }
+        &.Theme-round {
+            border-radius: 34px;
+
+            &::before {
+                border-radius: 50%;
+            }
+        } 
+      }
+      
+      input:checked + .Theme-slider {
+        background-color: rgba($light, 0.2);
+      }
+      
+      input:focus + .Theme-slider {
+        box-shadow: 0 0 1px rgba($light, 0.2);
+      }
+      
+      input:checked + .Theme-slider:before {
+        transform: translateX(26px);
+      }
+  }

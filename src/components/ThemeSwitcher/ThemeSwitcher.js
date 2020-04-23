@@ -12,11 +12,19 @@ class ThemeSwitcher extends Component {
   }
 
   componentDidMount() {
-    this.setTheme()
+    this.setTheme('theme', this.state.theme)
   }
 
-  setTheme() {
-    document.documentElement.setAttribute("data-theme", this.state.theme)
+  setTheme(dataName, themeName) {
+    document.documentElement.setAttribute(dataName, themeName)
+  }
+
+  setClass(remove) {
+    document.documentElement.classList.toggle("theme-transition")
+
+    if(remove) {
+      document.documentElement.removeAttribute('class')
+    }
   }
 
   toggleTheme() {
@@ -30,17 +38,17 @@ class ThemeSwitcher extends Component {
     }
     const theme = themes[newPosition];
 
-    document.documentElement.classList.add("color-theme-in-transition");
+    this.setClass();
     this.setState({ theme });
-    document.documentElement.setAttribute("data-theme", theme);
+    this.setTheme('theme', theme)
     window.setTimeout(() => {
-      document.documentElement.classList.remove("color-theme-in-transition");
+      this.setClass(true);
     }, 1000);
   }
 
   render() {
     return (
-      <div className="theme-switcher--wrapper">
+      <div className="Theme-switcher--wrapper">
         <ThemeSwitcherRadioButton toggleTheme={this.toggleTheme} />
       </div>
     );
