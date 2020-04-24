@@ -9,6 +9,10 @@ import {
   NotFound
 } from "./utilities/navigation/routes.js";
 
+import Firebase from 'firebase/app';
+import 'firebase/firestore';
+import firebaseConfig from "./utilities/data/firebase";
+
 import postData from "./store/articles/art-one";
 import ArticleListItem from "./components/ArticleListItem";
 
@@ -31,6 +35,8 @@ const DetailedPost = () => {
 
 
 function App() {
+  Firebase.initializeApp(firebaseConfig);
+
   return (
     <div className="App">
       {/* <header className="App-header">

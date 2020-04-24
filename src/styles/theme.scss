@@ -37,10 +37,12 @@ html {
     &[theme="dark"] {
         $light:         #393939;
         $dark:          #EBECF0;
+        $secondary:     #EBECF0 ;
     
         $theme-colors: (
             "light":      $light,
-            "dark":       $dark
+            "dark":       $dark,
+            "secondary":  $secondary
         );
     
         @each $color, $value in $theme-colors {

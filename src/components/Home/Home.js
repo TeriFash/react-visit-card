@@ -18,11 +18,9 @@ class Home extends Component {
   }
 
   loadData() {
-    // Загружаем данные из файла, переданного в качестве параметра
-    load(this.props.data).then(users => {
-      // После загрузки обновляем состояние
+    load(this.props.data).then(items => {
       this.setState({
-        data: JSON.parse(users)
+        data: JSON.parse(items)
       });
     });
   }
@@ -34,10 +32,6 @@ class Home extends Component {
           <MainLink />
           <MainSocialLink />
         </MainContainer>
-
-
-        <div data="api.json"></div>
-
       </>
     );
   }

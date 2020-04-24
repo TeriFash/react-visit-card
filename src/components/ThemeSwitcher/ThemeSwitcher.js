@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 
 // import './ThemeSwitcher.scss'
 
@@ -6,17 +6,25 @@ class ThemeSwitcher extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      theme: "light",
+      inputRef: createRef(),
+      theme: localStorage.getItem('theme-store') || 'light',
     };
     this.toggleTheme = this.toggleTheme.bind(this);
   }
 
   componentDidMount() {
+    const input = this.state.inputRef.current;
+
+    if(input.value === 'dark' && !input.hasAttribute('checked')) {
+      input.setAttribute('checked', true)
+    }
+
     this.setTheme('theme', this.state.theme)
   }
 
   setTheme(dataName, themeName) {
-    document.documentElement.setAttribute(dataName, themeName)
+    document.documentElement.setAttribute(dataName, themeName) 
+    localStorage.setItem('theme-store', themeName);
   }
 
   setClass(remove) {
@@ -27,20 +35,26 @@ class ThemeSwitcher extends Component {
     }
   }
 
-  toggleTheme() {
-    const themes = ["dark", "light"];
-
-    const currentPosition = themes.indexOf(this.state.theme);
-    let newPosition = currentPosition + 1;
-
-    if (currentPosition === themes.length - 1) {
-      newPosition = 0;
+  toggleTheme = (event) => {
+  
+    const input = this.state.inputRef.current;
+  
+    if(!input.value === 'dark' && input.hasAttribute('checked')) {
+      input.removeAttribute('checked')
     }
-    const theme = themes[newPosition];
+
+    let newTheme
+
+    if (input.value === 'light') {
+       newTheme = 'dark'
+    } else {
+       newTheme = 'light'
+    }
+
 
     this.setClass();
-    this.setState({ theme });
-    this.setTheme('theme', theme)
+    this.setState({ theme: newTheme });
+    this.setTheme('theme', newTheme)
     window.setTimeout(() => {
       this.setClass(true);
     }, 1000);
@@ -49,20 +63,20 @@ class ThemeSwitcher extends Component {
   render() {
     return (
       <div className="Theme-switcher--wrapper">
-        <ThemeSwitcherRadioButton toggleTheme={this.toggleTheme} />
+        <label className="Theme-switch">
+          <input
+            name='theme'
+            ref={this.state.inputRef}
+            value={this.state.theme}
+            onInput={this.toggleTheme}
+            type="checkbox"
+          />
+
+          <span className="Theme-slider Theme-round" />
+        </label>
       </div>
     );
   }
 }
-
-const ThemeSwitcherRadioButton = ({ toggleTheme }) => (
-  <label className="Theme-switch">
-    <input
-      onChange={(e) => toggleTheme()}
-      type="checkbox"
-    />
-    <span className="Theme-slider Theme-round" />
-  </label>
-);
 
 export default ThemeSwitcher;
