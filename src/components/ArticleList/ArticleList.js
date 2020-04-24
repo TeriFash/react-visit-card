@@ -16,9 +16,6 @@ const ArticleList = () => {
 
   useEffect(() => {
     setPosts(postData);
-  }, []);
-
-  useEffect(() => {
     // Initialize Firebase
     Firebase.initializeApp(firebaseConfig);
     db = Firebase.firestore();
@@ -26,7 +23,6 @@ const ArticleList = () => {
     db.collection("articles").onSnapshot((snapshot) => {
       snapshot.forEach((doc) => {
         console.log('---', doc.data());
-        
       });
         
     });
@@ -35,7 +31,6 @@ const ArticleList = () => {
   return (
     <div className="Article-list"> 
       {posts.map((post, postIndex) => {
-        
         const clickedMore = (event) => {
           event.preventDefault();
           navigate(post.id, { replace: true });
@@ -49,8 +44,6 @@ const ArticleList = () => {
               isOnlySummary={true}
             />
             <button onClick={clickedMore}>More</button>
-
-            {/* <Link to={post.id}>More</Link>{" "} */}
           </Fragment>
         );
       })}
