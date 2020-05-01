@@ -5,7 +5,7 @@ const lookUrl =
 const downloadUrl =
   "https://docs.google.com/document/d/1vsexD7H_Xa_DVmbWLf_LECN7ZsGn72e8hrq27cG0qXk/export?format=pdf";
 
-export default function CvLink(props) {
+ const CvLink = (props) => {
   const { type, ...rest } = props;
   const look = type === "look";
   const url = look ? lookUrl : downloadUrl;
@@ -17,3 +17,5 @@ export default function CvLink(props) {
     </a>
   );
 }
+
+export default CvLink

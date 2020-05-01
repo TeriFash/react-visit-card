@@ -35,26 +35,23 @@ class ThemeSwitcher extends Component {
     }
   }
 
-  toggleTheme = (event) => {
-  
+  toggleTheme() {
+    let { theme } = this.state;
     const input = this.state.inputRef.current;
-  
-    if(!input.value === 'dark' && input.hasAttribute('checked')) {
+    
+    if (!input.value === 'dark' && input.hasAttribute('checked')){
       input.removeAttribute('checked')
     }
 
-    let newTheme
-
     if (input.value === 'light') {
-       newTheme = 'dark'
+      theme = 'dark'
     } else {
-       newTheme = 'light'
+      theme = 'light'
     }
 
-
     this.setClass();
-    this.setState({ theme: newTheme });
-    this.setTheme('theme', newTheme)
+    this.setState({ theme });
+    this.setTheme('theme', theme)
     window.setTimeout(() => {
       this.setClass(true);
     }, 1000);

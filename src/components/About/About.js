@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import BtnBack from "../BtnBack";
 import BtnTilt from "../BtnTilt";
+import AboutText from "../AboutText";
 
 // import './Consult.scss'
 
@@ -16,6 +17,7 @@ class About extends Component {
         {/* <BtnBack /> */}
         <h1>About me</h1>
         <BtnTilt />
+        <AboutText />
       </section>
     );
   }

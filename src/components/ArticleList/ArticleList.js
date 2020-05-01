@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Firebase from 'firebase/app';
-import postData from "../../store/articles/art-one";
+import postData from "../../store/articles/post-data";
 
 import ArticleListItem from "../ArticleListItem";
 
@@ -50,3 +50,5 @@ const ArticleList = () => {
 };
 
 export default ArticleList;
+
+

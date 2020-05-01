@@ -13,7 +13,7 @@ import Firebase from 'firebase/app';
 import 'firebase/firestore';
 import firebaseConfig from "./utilities/data/firebase";
 
-import postData from "./store/articles/art-one";
+import postData from "./store/articles/post-data";
 import ArticleListItem from "./components/ArticleListItem";
 
 

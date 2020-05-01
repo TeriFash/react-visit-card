@@ -11,7 +11,7 @@ import { devData } from "../../store/data";
 // import './FlipperСard.scss'
 const data = devData;
 
-const FlipperСard = function() {
+const FlipperСard = () => {
   const [open, set] = useState(false);
 
   setTimeout(() => {

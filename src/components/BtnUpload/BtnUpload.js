@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-export default function BtnUpload() {
+const BtnUpload = () => {
   const uploadRef = useRef(null);
 
   function uploaClick(e) {
@@ -38,4 +38,6 @@ export default function BtnUpload() {
       </div>
     </div>
   );
-}
+};
+
+export default BtnUpload;

@@ -5,7 +5,7 @@ import BtnUpload from "../BtnUpload";
 
 // import './BtnTilt.scss'
 
-export default function BtnTilt() {
+const BtnTilt = () => {
   const options = {
     scale: 1.1,
     speed: 3000,
@@ -25,4 +25,6 @@ export default function BtnTilt() {
       </CvLink>
     </>
   );
-}
+};
+
+export default BtnTilt;

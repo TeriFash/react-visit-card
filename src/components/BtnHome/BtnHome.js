@@ -5,7 +5,7 @@ const BtnHome = () => {
   let navigate = useNavigate();
   let btnRef = useRef();
 
-   function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
     navigate('/');
   }
