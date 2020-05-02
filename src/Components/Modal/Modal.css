@@ -1,0 +1,85 @@
+.container-modal {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1232142;
+}
+
+.Modal {
+    background-color: #202026;
+    width: 75%;
+    height: 80%;
+    overflow: scroll;
+    position: fixed;
+    top: 10%;
+    border-radius: 20px;
+}
+
+.Modal .btn {}
+
+.container-fluid {
+    padding: 50px 50px !important;
+}
+
+@media (max-width: 500px) {
+    .Modal {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        border-radius: 0;
+    }
+
+    .container-fluid {
+        padding: 20px 20px !important;
+    }
+}
+
+.Modal img {
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.Modal::-webkit-scrollbar {
+    display: none;
+}
+
+.Modal span {
+    color: white !important;
+}
+
+.closeModal {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 13px;
+    padding-top: 13px;
+
+
+}
+
+.closeModal .closeIt {
+    /* position: fixed; */
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeModal .closeIt p {
+    margin: 0 !important;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.no-scroll {
+    overflow-y: hidden !important;
+}

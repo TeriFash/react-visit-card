@@ -1,0 +1,670 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+}
+
+.no-scroll {
+  overflow-y: hidden !important;
+}
+
+body {
+  height: 100% !important;
+}
+
+#root {
+  overflow: hidden;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  .header-info {
+    padding: 0 0 20px 0;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .work h3 {
+    font-size: 30px !important;
+  }
+
+  .education h3 {
+    font-size: 30px !important;
+  }
+
+  .about h2 {
+    font-size: 50px;
+  }
+
+  .highlightBlack {
+    font-size: 50px !important;
+  }
+
+  .separator,
+  .separator-bottom {
+    padding: 50px 0 !important;
+  }
+
+  .bar {
+    line-height: 12px !important;
+    font-size: 11px !important;
+  }
+
+  .bar::before {
+    height: 12px !important;
+  }
+
+  .bar::after {
+    height: 12px !important;
+  }
+
+  .graph-cont img {
+    max-width: 20px !important;
+    max-height: 20px !important;
+  }
+
+  .graph-cont p {
+    font-size: 14px;
+  }
+
+  .education {
+    padding-right: 0 !important;
+  }
+
+  .work {
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .about {
+    padding-left: 0 !important;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .header-info h2 {
+    font-size: 35px !important;
+  }
+
+  .header-info h4 {
+    font-size: 22px !important;
+  }
+
+  .navbar li a {
+    margin: 5px 10px !important;
+    font-weight: 700;
+    font-size: 15px !important;
+  }
+}
+
+/* MEDIA QUERIES END*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+.separator {
+  padding: 140px;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+.separator-bottom {
+  padding-bottom: 120px;
+}
+
+.header-info h2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 65px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.header-info h4 {
+  font-size: 26px;
+  line-height: 34px;
+  margin-bottom: 30px;
+}
+
+.header-info ul li .fa {
+  transition: all 0.4s ease-in;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  /* text-decoration: none !important; */
+}
+
+
+
+
+@media (max-width: 780px) {
+  .header-info .btn {
+    display: none;
+  }
+}
+
+.social-icons .fa {
+  box-sizing: border-box;
+  font-size: 25px;
+  line-height: 30px;
+  padding: 25px 25px;
+  transition: all 0.4s ease-in;
+}
+
+.image-bg {
+  /* background-image: url(./img/header.png); */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+}
+
+.overlay {
+  height: 100%;
+  background-image: linear-gradient(to left, #434343 -20%, black 30%);
+}
+
+/* ==================
+ABOUT ME STYLE 
+==================*/
+
+
+
+/* ===============
+ABOUT ME STYLE END
+================= */
+
+/* SKILLS BAR STYLE */
+.graph-cont {
+  width: calc(100% - 40px);
+  width: 100%;
+  max-width: 800px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.graph-cont p {
+  margin-bottom: 2px;
+}
+
+.graph-cont img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+.name p {
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.bar {
+  height: 50px;
+  line-height: 23px;
+  font-size: 16px;
+  color: white;
+  padding: 0 0 0 10px;
+  position: relative;
+  font-weight: bold;
+}
+
+.bar::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 23px;
+  top: 0;
+  z-index: -2;
+  background: #ecf0f1;
+}
+
+.bar::after {
+  content: "";
+  background-image: linear-gradient(120deg, #f1636c 60%, #b6256e 200%);
+  height: 23px;
+  transition: 2s;
+  display: block;
+  width: 100%;
+  animation: bar-before 1 2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 0 5px 5px 0;
+}
+
+.bar1::after {
+  max-width: 90%;
+}
+
+.bar2::after {
+  max-width: 80%;
+}
+
+.bar3::after {
+  max-width: 50%;
+}
+
+.bar4::after {
+  max-width: 90%;
+}
+
+.bar5::after {
+  max-width: 60%;
+}
+
+.bar6::after {
+  max-width: 60%;
+}
+
+.bar7::after {
+  max-width: 80%;
+}
+
+.bar8::after {
+  max-width: 80%;
+}
+
+@keyframes bar-before {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* SKILLS BAR STYLE END */
+
+/* =============
+EDUCATION AND WORK EXPERIENCES STYLE
+================== */
+
+
+/* =============
+EDUCATION AND WORK EXPERIENCES STYLE END
+================== */
+
+.background-portfolio {
+  background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
+}
+
+/* ==============
+TEXT HIGLIGHT HALF HEIGHT FOR BLACK TITTLE
+============== */
+.highlightBlack {
+  color: black;
+  font-size: 70px;
+}
+
+/* ==============
+TEXT HIGLIGHT HALF HEIGHT FOR BLACK TITTLE
+============== */
+
+/* ==============
+TEXT HIGLIGHT HALF HEIGHT FOR WHITE TITTLE
+============== */
+.highlightWhite {
+  color: white !important;
+}
+
+/* ==============
+TEXT HIGLIGHT HALF HEIGHT FOR WHITE TITTLE
+============== */
+
+/* =================
+SEPARATOR DIVS STYLE 
+================= */
+.divider {
+  position: relative;
+  height: 1px;
+  background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+}
+
+.div-transparent:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  height: 1px;
+  background-image: linear-gradient(to right,
+      transparent,
+      rgb(48, 49, 51),
+      transparent);
+}
+
+.div-dot:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  background-color: #f1636c;
+  /* border: 1px solid rgb(48, 49, 51); */
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px white, 0 0 0 4px white;
+}
+
+/* =================
+SEPARATOR DIVS STYLE END 
+================= */
+
+/* GRID CSS HEADER.JS */
+.grid-container-header {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 200px 50px 150px 50px;
+}
+
+.item1 {
+  display: flex;
+  justify-content: center;
+}
+
+.item2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item2 img {
+  max-width: 550px;
+}
+
+@media (max-width: 850px) {
+  .grid-container-header {
+    grid-template-columns: auto;
+    /* height: auto; */
+    /* padding: 120px 5px 10px 5px; */
+  }
+
+  .item1 {
+    grid-row-start: 1;
+  }
+
+  .item2 img {
+    margin-top: 40px;
+    /* padding-top: 10px; */
+    max-width: 300px;
+  }
+}
+
+
+@media (max-width: 520px) {
+  .grid-container-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .item2 {
+    display: none;
+  }
+  .item2 img {
+    /* max-width: 300px; */
+  }
+}
+
+/* GRID CSS  HEADER.JS*/
+
+/* GRID CSS ABOUT.JS */
+.grid-container-about {
+  padding: 80px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "illustration about"
+    "title title"
+    "skill skill2";
+}
+
+.item-about-1 {
+  grid-area: illustration;
+}
+
+.item-about-2 {
+  grid-area: about;
+}
+
+.item-about-2 .react-reveal.about-tag {
+  margin-bottom: 10%;
+}
+
+.item-about-3 {
+  grid-area: skill;
+  padding: 20px;
+}
+
+.item-about-4 {
+  grid-area: skill2;
+  padding: 20px;
+}
+
+.title {
+  grid-area: title;
+}
+
+@media (max-width: 780px) {
+  .grid-container-about {
+    grid-template-areas:
+      "illustration illustration"
+      "about about"
+      "title title"
+      "skill skill"
+      "skill2 skill2";
+  }
+
+  .item-about-2 {
+    padding: 0 15px;
+  }
+
+  .item-about-3 {
+    padding: 0;
+  }
+
+  .item-about-4 {
+    padding: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .grid-container-about {
+    grid-template-areas:
+      "illustration illustration"
+      "about about"
+      "title title"
+      "skill skill"
+      "skill2 skill2";
+  }
+  
+  .item-about-1 {
+    display: none;
+  }
+
+  .item-about-2 {
+    padding: 0 15px;
+  }
+
+  .item-about-3 {
+    padding: 0;
+  }
+
+  .item-about-4 {
+    padding: 0;
+  }
+}
+
+/* GRID CSS  ABOUT.JS*/
+
+/* GRID CSS  EXPERIENCE.JS*/
+.grid-container-experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "education work";
+  grid-column-gap: 100px;
+  padding: 80px 120px;
+}
+
+.cards-education {
+  grid-area: education;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-work {
+  grid-area: work;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .grid-container-experience {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 771px) {
+  .grid-container-experience {
+    grid-template-areas:
+      "education education"
+      "work work";
+    padding: 30px 30px !important;
+    text-align: center;
+  }
+}
+
+/* GRID CSS  EXPERIENCE.JS*/
+
+.grid-portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 40px;
+  align-items: center;
+  position: relative;
+  padding: 50px 120px;
+}
+
+.grid-portfolio img {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  border-radius: 10px;
+  filter: blur(1.5px);
+  -webkit-filter: blur(1.5px);
+}
+
+.grid-portfolio h2 {
+  position: absolute;
+  top: -8%;
+  left: -5%;
+  font-size: 28px;
+  color: white;
+  text-shadow: 2px 2px black;
+  transition: 0.5s ease;
+  z-index: 3;
+  background: rgba(71, 71, 71, 0.9);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.grid-portfolio .text {
+  position: absolute;
+  top: -8%;
+  left: -5%;
+  font-size: 28px;
+  color: white;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.9);
+  transition: 0.5s ease;
+  z-index: 2;
+  background: rgb(71, 71, 71);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.grid-portfolio .card {
+  border-radius: 10px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+@media (min-width: 1100px) {
+  .grid-portfolio .card:hover {
+    box-shadow: 4px 4px 8px 6px #07070773;
+    transform: translateY(-5%);
+    -webkit-transform: translateY(-5%);
+    -moz-transform: translateY(-5%);
+  }
+
+  .grid-portfolio .card:hover .text {
+    opacity: 1;
+  }
+
+  .grid-portfolio .card:hover h2 {
+    opacity: 0;
+  }
+
+  .grid-portfolio .text {
+    opacity: 0;
+  }
+
+  .grid-portfolio .card img:hover {
+    filter: blur(0);
+    -webkit-filter: blur(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .grid-portfolio {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 50px 30px;
+  }
+
+  .grid-portfolio .card {
+    box-shadow: 4px 4px 8px 6px #07070773;
+  }
+
+  .grid-portfolio h2 {
+    font-size: 20px;
+    padding: 6px;
+    top: -8%;
+  }
+
+  .grid-portfolio .text {
+    display: none;
+  }
+
+  .grid-portfolio .card img {
+    filter: blur(0);
+    -webkit-filter: blur(0);
+  }
+}

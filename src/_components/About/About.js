@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import BtnBack from "../BtnBack";
 import BtnTilt from "../BtnTilt";
 import AboutText from "../AboutText";
 

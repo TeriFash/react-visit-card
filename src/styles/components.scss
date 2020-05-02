@@ -1,12 +1,109 @@
-@import '../components/AboutText/AboutText.scss';
-@import '../components/ArticleList/ArticleList.scss';
-@import '../components/ArticleListItem/ArticleListItem.scss';
-@import '../components/BtnBack/BtnBack.scss';
-@import '../components/BtnHome/BtnHome.scss';
-@import '../components/BtnTilt/BtnTilt.scss';
-@import '../components/BtnUpload/BtnUpload.scss';
-@import '../components/ThemeSwitcher/ThemeSwitcher.scss';
+// @import '../_components/ArticleList/AboutText.scss';
+// @import '../_components/ArticleList/ArticleList.scss';
+// @import '../_components/ArticleListItem/ArticleListItem.scss';
+// @import '../_components/BtnBack/BtnBack.scss';
+// @import '../_components/BtnHome/BtnHome.scss';
+// @import '../_components/BtnTilt/BtnTilt.scss';
+// @import '../_components/BtnUpload/BtnUpload.scss';
+@import "../_components/ThemeSwitcher/ThemeSwitcher.scss";
 
-@import '../components/MainContainer/MainContainer.scss';
-@import '../components/MainSocialLink/MainSocialLink.scss';
-@import '../components/MainLink/MainLink.scss';
+// @import '../_components/MainContainer/MainContainer.scss';
+// @import '../_components/MainSocialLink/MainSocialLink.scss';
+// @import '../_components/MainLink/MainLink.scss';
+
+.Main-Link {
+  padding: 0;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & li {
+    list-style: none;
+    user-select: none;
+    font-weight: 500;
+    font-size: calc(0.5em + 1vw);
+    margin-bottom: 20px;
+
+    &:nth-child(1):after,
+    &:nth-child(2):after {
+      margin: 0 10px;
+      color: $primary;
+      content: "/";
+    }
+
+    > a {
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Main-Link {
+    flex-direction: column;
+    min-width: 135px;
+
+    & li {
+      padding: 0 15px;
+      text-align: center;
+      width: 100%;
+      position: relative;
+
+      &::after {
+        right: 0;
+        position: absolute;
+        margin: 0 10px;
+        color: $primary;
+        content: "/";
+      }
+    }
+  }
+}
+
+// Main-social-link
+
+.Main-social-link {
+  padding: 0;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & li {
+    list-style: none;
+
+    a {
+      height: 40px;
+      width: 40px;
+      margin: 10px;
+      display: flex;
+      color: transparent;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      svg,
+      path {
+        fill: $global-text-color;
+        transition: fill 0.4s ease-in;
+      }
+
+      &:hover {
+        svg,
+        path {
+          transition: fill 0.4s ease-out;
+          fill: $primary;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .Main-social-link {
+    margin-top: 3%;
+  }
+}

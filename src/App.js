@@ -1,65 +1,131 @@
-import React, {useState, useEffect} from "react";
-import { Routes, Route, useParams } from "react-router-dom";
-import {
-  About,
-  Services,
-  Development,
-  Home,
-  Main,
-  NotFound
-} from "./utilities/navigation/routes.js";
-
-import Firebase from 'firebase/app';
-import 'firebase/firestore';
-import firebaseConfig from "./utilities/data/firebase";
-
-import postData from "./store/articles/post-data";
-import ArticleListItem from "./components/ArticleListItem";
+import React, { Component } from "react";
+import Toolbar from "./Components/Toolbar/Toolbar";
+import SideDrawer from "./Components/SideDrawer/SideDrawer";
+import Backdrop from "./Components/Backdrop/Backdrop";
+import Header from "./Components/Header";
+import About from "./Components/About";
+import Experiences from "./Components/Experiences";
+import Portfolio from "./Components/Portfolio";
+import Modal from "./Components/Modal/Modal";
+import data from "./store/settings";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+// import "./App.css";
 
 
-const DetailedPost = () => {
-  const { id } = useParams();
-  const [post, setPost] = useState({
-    title: "",
-    author: "",
-    content: ""
-  });
+class App extends Component {
+  state = {
+    sideDrawerOpen: false,
+    modalOpen: false,
+    projectId: 0,
+    done: false
+  };
 
-  useEffect(() => {
-    const requiredPost = postData.find(postItem => postItem.id === id);
-    setPost(requiredPost);
-  }, [id]);
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ done: true });
+    }, 1000);
+  }
 
-  return <ArticleListItem {...post} />;
-};
+  // Modal 
 
+  modalToggleClick = projectId => {
+    this.setState(prevState => {
+      document.body.classList.add("no-scroll");
+      return {
+        modalOpen: !prevState.modalToggleClick,
+        projectId
+      };
+    });
+  };
 
-function App() {
-  Firebase.initializeApp(firebaseConfig);
+  modalCloseClick = () => {
+    document.body.classList.remove("no-scroll");
+    this.setState({ modalOpen: false });
+  };
 
-  return (
-    <div className="App">
-      {/* <header className="App-header">
-        <nav className="App-navigator navigation-container">
-          <Link to="dev">Development</Link> |{' '}
-          <Link to="services">Services</Link>
-          <Link to="story">About</Link>
-        </nav>
-      </header> */}
+  // Modal
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="me" element={<Main />}>
-          <Route path="dev" element={<Development />} />
-          <Route path="services" element={<Services />} />
-          <Route path="services/:id" element={<DetailedPost />} />
-          <Route path="story" element={<About />} />
-        </Route>
-        {/* <Route path="home" redirectTo="/" /> */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </div>
-  );
+  // Nav sidebar
+
+  drawerToggleClickHandler = () => {
+    document.body.classList.add("no-scroll");
+    this.setState(prevState => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
+    });
+  };
+
+  backdropClickHandler = () => {
+    document.body.classList.remove("no-scroll");
+    this.setState({ sideDrawerOpen: false });
+  };
+
+  // Nav sidebar
+
+  render() {
+    let backdrop;
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
+    }
+
+    let modal;
+    if (this.state.modalOpen) {
+      backdrop = <Backdrop click={this.modalCloseClick} />; // click=close modal
+      modal = (
+        <Modal
+          project={data.portfolio[this.state.projectId]}
+          close={this.modalCloseClick}
+        />
+      );
+    }
+    let stylePreloader = {
+      display: "flex",
+      height: "100vh",
+      width: "100%",
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "rgb(26, 25, 25)"
+    };
+    return (
+      <>
+        {!this.state.done ? (
+          <Loader
+            style={stylePreloader}
+            type="Triangle"
+            color="#f1636c"
+            height={200}
+            width={200}
+            timeout={3000}
+          />
+        ) : (
+          <>
+            {backdrop}
+
+            {modal}
+
+            <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
+
+            <SideDrawer
+              show={this.state.sideDrawerOpen}
+              click={this.backdropClickHandler}
+            />
+
+            <Header/>
+
+            <Experiences />
+
+            <About />
+
+            <Portfolio click={this.modalToggleClick} />
+
+            <footer className="footer">
+              Teri Fash {new Date().getFullYear()}
+            </footer>
+          </>
+        )}
+      </>
+    );
+  }
 }
 
 export default App;

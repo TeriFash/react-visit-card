@@ -1,5 +1,5 @@
 // Core dependency
-@import "_core/main";
+//@import "_core/main";
 
 // Main dependency
 @import 'variables';
@@ -9,6 +9,263 @@
 
 // Modules
   @import 'components';   // components
-  @import 'pages';        // pages
+  //@import 'pages';        // pages
 
 // Helpers
+
+@import '../App.css';
+
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $dark;
+}
+
+#home {
+  height: 100vh;
+}
+
+#home,
+.nav {
+  width: 100%;
+}
+
+// nav
+
+.nav {
+  text-shadow: 1px 1px 2px $dark;
+}
+
+.side__drawer ul li a {
+  color: $light;
+}
+
+// toggle
+
+.toggle__button__line {
+  width: 34px;
+  height: 4.5px;
+  background: $primary;
+}
+
+// education
+
+#experiences {
+  min-height: 100vh;
+}
+
+.education {
+  h3, h4, p {
+  color: $light;
+  }
+}
+
+.education h3 {
+  font-size: 50px;
+  line-height: 40px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.education .education-item {
+  margin-bottom: 30px;
+  padding: 26px 30px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #202026;
+  box-shadow: -1rem 0 3rem #000;
+  border-radius: 7px;
+}
+
+.education-item h4 a {
+  font-style: italic;
+  margin-left: 4px;
+  color: $primary;
+}
+
+.education-item .year {
+  margin: 10px 0;
+  color: $primary;
+}
+
+.work.small span {
+  font-size: 12px;
+}
+
+.work h3 {
+  font-size: 50px;
+  line-height: 40px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.work .work-item {
+  margin-bottom: 30px;
+  padding: 26px 30px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #202026;
+  box-shadow: -1rem 0 3rem #000;
+  border-radius: 7px;
+
+  .small {
+    color: $light;
+    opacity: 0.8;
+  }
+}
+
+.work-item h4 a {
+  font-style: italic;
+  margin-left: 4px;
+  color: $primary;
+}
+
+.work-item .year {
+  margin: 10px 0;
+  color: $primary;
+}
+
+.work-responsability {
+  color: $light;
+}
+
+.work-responsability .fa {
+  font-size: 12px;
+}
+
+.fa .fa-circle {
+  margin-right: 10px;
+}
+
+// about
+
+.about {
+  padding-left: 50px;
+}
+
+#about {
+  min-height: 100vh;
+
+  p, ul li span {
+    font-weight: bold;
+  }
+}
+
+.about h2 {
+  font-size: 70px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.about p {
+  margin-bottom: 30px;
+}
+
+.about-tag ul li {
+  margin: 0px 6px 0 0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 4px 0px;
+  display: inline-block;
+}
+
+.about-tag ul li span {
+  border: 1px solid $primary;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.about .btn,
+.modal .btn {
+  background-image: linear-gradient(120deg, $primary 60%, #b6256e 100%);
+  color: $white;
+  min-height: 60px;
+  padding: 12px 35px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.about .btn .fa {
+  margin-left: 10px;
+}
+
+.skills-title {
+  padding: 60px 0 0 0;
+}
+
+.item-about-3, .item-about-4 {
+
+  .react-reveal {
+    padding: 0;
+
+    .name {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.item-about-3 {
+  padding-left: 0!important;
+}
+
+.item-about-4 {
+  padding-right: 0!important;
+}
+
+// portfolio
+
+#portfolio {
+  min-height: 100vh;
+}
+
+.grid-portfolio {
+  .react-reveal {
+    position: relative;
+    &.card {
+      min-height: 250px;
+    }
+  }
+}
+
+.title-portfolio {
+  padding-top: 80px;
+  padding-left: 80px;
+}
+
+// container-modal {}
+.container-modal {
+  h1, p , a{
+    color: $white;
+  }
+
+  h1{
+    margin-bottom: 12px;
+  }
+
+  p{
+    margin-bottom: 12px;
+  }
+
+  .about-tag {
+    margin-bottom: 20px;
+  }
+}
+
+//footer
+
+.footer {
+  background: $gray;
+  color: $primary;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  font-weight: $bold;
+}
+

@@ -1,6 +1,6 @@
 import React, { Component, createRef } from "react";
 
-// import './ThemeSwitcher.scss'
+import './ThemeSwitcher.scss'
 
 class ThemeSwitcher extends Component {
   constructor(props) {

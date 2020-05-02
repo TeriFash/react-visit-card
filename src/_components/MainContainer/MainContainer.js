@@ -1,7 +1,7 @@
 import React, { Component, createRef } from "react";
 import ReactDOM from "react-dom";
 
-// import './MainContainer.scss'
+import './MainContainer.scss'
 
 class MainContainer extends Component {
   constructor(props) {
