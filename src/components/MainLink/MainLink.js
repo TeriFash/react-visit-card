@@ -17,6 +17,19 @@ import { Link } from "react-router-dom";
 //   <Link {...props} />
 // )
 
+// <ul className="Main-Link">
+//   <li>
+//     <Link to="me/dev">Development</Link>
+//     {""}
+//   </li>
+//   <li>
+//     <Link to="me/services">Services</Link>
+//   </li>
+//   <li>
+//     <Link to="me/story">About</Link>
+//   </li>
+// </ul>
+
 class MainLink extends Component {
   constructor(props) {
     super(props);
@@ -27,11 +40,10 @@ class MainLink extends Component {
     return (
       <ul className="Main-Link">
         <li>
-          <Link to="me/dev">Development</Link>
-          {""}
+          <a href="#" className="is-disabled" title="partition in development">Development</a>
         </li>
         <li>
-          <Link to="me/services">Services</Link>
+          <a href="#" className="is-disabled" title="partition in development">Services</a>
         </li>
         <li>
           <Link to="me/story">About</Link>

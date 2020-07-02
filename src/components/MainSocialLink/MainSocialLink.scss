@@ -4,34 +4,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  
+
     & li {
       list-style: none;
-  
+
       a {
         height: 40px;
         width: 40px;
         margin: 10px;
         display: flex;
         color: transparent;
-  
+
         svg {
           width: 100%;
           height: 100%;
         }
-  
+
         svg, path {
           fill: $global-text-color;
           transition: fill 0.4s ease-in;
         }
-  
+
         &:hover {
           svg, path {
             transition: fill 0.4s ease-out;
-            fill: $primary;
+            // fill: $primary;
+            fill: rgb(92, 94, 220);
           }
         }
       }
     }
   }
-  

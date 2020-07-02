@@ -17,6 +17,11 @@
       color: $primary;
       content: "/";
     }
+
+    .is-disabled {
+      // pointer-events: none;
+      opacity: .7;
+    }
   }
 }
 

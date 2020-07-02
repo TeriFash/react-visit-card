@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
 import MainSocialLink from "../MainSocialLink";
-import MainLink from "../MainLink";
+// import MainLink from "../MainLink";
 import MainContainer from "../MainContainer";
+import BtnTilt from "../BtnTilt";
 import load from "../../utilities/data/load";
 
 // import './Home.scss'
@@ -29,7 +30,8 @@ class Home extends Component {
     return (
       <>
         <MainContainer className="Home-page page-wrapper">
-          <MainLink />
+          {/*<MainLink />*/}
+          <BtnTilt />
           <MainSocialLink />
         </MainContainer>
       </>

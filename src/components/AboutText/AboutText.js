@@ -20,7 +20,7 @@ const TextBlock = ({ items, fallback }) => {
 
 const AboutText = () => {
   const [items, setItems] = useState([]);
-  useEffect(() => {   
+  useEffect(() => {
     let db = Firebase.firestore();
 
     db.collection("about").onSnapshot((snapshot) => {
@@ -31,7 +31,7 @@ const AboutText = () => {
   }, [items]);
 
   const [firstLoad, setLoaded] = useState(false);
-  useEffect(() => {   
+  useEffect(() => {
     document.querySelector('.Btn-upload-wrapper').classList.add('is-down')
     setPosition()
   }, []);
@@ -42,7 +42,7 @@ const AboutText = () => {
 
   function setPosition(val = !firstLoad) {
     const patch = containerRef.current
-    
+
     if(val) {
       patch.style.transform = `translateY(60%)`;
     } else {
@@ -53,7 +53,7 @@ const AboutText = () => {
   }
 
 
-  const clickMore = (event) => {  
+  const clickMore = (event) => {
     setLoaded((firstLoad) => !firstLoad)
     externalBtn.classList.toggle('is-down')
     setPosition(firstLoad)

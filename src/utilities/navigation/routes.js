@@ -23,7 +23,7 @@ import ThemeSwitcher from "../../components/ThemeSwitcher";
 // const NotFound = () => <h1> NotFound 404 page</h1>;
 
 // function Home() {
-  
+
 //   return (
 //     <div>
 //       <HomePage />
@@ -120,7 +120,7 @@ function Main() {
 
   return (
     <>
-      {/* <header className="App-header"> 
+      {/* <header className="App-header">
        <h1>Welcome to the app!</h1>
       </header>
       <nav className="App-navigator navigation-container">
@@ -130,10 +130,10 @@ function Main() {
       </nav> */}
 
       <main className="App-wrapper content-container">
-        
+
           <BtnHome />
           <Outlet />
-   
+
       </main>
     </>
   );
@@ -201,9 +201,9 @@ function NotFound() {
       <section className="Not-found-page page-wrapper">
         <h1>NotFound 404 page</h1>
 
-        
+
         <Link to="/">Go Home</Link>
-      
+
       </section>
       {/* <nav>
         <Link to="/">Home</Link>
@@ -212,11 +212,11 @@ function NotFound() {
   );
 }
 
-export { 
-  About, 
-  Services, 
-  Development, 
-  Home, 
-  Main, 
+export {
+  About,
+  Services,
+  Development,
+  Home,
+  Main,
   NotFound
 }

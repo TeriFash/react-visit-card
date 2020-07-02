@@ -1,7 +1,8 @@
 .Tilt-root {
     background-color: rgb(92, 94, 220);
-    padding: 0.5em 2em;
     cursor: pointer;
+    // padding: 0.5em 2em;
+
     // margin-left: 20px;
 
     &::after {
@@ -14,13 +15,27 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+
+    > div {
+      align-items: center;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+    }
   }
-  
+
   .btn-tilt {
+    min-height: calc(47px + 1em);
+
     text-decoration: none;
     text-transform: uppercase;
     color: $white;
     letter-spacing: 0.1em;
+    padding: 0 2em;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
   }
 
   .btn-download {
