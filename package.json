@@ -22,8 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prod": "react-scripts build && yarn global add serve && serve -s build",
-    "ftp": "node ftp.js",
-    "deploy": "yarn ftp"
+    "ftp-deploy": "node deploy.js",
+    "deploy": "yarn ftp-deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
