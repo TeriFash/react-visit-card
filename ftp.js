@@ -2,7 +2,9 @@ let Deploy = require('ftp-deploy');
 let ftpDeploy = new Deploy();
 
 let config = {
-    
+    host : "",
+    user : "",
+    password : "",
     port: 21,
     localRoot: __dirname + '/build',
     remoteRoot: '/www/terifash.pro/',

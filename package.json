@@ -23,8 +23,7 @@
     "eject": "react-scripts eject",
     "prod": "react-scripts build && yarn global add serve && serve -s build",
     "ftp": "node ftp.js",
-    "deploy": "yarn ftp",
-    "postdeploy": "yarn node img.js"
+    "deploy": "yarn ftp"
   },
   "eslintConfig": {
     "extends": "react-app"
