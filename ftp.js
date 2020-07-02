@@ -2,9 +2,7 @@ let Deploy = require('ftp-deploy');
 let ftpDeploy = new Deploy();
 
 let config = {
-    host : "jazz.cityhost.com.ua",
-    user : "chterif9029",
-    password : "82e7de80e9",
+    
     port: 21,
     localRoot: __dirname + '/build',
     remoteRoot: '/www/terifash.pro/',
