@@ -133,6 +133,22 @@
     &:active {
         transform: scale(.92) translateZ(0);
     }
+
+    .info-text {
+      display: inline-block;
+      word-break: normal;
+      min-width: 110px;
+      font-size: 11px;
+      bottom: -25px;
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+      // opacity: .5;
+      span {
+        // font-weight: bold;
+      }
+    }
 }
 
 @keyframes load {

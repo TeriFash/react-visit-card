@@ -36,6 +36,8 @@ const BtnUpload = () => {
           </svg>
         </div>
       </div>
+
+      <span className="info-text">Download <span> CV</span></span>
     </div>
   );
 };

@@ -1,9 +1,8 @@
 import React from "react";
+import settings from "../../store/settings.js"
 
-const lookUrl =
-  "https://docs.google.com/document/d/1-wco4u22lsKdYxYPDjzX-7awq_xub0Yla-ooK6EBfQI/edit?usp=sharing";
-const downloadUrl =
-  "https://docs.google.com/document/d/1-wco4u22lsKdYxYPDjzX-7awq_xub0Yla-ooK6EBfQI/export?format=pdf";
+const lookUrl = settings.cvLinks.en.view;
+const downloadUrl = settings.cvLinks.en.download;
 
  const CvLink = (props) => {
   const { type, ...rest } = props;
