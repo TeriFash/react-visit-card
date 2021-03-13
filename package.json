@@ -7,11 +7,12 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "firebase": "latest",
+    "history": "^5.0.0",
     "node-sass": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-router": "^6.0.0-alpha.2",
-    "react-router-dom": "^6.0.0-alpha.2",
+    "react-router-dom": "^6.0.0-beta.0",
     "react-scripts": "latest",
     "react-spring": "latest",
     "vanilla-tilt": "latest"
