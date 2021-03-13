@@ -2,12 +2,12 @@ let Deploy = require('ftp-deploy');
 let ftpDeploy = new Deploy();
 
 let config = {
-    host : "",
-    user : "",
-    password : "",
+    host : "volt.cityhost.com.ua",
+    user : "chf7c07ff6",
+    password : "950cdfe325",
     port: 21,
     localRoot: __dirname + '/build',
-    remoteRoot: '/www/**/',
+    remoteRoot: '/www/terifash.pro.test',
     include: ['*'],
     deleteRemote: true
 }
