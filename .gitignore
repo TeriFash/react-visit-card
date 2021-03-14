@@ -29,5 +29,6 @@ package-lock.json
 .git
 .ftpconfig
 .vscode
+deploy.js*
 deploy.js
 jsconfig.json
