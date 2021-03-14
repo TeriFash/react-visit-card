@@ -1,3 +1,9 @@
+$iconColours: (
+    "github": #000C,
+    "linkedin": #0A66C2,
+    "telegram": #2D9FD7,
+);
+
 .Main-social-link {
     padding: 0;
     flex-direction: row;
@@ -14,22 +20,23 @@
         margin: 10px;
         display: flex;
         color: transparent;
+        color: $global-text-color;
 
         svg {
           width: 100%;
           height: 100%;
-        }
-
-        svg, path {
-          fill: $global-text-color;
-          transition: fill 0.4s ease-in;
+          transition: color 0.3s ease-in;
         }
 
         &:hover {
-          svg, path {
-            transition: fill 0.4s ease-out;
-            // fill: $primary;
-            fill: rgb(92, 94, 220);
+          transition: color 0.3s ease-out;
+
+          svg {
+            @each $iconColour, $i in $iconColours {
+              &[data-icon="#{$iconColour}"] {
+                color: $i;
+              }
+            }
           }
         }
       }

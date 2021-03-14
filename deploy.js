@@ -7,7 +7,7 @@ let config = {
     password : "950cdfe325",
     port: 21,
     localRoot: __dirname + '/build',
-    remoteRoot: '/www/terifash.pro.test',
+    remoteRoot: '/www/terifash.pro',
     include: ['*'],
     deleteRemote: true
 }

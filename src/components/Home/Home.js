@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-
-import MainSocialLink from "../MainSocialLink";
+import MainSocialLinks from "../MainSocialLinks";
 // import MainLink from "../MainLink";
+import settings from "../../store/settings.js"
 import MainContainer from "../MainContainer";
 import BtnTilt from "../BtnTilt";
+import GoSkillLink from "../GoSkillLink";
 import load from "../../utilities/data/load";
 
 // import './Home.scss'
@@ -13,6 +14,7 @@ class Home extends Component {
     super(props);
     this.state = {
       data: null,
+      socialLinks: settings.socialLinks,
       term: "",
       active: 0,
     };
@@ -32,7 +34,10 @@ class Home extends Component {
         <MainContainer className="Home-page page-wrapper">
           {/*<MainLink />*/}
           <BtnTilt />
-          <MainSocialLink />
+          <div className="Link-wrapper">
+            <MainSocialLinks data={this.state.socialLinks} />
+            <GoSkillLink />
+          </div>
         </MainContainer>
       </>
     );

@@ -1,0 +1,11 @@
+.Skill-link {
+  margin-left: 10px;  
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease-in;
+
+  &:hover {
+    transition: color 0.3s ease-out;
+    color: $purple;
+  }
+}

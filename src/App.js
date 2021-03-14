@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 import {
   // About,
@@ -6,33 +6,37 @@ import {
   // Development,
   Home,
   Main,
-  NotFound
+  NotFound,
 } from "./utilities/navigation/routes.js";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
-import Firebase from 'firebase/app';
-import 'firebase/firestore';
+
+
+import Firebase from "firebase/app";
+import "firebase/firestore";
 import firebaseConfig from "./utilities/data/firebase";
 
 import postData from "./store/articles/post-data";
 import ArticleListItem from "./components/ArticleListItem";
 
+library.add(fab)
 
 const DetailedPost = () => {
   const { id } = useParams();
   const [post, setPost] = useState({
     title: "",
     author: "",
-    content: ""
+    content: "",
   });
 
   useEffect(() => {
-    const requiredPost = postData.find(postItem => postItem.id === id);
+    const requiredPost = postData.find((postItem) => postItem.id === id);
     setPost(requiredPost);
   }, [id]);
 
   return <ArticleListItem {...post} />;
 };
-
 
 function App() {
   Firebase.initializeApp(firebaseConfig);
