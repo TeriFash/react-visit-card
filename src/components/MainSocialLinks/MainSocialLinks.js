@@ -13,11 +13,11 @@ const MainSocialLinksItem = (props) => {
 }
 
 const MainSocialLinks = (props) => {
-  const socialLinks  = props.data
+  const { data } = props
   
   return (
     <ul className="Main-social-link">
-      {socialLinks.map((item) =>
+      {data.map((item) =>
         <MainSocialLinksItem key={item.link} value={item} />
       )}
     </ul>

@@ -1,13 +1,13 @@
 import React from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
-import HomeComponent from "../../components/Home";
-import DevComponent from "../../components/Development";
-import ServicesComponent from "../../components/Services";
-import AboutComponent from "../../components/About";
+import HomeComponent from "components/Home";
+import DevComponent from "components/Development";
+import ServicesComponent from "components/Services";
+import AboutComponent from "components/About";
 
-import BtnHome from "../../components/BtnHome";
-import ArticleList from "../../components/ArticleList";
-import ThemeSwitcher from "../../components/ThemeSwitcher";
+import BtnHome from "components/BtnHome";
+import ArticleList from "components/ArticleList";
+import ThemeSwitcher from "components/ThemeSwitcher";
 
 
 

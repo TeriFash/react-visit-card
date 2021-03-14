@@ -1,15 +1,15 @@
 .Development-page {
     display: block;
     overflow-y: scroll;
-    // overflow-X: hidden;
-
+    overflow-X: hidden;
     height: calc(100% - 120px);
-    width: calc(100% - 80px);
-    margin: 0 auto;
-    padding: 40px 0;
+    width: calc(100% - 120px);
+    // margin: 0 auto;
+    // padding-top: 120px;
 
     &::-webkit-scrollbar {
       width: 0px;
+      display: none;
     }
   
     & .Container {
@@ -37,3 +37,35 @@
     }
   }
   
+  .dev {
+    padding: 20px 0;
+    // margin-top: 100px;
+    position: relative;
+
+    &::before {
+      // background: transparent;
+      content: "";
+      display: block;
+      height: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      top: 20px;
+      width: calc(100vw - 20px);
+      background: linear-gradient(to top, transparent 0%, var(--light) 50%);
+    }
+
+    &::after {
+      // background: transparent;
+      content: "";
+      display: block;
+      height: 150px;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      bottom: 50px;
+      width: calc(100vw - 20px);
+      background: linear-gradient(to bottom, transparent 0%, var(--light) 50%);
+    }
+
+  }

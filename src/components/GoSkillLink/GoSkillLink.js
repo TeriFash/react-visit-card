@@ -4,21 +4,14 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
 
 
- const GoSkillLink = (props) => {
-  const { data, ...rest } = props;
+ const GoSkillLink = () => {
   const slot = "Show skills...";
 
   return (
-    // <a href={data.url} className="Skill-link" {...rest} rel="noopener noreferrer" target="_blank">
-    //   <span>{ slot }</span>  
-    //   <FontAwesomeIcon icon={faChevronRight}/>
-    // </a>
-
-          <Link className="Skill-link" tag="a" to="me/dev">
-            <span>{ slot }</span>  
-            <FontAwesomeIcon icon={faChevronRight}/>
-          </Link> 
-
+      <Link className="Skill-link" to={{pathname: 'me/dev', hash: '#skills'}}>
+        <span>{ slot }</span>  
+        <FontAwesomeIcon icon={ faChevronRight }/>
+      </Link> 
   );
 }
 

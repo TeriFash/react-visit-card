@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Routes, Route, useParams, useLocation } from "react-router-dom";
+import React from "react"; // useState, useEffect
+import { Routes, Route } from "react-router-dom"; // useParams
 import {
   // About,
   // Services,
@@ -7,35 +7,35 @@ import {
   Home,
   Main,
   NotFound,
-} from "./utilities/navigation/routes.js";
+} from "utilities/navigation/routes.js";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import Firebase from "firebase/app";
-import "firebase/firestore";
-import firebaseConfig from "./utilities/data/firebase";
-import postData from "./store/articles/post-data";
-import ArticleListItem from "./components/ArticleListItem";
+// import Firebase from "firebase/app";
+// import "firebase/firestore";
+// import firebaseConfig from "./utilities/data/firebase";
+// import postData from "./store/articles/post-data";
+// import ArticleListItem from "./components/ArticleListItem";
 
 library.add(fab)
 
-const DetailedPost = () => {
-  const { id } = useParams();
-  const [post, setPost] = useState({
-    title: "",
-    author: "",
-    content: "",
-  });
+// const DetailedPost = () => {
+//   const { id } = useParams();
+//   const [post, setPost] = useState({
+//     title: "",
+//     author: "",
+//     content: "",
+//   });
 
-  useEffect(() => {
-    const requiredPost = postData.find((postItem) => postItem.id === id);
-    setPost(requiredPost);
-  }, [id]);
+//   useEffect(() => {
+//     const requiredPost = postData.find((postItem) => postItem.id === id);
+//     setPost(requiredPost);
+//   }, [id]);
 
-  return <ArticleListItem {...post} />;
-};
+//   return <ArticleListItem {...post} />;
+// };
 
 function App() {
-  Firebase.initializeApp(firebaseConfig);
+  // Firebase.initializeApp(firebaseConfig);
 
   return (
     <div className="App">

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import MainSocialLinks from "../MainSocialLinks";
+import MainSocialLinks from "components/MainSocialLinks";
 // import MainLink from "../MainLink";
-import settings from "../../store/settings.js"
-import MainContainer from "../MainContainer";
-import BtnTilt from "../BtnTilt";
-import GoSkillLink from "../GoSkillLink";
-import load from "../../utilities/data/load";
+import settings from "store/settings.js"
+import MainContainer from "components/MainContainer";
+import BtnTilt from "components/BtnTilt";
+import GoSkillLink from "components/GoSkillLink";
+import load from "utilities/data/load";
 
 // import './Home.scss'
 

@@ -1,19 +1,8 @@
-import React, { useRef } from "react";
+import React, { useState, useEffect } from "react";
 
-const BtnUpload = () => {
-  const uploadRef = useRef(null);
-
-  function uploaClick(e) {
-    //e.preventDefault();
-    uploadRef.current.classList.add("loading");
-
-    setTimeout(function () {
-      uploadRef.current.classList.remove("loading");
-    }, 4200);
-  }
-
+const UploadImage = () => {
   return (
-    <div ref={uploadRef} onClick={uploaClick} className="Btn-upload">
+    <>
       <div className="path">
         <div className="arrow"></div>
         <svg>
@@ -36,7 +25,26 @@ const BtnUpload = () => {
           </svg>
         </div>
       </div>
+    </>
+  );
+};
 
+const BtnUpload = () => {
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading((loading) => (loading = false));
+    }, 4200);
+  }, [loading]);
+
+  const uploadClick = () => {
+    setLoading((loading) => (loading = true));
+  };
+
+  return (
+    <div className={`Btn-upload ${loading ? 'loading' : ''}`} onClick={ uploadClick }>
+      <UploadImage />
       <span className="info-text">Download <span> CV</span></span>
     </div>
   );
