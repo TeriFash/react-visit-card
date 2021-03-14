@@ -8,7 +8,6 @@ import {
 } from "react-spring";
 
 // import './FlipperСard.scss'
-// const data = skills.hard;
 
 const FlipperСard = (props) => {
   const [open, set] = useState(false);

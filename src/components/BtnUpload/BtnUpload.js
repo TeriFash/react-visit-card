@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const UploadImage = () => {
   return (
@@ -31,19 +31,24 @@ const UploadImage = () => {
 
 const BtnUpload = () => {
   const [loading, setLoading] = useState(false)
+  const titleRef = useRef();
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading((loading) => (loading = false));
-    }, 4200);
+    if(loading) {
+      setTimeout(() => {
+        titleRef.current.classList.remove("loading");
+        setLoading(false)
+      }, 4200);
+    }
   }, [loading]);
 
-  const uploadClick = () => {
-    setLoading((loading) => (loading = true));
+  const handleClick = () => {
+    titleRef.current.classList.add("loading")
+    setLoading(true)
   };
 
   return (
-    <div className={`Btn-upload ${loading ? 'loading' : ''}`} onClick={ uploadClick }>
+    <div ref={titleRef} className="Btn-upload" onClick={handleClick}>
       <UploadImage />
       <span className="info-text">Download <span> CV</span></span>
     </div>

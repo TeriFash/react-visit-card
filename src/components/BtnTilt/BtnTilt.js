@@ -1,8 +1,8 @@
 import React from "react";
-import MoveTilt from "../MoveTilt";
-import CvLink from "../CvLink";
-import BtnUpload from "../BtnUpload";
-import settings from "../../store/settings.js"
+import MoveTilt from "components/MoveTilt";
+import CvLink from "components/CvLink";
+import BtnUpload from "components/BtnUpload";
+import settings from "store/settings.js"
 
 // import './BtnTilt.scss'
 
