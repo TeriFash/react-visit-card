@@ -6,7 +6,7 @@ const MainSocialLinksItem = (props) => {
   return (
     <li>
       <a rel="noopener noreferrer" target="_blanck" href={props.value.link}>
-        <FontAwesomeIcon icon={['fab', props.value.icon]} />
+        <FontAwesomeIcon icon={[ 'fab', props.value.icon ]} />
       </a> 
     </li>
   );

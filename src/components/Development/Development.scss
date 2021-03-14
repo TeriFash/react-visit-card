@@ -1,22 +1,30 @@
 .Development-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: block;
+    overflow-y: scroll;
+    // overflow-X: hidden;
+
     height: calc(100% - 120px);
     width: calc(100% - 80px);
+    margin: 0 auto;
+    padding: 40px 0;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
   
     & .Container {
+      width: 100%;
       position: relative;
       display: grid;
-      grid-template-columns: repeat(4, minmax(100px, 1fr));
-      grid-gap: 25px;
-      padding: 25px;
-      background: $white;
+      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+      grid-template-rows: repeat(auto-fill, 60px);
+      grid-gap: 10px;
+      padding: 20px;
       border-radius: 5px;
       cursor: pointer;
       box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
       will-change: width, height;
+      margin-bottom: 60px;
     }
   
     & .Item {

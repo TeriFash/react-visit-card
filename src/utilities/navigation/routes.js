@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import HomeComponent from "../../components/Home";
 import DevComponent from "../../components/Development";
 import ServicesComponent from "../../components/Services";
@@ -8,6 +8,7 @@ import AboutComponent from "../../components/About";
 import BtnHome from "../../components/BtnHome";
 import ArticleList from "../../components/ArticleList";
 import ThemeSwitcher from "../../components/ThemeSwitcher";
+
 
 
 // const Main = () => <h1> Main page</h1>;
@@ -116,7 +117,8 @@ import ThemeSwitcher from "../../components/ThemeSwitcher";
 
 
 function Main() {
-  // let navigate = useNavigate();
+  const location = useLocation().pathname.split('/');
+  const locationMarc =  location[location.length - 1];
 
   return (
     <>
@@ -129,11 +131,9 @@ function Main() {
         <Link to="story">About</Link>
       </nav> */}
 
-      <main className="App-wrapper content-container">
-
+      <main className={`App-wrapper content-container ${locationMarc}`}>
           <BtnHome />
           <Outlet />
-
       </main>
     </>
   );

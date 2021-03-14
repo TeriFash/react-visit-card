@@ -6,12 +6,11 @@ import {
   config,
   animated,
 } from "react-spring";
-import { devData } from "../../store/data";
 
 // import './FlipperСard.scss'
-const data = devData;
+// const data = skills.hard;
 
-const FlipperСard = () => {
+const FlipperСard = (props) => {
   const [open, set] = useState(false);
 
   setTimeout(() => {
@@ -22,15 +21,15 @@ const FlipperСard = () => {
   const { size, opacity, ...rest } = useSpring({
     ref: springRef,
     config: config.stiff,
-    from: { size: "20%", background: "#f57972" },
-    to: { size: open ? "100%" : "20%", background: open ? "white" : "#ee6058" },
+    from: { size: "20%", background: "white" },
+    to: { size: open ? "100%" : "20%", background: open ? "white" : "white" },
   });
 
   const transRef = useRef();
-  const transitions = useTransition(open ? data : [], (item) => item.name, {
+  const transitions = useTransition(open ? props.data : [], (item) => item.title, {
     ref: transRef,
     unique: true,
-    trail: 400 / data.length,
+    trail: 200 / props.data.length,
     from: { opacity: 0, transform: "scale(0)" },
     enter: { opacity: 1, transform: "scale(1)" },
     leave: { opacity: 0, transform: "scale(0)" },
@@ -42,21 +41,30 @@ const FlipperСard = () => {
   ]);
 
   return (
+    <>
+    <h2>{props.title}</h2>
     <animated.div
       className="Container"
-      style={{ ...rest, width: size, height: size }}
+      style={{ ...rest, width: size, height: "auto" }}
       onClick={() => set((open) => !open)}
     >
       {transitions.map(({ item, key, props }) => (
+        
         <animated.div
-          className="Item"
+          className="Item Flipper-card-item"
           key={key}
           style={{ ...props, background: item.css }}
         >
-          {/* <div>{item.name}</div> */}
+          <a title={item.title} href={item.url} className="Flipper-card-item__link" {...rest} rel="noopener noreferrer" target="_blank">
+            <img alt={item.text} src={item.img}/>
+            <span>{item.title}</span>
+          </a>
+          
         </animated.div>
       ))}
     </animated.div>
+    </>
+    
   );
 }
 

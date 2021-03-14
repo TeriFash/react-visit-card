@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, useParams } from "react-router-dom";
+import { Routes, Route, useParams, useLocation } from "react-router-dom";
 import {
   // About,
   // Services,
-  // Development,
+  Development,
   Home,
   Main,
   NotFound,
 } from "./utilities/navigation/routes.js";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-
-
-
 import Firebase from "firebase/app";
 import "firebase/firestore";
 import firebaseConfig from "./utilities/data/firebase";
-
 import postData from "./store/articles/post-data";
 import ArticleListItem from "./components/ArticleListItem";
 
@@ -54,8 +50,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="me" element={<Main />}>
-          {/*<Route path="dev" element={<Development />} />
-          <Route path="services" element={<Services />} />
+          <Route path="dev" element={<Development />} />
+          {/*<Route path="services" element={<Services />} />
           <Route path="services/:id" element={<DetailedPost />} />
           <Route path="story" element={<About />} />*/}
         </Route>

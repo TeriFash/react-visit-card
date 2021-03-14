@@ -1,22 +1,50 @@
-import React, { Component } from "react";
+import React from "react";
 import FlipperСard from "../FlipperСard";
+import { skills } from "../../store/data";
+// import { useLocation  } from 'react-router-dom';
 
-class Development extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+// const location = useLocation();
 
-  render() {
+// function Locate() {
+//   const location = useLocation();
+//   useEffect(() => {
+//     const currentPath = location.pathname;
+//   }, [location]);
+//   return <p>Profile</p>;
+// }
+
+const Development = () => {
+  // const location = useLocation();
+
+  // useEffect(() => {
+  //   const currentPath = location.pathname;
+  //   console.log('-----location in', location);
+
+  // }, [location]);
+
+  // console.log('-----location', location.pathname);
+
+  const { managment, soft, hard} = skills;
+    const dataList = [{
+      title: 'Technology',
+      data: hard
+    },
+    {
+      title: 'Tools',
+      data: soft
+    },
+    {
+      title: 'Managment',
+      data: managment
+    }]
+    
     return (
       <section className="Development-page page-wrapper">
-        <h1>Development</h1>
-        <>
-          <FlipperСard />
-        </>
+        {dataList.map((item) =>
+            <FlipperСard title={item.title} key={item.title} data={item.data} />
+        )}
       </section>
     );
-  }
 }
 
 export default Development;
