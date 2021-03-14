@@ -3,6 +3,22 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   cvLinks: {
+    typeOne: {
+      type: '_self',
+      title: 'Download CV',
+      link: {
+        en: 'https://docs.google.com/document/d/1QUN8eLY4xA-7wuqlNIEfFJyETuEGKz9e4DqD8incN-8/export?format=pdf',
+        ru: 'https://docs.google.com/document/d/1-wco4u22lsKdYxYPDjzX-7awq_xub0Yla-ooK6EBfQI/export?format=pdf',
+      }
+    },
+    typeTwo: {
+      type: '_blank',
+      title: 'Go my Bio',
+      link: {
+        en: 'https://docs.google.com/document/d/1QUN8eLY4xA-7wuqlNIEfFJyETuEGKz9e4DqD8incN-8/edit?usp=sharing',
+        ru: 'https://docs.google.com/document/d/1-wco4u22lsKdYxYPDjzX-7awq_xub0Yla-ooK6EBfQI/edit?usp=sharing',
+      }
+    },
     en: {
       view:
         "https://docs.google.com/document/d/1QUN8eLY4xA-7wuqlNIEfFJyETuEGKz9e4DqD8incN-8/edit?usp=sharing",

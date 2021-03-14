@@ -1,11 +1,61 @@
+$height-size: 35px;
+
 .Skill-link {
   margin-left: 10px;  
-  font-size: 16px;
-  font-weight: 600;
-  transition: color 0.3s ease-in;
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: $height-size;
+  min-width: 120px;
+
+  span {
+    display: inline-flex;
+    width: auto;
+    align-items: center;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 2;
+
+    &::after {
+      transition-duration: 2s;
+      transition: all 0.5s ease-in;
+      z-index: 4;
+      background: var(--light);
+      width: 130px;
+      content: '';
+      display: block;
+      height: $height-size;
+      top: 0;
+      left: -12px;
+      position: absolute;
+    }
+  }
+
+  svg {
+    transition: all 0.4s ease-in;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 5;
+  }
 
   &:hover {
-    transition: color 0.3s ease-out;
+    transition-duration: 2s;
+    svg {
+    transition: all 0.4s ease-out;
+    transition-duration: 2s;
     color: $purple;
+    left: 100%;
+    }
+
+    span {
+      &::after {
+        transition: all 0.3s ease-out;
+        transition-duration: 2s;
+        left: 100%;
+      }
+    }
   }
 }

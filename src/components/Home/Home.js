@@ -15,6 +15,7 @@ class Home extends Component {
     this.state = {
       data: null,
       socialLinks: settings.socialLinks,
+      goSkillLink: settings.goSkillLink,
       term: "",
       active: 0,
     };
@@ -36,7 +37,7 @@ class Home extends Component {
           <BtnTilt />
           <div className="Link-wrapper">
             <MainSocialLinks data={this.state.socialLinks} />
-            <GoSkillLink />
+            <GoSkillLink data={this.state.goSkillLink} />
           </div>
         </MainContainer>
       </>

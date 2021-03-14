@@ -1,15 +1,15 @@
 import React from "react";
-import settings from "../../store/settings.js"
-
-const lookUrl = settings.goSkillLink.url;
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
  const GoSkillLink = (props) => {
-  const { type, ...rest } = props;
-  const slot = "Show all skills...";
+  const { data, ...rest } = props;
+  const slot = "Show skills...";
 
   return (
-    <a href={lookUrl}  className="Skill-link" {...rest} rel="noreferrer" target="_blank">
-      {slot}
+    <a href={data.url} className="Skill-link" {...rest} rel="noopener noreferrer" target="_blank">
+      <span>{ slot }</span>  
+      <FontAwesomeIcon icon={faChevronRight}/>
     </a>
   );
 }

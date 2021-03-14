@@ -1,18 +1,14 @@
 import React from "react";
-import settings from "../../store/settings.js"
-
-const lookUrl = settings.cvLinks.en.view;
-const downloadUrl = settings.cvLinks.en.download;
 
  const CvLink = (props) => {
-  const { type, ...rest } = props;
-  const look = type === "look";
-  const url = look ? lookUrl : downloadUrl;
-  const slot = look ? "Go my Bio" : props.children;
+  const { type, link, title, ...rest } = props;
+  const look = type === "_blank";
+  const lang = "en";
+  const slot = look ? title : props.children;
 
   return (
-    <a href={url} {...rest} download={type !== 'look'} target={type === 'look' ? '_blanck' : '_self'}>
-      {slot}
+    <a rel="noopener noreferrer" href={link[lang]} {...rest} download={!look} target={type}>
+      { slot }
     </a>
   );
 }
