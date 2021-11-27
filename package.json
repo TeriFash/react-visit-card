@@ -3,35 +3,45 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-brands-svg-icons": "^5.15.2",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "firebase": "latest",
-    "history": "^5.0.0",
+    "history": "^5.1.0",
     "node-sass": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-router": "^6.0.0-alpha.2",
-    "react-router-dom": "^6.0.0-beta.0",
+    "react-router": "^6.0.2",
+    "react-router-dom": "^6.0.2",
     "react-scripts": "latest",
     "react-spring": "latest",
-    "vanilla-tilt": "latest"
+    "vanilla-tilt": "latest",
+    "yarn": "^1.22.17"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "precommit": "lint-staged",
+    "format": "prettier --write \"**/*.{js,md,ts,json}\" *.{js,md,ts,json}",
     "prod": "react-scripts build && yarn global add serve && serve -s build",
     "ftp-deploy": "node deploy.js",
     "deploy": "yarn ftp-deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "lint-staged": {
+    "*.{js,md,ts,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "browserslist": {
     "production": [
@@ -47,6 +57,18 @@
   },
   "devDependencies": {
     "ftp-deploy": "^2.4.1",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "babel-cli": "^6.7.5",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-react": "^6.5.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "lint-staged": "9.4.1",
+    "prettier": "^1.12.1"
   }
 }
