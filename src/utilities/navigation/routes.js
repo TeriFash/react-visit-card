@@ -6,7 +6,7 @@ import ServicesComponent from "components/Services";
 import AboutComponent from "components/About";
 
 import BtnHome from "components/BtnHome";
-import ArticleList from "components/ArticleList";
+// import ArticleList from "components/ArticleList";
 import ThemeSwitcher from "components/ThemeSwitcher";
 
 
@@ -170,7 +170,7 @@ function Services() {
   return (
     <>
       <ServicesComponent>
-        <ArticleList />
+        {/* <ArticleList /> */}
       </ServicesComponent>
 
 

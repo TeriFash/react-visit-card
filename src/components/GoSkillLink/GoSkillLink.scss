@@ -1,7 +1,7 @@
 $height-size: 35px;
 
 .Skill-link {
-  margin-left: 10px;  
+  margin-left: 10px;
   display: flex;
   position: relative;
   align-items: center;
@@ -11,6 +11,7 @@ $height-size: 35px;
   span {
     display: inline-flex;
     width: auto;
+
     align-items: center;
     height: 100%;
     font-size: 16px;
@@ -18,11 +19,11 @@ $height-size: 35px;
     z-index: 2;
 
     &::after {
-      transition: all 0.5s ease-in;
+      transition: transform 0.5s ease-in, left 0.5s ease-in;
       z-index: 4;
-      background: var(--light);
+      background-color: var(--light);
       width: 130px;
-      content: '';
+      content: "";
       display: block;
       height: $height-size;
       top: 0;
@@ -32,7 +33,7 @@ $height-size: 35px;
   }
 
   svg {
-    transition: all 0.4s ease-in;
+    transition: transform 0.4s ease-in, left 0.4s ease-in, color 0.4s ease-in;
     top: 50%;
     position: absolute;
     transform: translateY(-50%);
@@ -41,17 +42,20 @@ $height-size: 35px;
   }
 
   &:hover {
-    
+  }
+
+  &--hover {
     svg {
-    transition: all 0.4s ease-out 0.5s;
-    transition-duration: 2s;
-    color: $purple;
-    left: 100%;
+      transition: transform 0.4s ease-out 0.4s, left 0.4s ease-out 0.5s,
+        color 0.4s ease-out 0.2s;
+      transition-duration: 2s;
+      color: $purple;
+      left: 100%;
     }
 
     span {
       &::after {
-        transition: all 0.3s ease-out 0.5s;
+        transition: transform 0.3s ease-out 0.5s, left 0.3s ease-out 0.5s;
         transition-duration: 2s;
         left: 100%;
       }
