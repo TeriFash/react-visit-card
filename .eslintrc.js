@@ -1,4 +1,13 @@
 module.exports = {
+  "env": {
+    "es6": true,
+    "browser": true,
+    "mocha": true,
+    "node": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
+  "root": true,
   extends: ['airbnb', 'prettier', 'prettier/react'],
   parser: 'babel-eslint',
   rules: {
