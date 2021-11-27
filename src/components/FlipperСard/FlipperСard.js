@@ -41,7 +41,7 @@ const FlipperСard = (props) => {
 
   return (
     <>
-    <h2>{props.title}</h2>
+    {/* <h2>{props.title}</h2> */}
     <animated.div
       className="Container"
       style={{ ...rest, width: size, height: "auto" }}

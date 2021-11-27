@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
  const GoSkillLink = () => {
@@ -9,15 +9,15 @@ import { Link } from "react-router-dom";
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-      <Link 
-     
+      <a 
+      target="_blank"
         className={`Skill-link ${isHovered ? 'Skill-link--hover' : ''}` } 
-        to={{pathname: 'me/dev', hash: '#skills'}} 
+        href='https://terifash.github.io/cv-skills-board/' 
         onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}>
+        onMouseLeave={() => setIsHovered(false)} rel="noreferrer">
         <span>{ slot }</span>  
         <FontAwesomeIcon icon={ faChevronRight }/>
-      </Link> 
+      </a> 
   );
 }
 
