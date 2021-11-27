@@ -19,9 +19,10 @@ $height-size: 35px;
     z-index: 2;
 
     &::after {
-      transition: transform 0.5s ease-in, left 0.5s ease-in;
+      transition: transform 0.5s ease-in, left 0.5s ease-in,
+        background-color 750ms ease-in-out 0;
       z-index: 4;
-      background-color: var(--light);
+      background-color: $global-background-secondary;
       width: 130px;
       content: "";
       display: block;
@@ -46,9 +47,9 @@ $height-size: 35px;
 
   &--hover {
     svg {
-      transition: transform 0.4s ease-out 0.4s, left 0.4s ease-out 0.5s,
+      transition: transform 0.4s ease-out 0.4s, left 0.4s ease-out 0.1s,
         color 0.4s ease-out 0.2s;
-      transition-duration: 2s;
+      transition-duration: 1s;
       color: $purple;
       left: 100%;
     }
@@ -56,7 +57,7 @@ $height-size: 35px;
     span {
       &::after {
         transition: transform 0.3s ease-out 0.5s, left 0.3s ease-out 0.5s;
-        transition-duration: 2s;
+        transition-duration: 1.5s;
         left: 100%;
       }
     }

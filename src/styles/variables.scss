@@ -2,45 +2,45 @@
 
 // Color system
 
-$white:    #fff !default;
-$black:    #000 !default;
-$gray:    #393939 !default;
-$indigo:  #36377a !default;
-$purple:  #5c5edc !default;
-$red:     #ee6058 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
+$white: #fff !default;
+$black: #000 !default;
+$gray: #393939 !default;
+$indigo: #36377a !default;
+$purple: #5c5edc !default;
+$red: #ee6058 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
 
 $colors: (
-  "indigo":     $indigo,
-  "purple":     $purple,
-  "orange":     $orange,
-  "red":        $red,
-  "yellow":     $yellow,
-  "green":      $green,
-  "white":      $white,
-  "gray":       $gray,
+  "indigo": $indigo,
+  "purple": $purple,
+  "orange": $orange,
+  "red": $red,
+  "yellow": $yellow,
+  "green": $green,
+  "white": $white,
+  "gray": $gray,
 ) !default;
 
-$primary:       $red !default;
-$secondary:     $gray !default;
-$success:       $green !default;
-$info:          $indigo !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         #EBECF0 !default;
-$dark:          $gray !default;
+$primary: $red !default;
+$secondary: $gray !default;
+$success: $green !default;
+$info: $indigo !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: #ebecf0 !default;
+$dark: $gray !default;
 
 $theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
 ) !default;
 
 $regular: 400 !default;
@@ -54,12 +54,13 @@ $opacity-9: 0.9 !default;
 
 $shadow: 0px 4px 10px rgba($gray, 0.05) !default;
 
-$global-font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Ubuntu', 'sans-serif' !default;
+$global-font-family: "Poppins", "Segoe UI", "Roboto", "Ubuntu", "sans-serif" !default;
 $global-text-color: var(--dark) !default;
 $global-font-size: 16px !default;
 $global-font-weight: $regular !default;
 $global-letter-spacing: normal !default;
 $global-background: var(--dark) !default;
+$global-background-secondary: var(--light) !default;
 $global-selection-color: $white !default;
 $global-selection-background: $primary !default;
 
@@ -67,4 +68,3 @@ $btn-upload-back-wave: var(--btn-upload-back-wave);
 $btn-upload-front-wave: var(--btn-upload-front-wave);
 $btn-upload-border: var(--btn-upload-front-wave);
 $btn-upload-border-active: var(--btn-upload-border-active);
-

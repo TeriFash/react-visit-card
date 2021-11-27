@@ -1,6 +1,6 @@
 html {
     .is-theme-transition {
-        transition: all 750ms;
+        transition: all 750ms ease-in-out 0;
         transition-delay: 0;
     }
 
