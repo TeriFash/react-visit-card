@@ -4,19 +4,21 @@
   "private": true,
   "devDependencies": {
     "@babel/cli": "^7.2.3",
-    "@babel/runtime": "7.13.8",
     "@babel/core": "^7.18.9",
-  	"@babel/preset-env": "^7.18.9",
-  	"@babel/preset-react": "^7.18.6",
-  	"@babel/eslint-parser": "7.16.3",
+    "@babel/eslint-parser": "7.16.3",
     "@babel/plugin-proposal-function-bind": "7.16.0",
+    "@babel/preset-env": "^7.18.9",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/runtime": "7.13.8",
     "babel-loader": "^8.2.5",
-  	"dotenv": "^16.0.1",
-  	"ftp-deploy": "^2.4.1",
-    "npm-run-all": "^4.1.5"
+    "dotenv": "^16.0.1",
+    "eslint": "^8.20.0",
+    "ftp-deploy": "^2.4.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1"
   },
   "dependencies": {
-	  "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
@@ -33,7 +35,6 @@
     "react-spring": "^9.5.2",
     "sass": "^1.54.0",
     "vanilla-tilt": "^1.7.2",
-	  "yarn": "^1.22.17",
     "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.5.3",
     "workbox-broadcast-update": "^6.5.3",
@@ -46,7 +47,8 @@
     "workbox-range-requests": "^6.5.3",
     "workbox-routing": "^6.5.3",
     "workbox-strategies": "^6.5.3",
-    "workbox-streams": "^6.5.3"
+    "workbox-streams": "^6.5.3",
+    "yarn": "^1.22.17"
   },
   "scripts": {
     "start": "react-scripts start --open",

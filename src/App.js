@@ -7,7 +7,7 @@ import {
   Home,
   Main,
   NotFound,
-} from "utilities/navigation/routes.js";
+} from "./utilities/navigation/routes.js";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 // import Firebase from "firebase/app";
