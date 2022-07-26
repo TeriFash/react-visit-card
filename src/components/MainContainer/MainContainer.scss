@@ -1,0 +1,33 @@
+.Main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .Main-text {
+    font-weight: 800;
+    font-size: calc(0.5em + 13vw);
+    margin-bottom: 0;
+    color: $global-text-color;
+    user-select: none;
+  
+    .bold {
+      display: inline-block;
+      font-weight: normal;
+      will-change: transform;
+  
+      &:first-child {
+        margin-left: 10px;
+      }
+    }
+  }
+  
+  @media screen and (min-width: 940px) {
+    .Main-text {
+      font-size: 140px;
+    }
+  }
+  

@@ -1,0 +1,53 @@
+// .padding {
+//     &--none {
+//         padding: 0 !important;
+//     }
+
+//     @each $size, $value in $paddings {
+//         &--#{$size} {
+//             padding: $value;
+//         }
+//     }
+// }
+
+// @each $position in top, right, bottom, left {
+//     .padding-#{$position} {
+//         @each $size, $value in $paddings {
+//             &--none {
+//                 padding-#{$position}: 0 !important;
+//             }
+
+//             &--#{$size} {
+//                 padding-#{$position}: $value;
+//             }
+//         }
+//     }
+// }
+
+// .padding-horizontal {
+//     @each $size, $value in $paddings {
+//         &--#{$size} {
+//             padding-right: $value;
+//             padding-left: $value;
+//         }
+
+//         &--none {
+//             padding-right: 0 !important;
+//             padding-left: 0 !important;
+//         }
+//     }
+// }
+
+// .padding-vertical {
+//     @each $size, $value in $paddings {
+//         &--#{$size} {
+//             padding-top: $value;
+//             padding-bottom: $value;
+//         }
+
+//         &--none {
+//             padding-top: 0 !important;
+//             padding-bottom: 0 !important;
+//         }
+//     }
+// }

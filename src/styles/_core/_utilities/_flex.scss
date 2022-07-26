@@ -1,0 +1,85 @@
+// .flex {
+//     display: flex;
+
+//     $justified: (
+//         center: center,
+//         left: flex-start,
+//         right: flex-end,
+//         between: space-between,
+//         around: space-around,
+//     );
+
+//     @each $key, $value in $justified {
+//         &--justify-#{$key} {
+//             justify-content: $value;
+//         }
+//     }
+
+//     @each $directions in column, column-reverse, row, row-reverse {
+//         &--#{$directions} {
+//             flex-direction: $directions;
+//         }
+//     }
+
+//     &--align-center {
+//         align-items: center;
+//     }
+
+//     &--align-top {
+//         align-items: flex-start;
+//     }
+
+//     &--align-bottom {
+//         align-items: flex-end;
+//     }
+
+//     &--wrap {
+//         flex-wrap: wrap;
+//     }
+
+//     &--nowrap {
+//         flex-wrap: nowrap;
+//     }
+// }
+
+// .row {
+//     display: flex;
+//     flex-wrap: wrap;
+//     width: 100%;
+//     box-sizing: border-box;
+// }
+
+// .col {
+//     flex: 1;
+//     display: block;
+//     width: 100%;
+//     box-sizing: border-box;
+// }
+
+// // Flex helper
+
+// %flex-center {
+//     @extend .flex;
+//     @extend .flex--justify-center;
+//     @extend .flex--align-center;
+// }
+
+// %flex {
+//     @extend .flex;
+// }
+
+// %flex--justify-center {
+//     @extend .flex--justify-center;
+// }
+
+// %flex--align-center {
+//     @extend .flex--align-center;
+// }
+
+// %flex--column {
+//     @extend .flex--column;
+// }
+
+// %flex--row {
+//     @extend .flex--row;
+// }

@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  font-family: $global-font-family;
+
+  &[disabled] {
+    pointer-events: none;
+  }
+}
+
+body {
+  font-family: $global-font-family;
+  color: $global-text-color;
+  font-size: $global-font-size;
+  letter-spacing: $global-letter-spacing;
+  background: $global-background;
+  font-weight:  $global-font-weight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  margin: 0;
+}
+
+::selection, 
+::-moz-selection {
+  color: $global-selection-color;
+  background: rgba($global-selection-background, 0.7);
+}
+
+#root {
+  overflow: hidden;
+}
+
+a {
+  color: $global-text-color;
+  text-decoration: none;
+}
+
+.App {
+  position: relative;
+  overflow: hidden;
+  background-color: $global-background;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(16px + 2vmin);
+  color: $global-text-color;
+}
+
+.App-wrapper {
+
+  background-color: var(--light);
+  flex-direction: column;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.page-wrapper{
+  width: inherit;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.Services-page.page-wrapper {
+  overflow: hidden;
+  flex-direction: column;
+
+}
+
+.Not-found-page {
+
+}

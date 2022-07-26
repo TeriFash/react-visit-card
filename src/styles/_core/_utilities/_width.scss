@@ -1,0 +1,53 @@
+// .child-width {
+//     @for $i from 2 through 10 {
+//         &--1-#{$i} {
+//             & > * {
+//                 width: 100%/$i;
+//             }
+//         }
+//     }
+// }
+
+// @each $breakpoint, $value in $--breakpoints {
+//     @media only screen and #{$value} {
+//         .child-width {
+//             @for $i from 1 through 10 {
+//                 &--1-#{$i}\@#{$breakpoint} {
+//                     & > * {
+//                         width: 100%/$i;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .width {
+//     &--full {
+//         width: 100%;
+//     }
+
+//     &--full-flex {
+//         flex: 0 0 100%;
+//     }
+
+//     &__auto {
+//         width: auto;
+//     }
+
+//     &--expand {
+//         flex-grow: 1;
+//     }
+
+//     @for $i from 2 through 10 {
+//         &--1-#{$i} {
+//             width: 100%/$i;
+//         }
+
+//         $numerator: $i - 1;
+
+//         &--#{$numerator}-#{$i} {
+//             width: 100%/$i*$numerator;
+//         }
+//     }
+// }

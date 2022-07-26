@@ -1,0 +1,66 @@
+html {
+    .is-theme-transition {
+        transition: all 750ms ease-in-out 0;
+        transition-delay: 0;
+    }
+
+    &.theme-transition {
+        @extend .is-theme-transition;
+
+        .App, .App-wrapper {
+            @extend .is-theme-transition;
+        }
+
+        // & *, 
+        // & *::before, 
+        // & *::after {
+        //     @extend .theme-transition;
+        // }
+    }
+}
+
+html {
+
+    @each $color, $value in $colors {
+        --#{$color}: #{$value};
+    }
+    
+    @each $color, $value in $theme-colors {
+        --#{$color}: #{$value};
+    }
+
+    --btn-upload-back-wave: var(--indigo);
+    --btn-upload-front-wave: var(--purple);
+    --btn-upload-border: var(--btn-upload-front-wave);
+    --btn-upload-border-active:  var(--indigo);
+
+    &[theme="dark"] {
+        $light:         #393939;
+        $dark:          #EBECF0;
+        $secondary:     #EBECF0 ;
+    
+        $theme-colors: (
+            "light":      $light,
+            "dark":       $dark,
+            "secondary":  $secondary
+        );
+    
+        @each $color, $value in $theme-colors {
+            --#{$color}: #{$value};
+        }
+    
+        --btn-upload-back-wave: var(--dark);
+        --btn-upload-border-active: var(--dark);
+    }
+
+    &[theme="light"] {
+        
+        @each $color, $value in $theme-colors {
+            --#{$color}: #{$value};
+        }
+    
+        --btn-upload-back-wave: var(--indigo);
+        --btn-upload-border-active:  var(--indigo);
+    }
+  
+}
