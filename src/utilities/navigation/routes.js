@@ -1,15 +1,13 @@
-import React from "react";
-import { Outlet, Link, useLocation } from "react-router-dom";
-import HomeComponent from "../../components/Home";
-import DevComponent from "../../components/Development";
-import ServicesComponent from "../../components/Services";
-import AboutComponent from "../../components/About";
+import React from 'react';
+import { Outlet, Link, useLocation } from 'react-router-dom';
+import HomeComponent from '../../components/Home';
+import DevComponent from '../../components/Development';
+import ServicesComponent from '../../components/Services';
+import AboutComponent from '../../components/About';
 
-import BtnHome from "../../components/BtnHome";
+import BtnHome from '../../components/BtnHome';
 // import ArticleList from "components/ArticleList";
-import ThemeSwitcher from "../../components/ThemeSwitcher";
-
-
+import ThemeSwitcher from '../../components/ThemeSwitcher';
 
 // const Main = () => <h1> Main page</h1>;
 // const Home = () => <h1> Home page</h1>;
@@ -34,7 +32,6 @@ import ThemeSwitcher from "../../components/ThemeSwitcher";
 //     </div>
 //   );
 // }
-
 
 // function Declarative() {
 //   return <Navigate to="/home" replace state={state} />;
@@ -115,10 +112,9 @@ import ThemeSwitcher from "../../components/ThemeSwitcher";
 
 // Code for example end
 
-
 function Main() {
   const location = useLocation().pathname.split('/');
-  const locationMarc =  location[location.length - 1];
+  const locationMarc = location[location.length - 1];
 
   return (
     <>
@@ -132,21 +128,20 @@ function Main() {
       </nav> */}
 
       <main className={`App-wrapper content-container ${locationMarc}`}>
-          <BtnHome />
-          <Outlet />
+        <BtnHome />
+        <Outlet />
       </main>
     </>
   );
 }
 
 function Home() {
-
   return (
     <>
-    <main className="App-wrapper">
-    <ThemeSwitcher />
-      <HomeComponent />
-    </main>
+      <main className='App-wrapper'>
+        <ThemeSwitcher />
+        <HomeComponent />
+      </main>
       {/* <nav>
         <Link to="about">Home</Link>
       </nav> */}
@@ -169,10 +164,7 @@ function Development() {
 function Services() {
   return (
     <>
-      <ServicesComponent>
-        {/* <ArticleList /> */}
-      </ServicesComponent>
-
+      <ServicesComponent>{/* <ArticleList /> */}</ServicesComponent>
 
       {/* <nav>
         <Link to="about">Home</Link>
@@ -196,14 +188,12 @@ function About() {
 
 function NotFound() {
   return (
-    <main className="App-wrapper">
+    <main className='App-wrapper'>
       {/* <h2>Who are we?</h2> */}
-      <section className="Not-found-page page-wrapper">
+      <section className='Not-found-page page-wrapper'>
         <h1>NotFound 404 page</h1>
 
-
-        <Link to="/">Go Home</Link>
-
+        <Link to='/'>Go Home</Link>
       </section>
       {/* <nav>
         <Link to="/">Home</Link>
@@ -212,11 +202,4 @@ function NotFound() {
   );
 }
 
-export {
-  About,
-  Services,
-  Development,
-  Home,
-  Main,
-  NotFound
-}
+export { About, Services, Development, Home, Main, NotFound };

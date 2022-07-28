@@ -1,44 +1,44 @@
 $iconColours: (
-    "github": #000C,
-    "linkedin": #0A66C2,
-    "telegram": #2D9FD7,
+  'github': #000c,
+  'linkedin': #0a66c2,
+  'telegram': #2d9fd7
 );
 
-.Main-social-link {
-    padding: 0;
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.main-social-link {
+  padding: 0;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    & li {
-      list-style: none;
+  & li {
+    list-style: none;
 
-      a {
-        height: 40px;
-        width: 40px;
-        margin: 10px;
-        display: flex;
-        color: transparent;
-        color: $global-text-color;
+    a {
+      height: 40px;
+      width: 40px;
+      margin: 10px;
+      display: flex;
+      color: transparent;
+      color: $global-text-color;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        transition: color 0.3s ease-in;
+      }
+
+      &:hover {
+        transition: color 0.3s ease-out;
 
         svg {
-          width: 100%;
-          height: 100%;
-          transition: color 0.3s ease-in;
-        }
-
-        &:hover {
-          transition: color 0.3s ease-out;
-
-          svg {
-            @each $iconColour, $i in $iconColours {
-              &[data-icon="#{$iconColour}"] {
-                color: $i;
-              }
+          @each $iconColour, $i in $iconColours {
+            &[data-icon='#{$iconColour}'] {
+              color: $i;
             }
           }
         }
       }
     }
   }
+}

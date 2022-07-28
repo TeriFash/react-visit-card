@@ -1,22 +1,22 @@
-import React from "react"; // useState, useEffect
-import { Routes, Route } from "react-router-dom"; // useParams
+import React from 'react'; // useState, useEffect
+import { Routes, Route } from 'react-router-dom'; // useParams
 import {
   // About,
   // Services,
   Development,
   Home,
   Main,
-  NotFound,
-} from "./utilities/navigation/routes.js";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
+  NotFound
+} from './utilities/navigation/routes.js';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 // import Firebase from "firebase/app";
 // import "firebase/firestore";
 // import firebaseConfig from "./utilities/data/firebase";
 // import postData from "./store/articles/post-data";
 // import ArticleListItem from "./components/ArticleListItem";
 
-library.add(fab)
+library.add(fab);
 
 // const DetailedPost = () => {
 //   const { id } = useParams();
@@ -38,7 +38,7 @@ function App() {
   // Firebase.initializeApp(firebaseConfig);
 
   return (
-    <div className="App">
+    <div className='App'>
       {/* <header className="App-header">
         <nav className="App-navigator navigation-container">
           <Link to="dev">Development</Link> |{' '}
@@ -48,15 +48,15 @@ function App() {
       </header> */}
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="me" element={<Main />}>
-          <Route path="dev" element={<Development />} />
+        <Route path='/' element={<Home />} />
+        <Route path='me' element={<Main />}>
+          <Route path='dev' element={<Development />} />
           {/*<Route path="services" element={<Services />} />
           <Route path="services/:id" element={<DetailedPost />} />
           <Route path="story" element={<About />} />*/}
         </Route>
         {/* <Route path="home" redirectTo="/" /> */}
-        <Route path="*" element={<NotFound />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
   );

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 // import BtnBack from "../BtnBack";
-import BtnTilt from "../BtnTilt";
-import AboutText from "../AboutText";
+import BtnTilt from 'components/BtnTilt';
+import AboutText from 'components/AboutText';
 
 // import './Consult.scss'
 
@@ -13,7 +13,7 @@ class About extends Component {
 
   render() {
     return (
-      <section className="About-page page-wrapper">
+      <section className='About-page page-wrapper'>
         {/* <BtnBack /> */}
         <h1>About me</h1>
         <BtnTilt />

@@ -1,8 +1,17 @@
 node_modules/
 __babel_fixtures__/
 dist/
+.vscode/
+.vscode/**
+build/
+build/**
 babel.js
 index.js
+deploy.js
+jsconfig.json
+.ftpconfig
+src/service-worker.js
+babel.config.js
 client/.cache/**
 client/static/**
 client/public/**

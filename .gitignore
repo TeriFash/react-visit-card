@@ -28,8 +28,4 @@ package-lock.json
 
 .git
 .ftpconfig
-.vscode
-deploy.js*
-deploy.js
-jsconfig.json
-deploy.js
+.vscode/sftp.json

@@ -1,10 +1,11 @@
+// eslint-disable-next-line
 import React, { Component } from "react";
-import MainSocialLinks from "components/MainSocialLinks";
+import MainSocialLinks from 'components/MainSocialLinks';
 // import MainLink from "../MainLink";
-import settings from "store/settings.js"
-import MainContainer from "components/MainContainer";
-import BtnTilt from "components/BtnTilt";
-import GoSkillLink from "components/GoSkillLink";
+import { settings } from 'store/settings.js';
+import MainContainer from 'components/MainContainer';
+import BtnTilt from 'components/BtnTilt';
+import GoSkillLink from 'components/GoSkillLink';
 // import url from "utilities/data/load.js";
 
 // import './Home.scss'
@@ -16,8 +17,8 @@ class Home extends Component {
       data: null,
       socialLinks: settings.socialLinks,
       goSkillLink: settings.goSkillLink,
-      term: "",
-      active: 0,
+      term: '',
+      active: 0
     };
   }
 
@@ -30,13 +31,13 @@ class Home extends Component {
   // }
 
   render() {
-    const {socialLinks, goSkillLink} = this.state
+    const { socialLinks, goSkillLink } = this.state;
     return (
       <>
-        <MainContainer className="Home-page page-wrapper">
+        <MainContainer className='Home-page page-wrapper'>
           {/*<MainLink />*/}
           <BtnTilt />
-          <div className="Link-wrapper">
+          <div className='Link-wrapper'>
             <MainSocialLinks data={socialLinks} />
             <GoSkillLink data={goSkillLink} />
           </div>

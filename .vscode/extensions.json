@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "msjsdiag.debugger-for-chrome",
+    "eg2.vscode-npm-script",
+    "dsznajder.es7-react-js-snippets",
+    "elypia.magick-image-reader",
+    "xabikos.reactsnippets",
+    "varunbardwaj.reactjssnippets",
+    "burkeholland.simple-react-snippets"
+  ]
+}

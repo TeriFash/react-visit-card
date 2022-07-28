@@ -88,599 +88,598 @@
 const skills = {
   hard: [
     {
-      type: "frontend",
-      title: "Javascript",
-      text: "Javascript",
+      type: 'frontend',
+      title: 'Javascript',
+      text: 'Javascript',
       url: 'https://tc39.es/ecma262/',
-      img: "https://cdn.svgporn.com/logos/javascript.svg",
+      img: 'https://cdn.svgporn.com/logos/javascript.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "React",
-      text: "React",
+      type: 'frontend',
+      title: 'React',
+      text: 'React',
       url: 'https://reactjs.org/',
-      img: "https://cdn.svgporn.com/logos/react.svg",
+      img: 'https://cdn.svgporn.com/logos/react.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Vue",
-      text: "Vue",
+      type: 'frontend',
+      title: 'Vue',
+      text: 'Vue',
       url: 'https://vuejs.org/',
-      img: "https://cdn.svgporn.com/logos/vue.svg",
+      img: 'https://cdn.svgporn.com/logos/vue.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Vuetify",
-      text: "Vuetify",
+      type: 'frontend',
+      title: 'Vuetify',
+      text: 'Vuetify',
       url: 'https://vuetifyjs.com/en/',
-      img: "https://cdn.svgporn.com/logos/vuetifyjs.svg",
+      img: 'https://cdn.svgporn.com/logos/vuetifyjs.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Nuxt",
-      text: "Nuxt",
+      type: 'frontend',
+      title: 'Nuxt',
+      text: 'Nuxt',
       url: 'https://nuxtjs.org/',
-      img: "https://cdn.svgporn.com/logos/nuxt-icon.svg",
+      img: 'https://cdn.svgporn.com/logos/nuxt-icon.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Next",
-      text: "Next",
+      type: 'frontend',
+      title: 'Next',
+      text: 'Next',
       url: 'https://github.com/vercel/next.js',
-      img: "https://cdn.svgporn.com/logos/nextjs.svg",
+      img: 'https://cdn.svgporn.com/logos/nextjs.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Gatsby",
-      text: "gatsby",
+      type: 'frontend',
+      title: 'Gatsby',
+      text: 'gatsby',
       url: 'https://gatsbyjs.com/',
-      img: "https://cdn.svgporn.com/logos/gatsby.svg",
+      img: 'https://cdn.svgporn.com/logos/gatsby.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Cordova",
-      text: "Cordova",
+      type: 'frontend',
+      title: 'Cordova',
+      text: 'Cordova',
       url: 'https://cordova.apache.org/',
-      img: "https://cdn.svgporn.com/logos/cordova.svg",
+      img: 'https://cdn.svgporn.com/logos/cordova.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "D3",
-      text: "D3",
+      type: 'frontend',
+      title: 'D3',
+      text: 'D3',
       url: 'https://d3js.org/',
-      img: "https://cdn.svgporn.com/logos/d3.svg",
+      img: 'https://cdn.svgporn.com/logos/d3.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Lodash",
-      text: "Lodash",
+      type: 'frontend',
+      title: 'Lodash',
+      text: 'Lodash',
       url: 'https://lodash.com/',
-      img: "https://cdn.svgporn.com/logos/lodash.svg",
+      img: 'https://cdn.svgporn.com/logos/lodash.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Babel",
-      text: "Babel",
+      type: 'frontend',
+      title: 'Babel',
+      text: 'Babel',
       url: 'https://babeljs.io/',
-      img: "https://cdn.svgporn.com/logos/babel.svg",
+      img: 'https://cdn.svgporn.com/logos/babel.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "MomentJs",
-      text: "MomentJs",
+      type: 'frontend',
+      title: 'MomentJs',
+      text: 'MomentJs',
       url: 'https://momentjs.com/',
-      img: "https://cdn.svgporn.com/logos/momentjs.svg",
+      img: 'https://cdn.svgporn.com/logos/momentjs.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Sass",
-      text: "Sass",
+      type: 'frontend',
+      title: 'Sass',
+      text: 'Sass',
       url: 'https://sass-lang.com/',
-      img: "https://cdn.svgporn.com/logos/sass.svg",
+      img: 'https://cdn.svgporn.com/logos/sass.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "PostCSS",
-      text: "PostCSS",
+      type: 'frontend',
+      title: 'PostCSS',
+      text: 'PostCSS',
       url: 'https://github.com/postcss/postcss',
-      img: "https://cdn.svgporn.com/logos/postcss.svg",
+      img: 'https://cdn.svgporn.com/logos/postcss.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Less",
-      text: "Less",
+      type: 'frontend',
+      title: 'Less',
+      text: 'Less',
       url: 'https://lesscss.org/',
-      img: "https://cdn.svgporn.com/logos/less.svg",
+      img: 'https://cdn.svgporn.com/logos/less.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "styled components",
-      text: "Styled components",
+      type: 'frontend',
+      title: 'styled components',
+      text: 'Styled components',
       url: 'https://styled-components.com/',
-      img: "https://terifash.pro/images/skills-icon/styled-components.png",
+      img: 'https://terifash.pro/images/skills-icon/styled-components.png',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Pug",
-      text: "pug",
+      type: 'frontend',
+      title: 'Pug',
+      text: 'pug',
       url: 'https://github.com/pugjs/pug',
-      img: "https://cdn.svgporn.com/logos/pug.svg",
+      img: 'https://cdn.svgporn.com/logos/pug.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Bootstrap",
-      text: "Bootstrap",
+      type: 'frontend',
+      title: 'Bootstrap',
+      text: 'Bootstrap',
       url: 'https://getbootstrap.com/',
-      img: "https://cdn.svgporn.com/logos/bootstrap.svg",
+      img: 'https://cdn.svgporn.com/logos/bootstrap.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "TailwindCSS",
-      text: "tailwindcss",
+      type: 'frontend',
+      title: 'TailwindCSS',
+      text: 'tailwindcss',
       url: 'https://tailwindcss.com/',
-      img: "https://cdn.svgporn.com/logos/tailwindcss-icon.svg",
+      img: 'https://cdn.svgporn.com/logos/tailwindcss-icon.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Materialize",
-      text: "Materialize",
+      type: 'frontend',
+      title: 'Materialize',
+      text: 'Materialize',
       url: 'https://materializecss.com/',
-      img: "https://cdn.svgporn.com/logos/materializecss.svg",
+      img: 'https://cdn.svgporn.com/logos/materializecss.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Material-ui",
-      text: "Material-ui",
+      type: 'frontend',
+      title: 'Material-ui',
+      text: 'Material-ui',
       url: 'https://material-ui.com/',
-      img: "https://cdn.svgporn.com/logos/material-ui.svg",
+      img: 'https://cdn.svgporn.com/logos/material-ui.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Element",
-      text: "Element",
+      type: 'frontend',
+      title: 'Element',
+      text: 'Element',
       url: 'https://element.eleme.io/#/en-US',
-      img: "https://cdn.svgporn.com/logos/element.svg",
+      img: 'https://cdn.svgporn.com/logos/element.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Ionic",
-      text: "Ionic",
+      type: 'frontend',
+      title: 'Ionic',
+      text: 'Ionic',
       url: 'https://ionicframework.com/',
-      img: "https://cdn.svgporn.com/logos/ionic.svg",
+      img: 'https://cdn.svgporn.com/logos/ionic.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Flat UI",
-      text: "flat-ui",
+      type: 'frontend',
+      title: 'Flat UI',
+      text: 'flat-ui',
       url: 'https://designmodo.github.io/Flat-UI/',
-      img: "https://cdn.svgporn.com/logos/flat-ui.svg",
+      img: 'https://cdn.svgporn.com/logos/flat-ui.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Bulma",
-      text: "Bulma",
+      type: 'frontend',
+      title: 'Bulma',
+      text: 'Bulma',
       url: 'https://bulma.io/',
-      img: "https://cdn.svgporn.com/logos/bulma.svg",
+      img: 'https://cdn.svgporn.com/logos/bulma.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Uikit",
-      text: "Uikit",
+      type: 'frontend',
+      title: 'Uikit',
+      text: 'Uikit',
       url: 'https://getuikit.com/',
-      img: "https://cdn.svgporn.com/logos/uikit.svg",
+      img: 'https://cdn.svgporn.com/logos/uikit.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "PixiJS",
-      text: "pixijs",
+      type: 'frontend',
+      title: 'PixiJS',
+      text: 'pixijs',
       url: 'https://pixijs.com/',
-      img: "https://cdn.svgporn.com/logos/pixijs.svg",
+      img: 'https://cdn.svgporn.com/logos/pixijs.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Semantic UI",
-      text: "semantic-ui",
+      type: 'frontend',
+      title: 'Semantic UI',
+      text: 'semantic-ui',
       url: 'https://semantic-ui.com/',
-      img: "https://cdn.svgporn.com/logos/semantic-ui.svg",
+      img: 'https://cdn.svgporn.com/logos/semantic-ui.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Eslint",
-      text: "Eslint",
+      type: 'frontend',
+      title: 'Eslint',
+      text: 'Eslint',
       url: 'https://eslint.org/',
-      img: "https://cdn.svgporn.com/logos/eslint.svg",
+      img: 'https://cdn.svgporn.com/logos/eslint.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Prettier",
-      text: "prettier",
+      type: 'frontend',
+      title: 'Prettier',
+      text: 'prettier',
       url: 'https://prettier.io/',
-      img: "https://cdn.svgporn.com/logos/prettier.svg",
+      img: 'https://cdn.svgporn.com/logos/prettier.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Stylelint",
-      text: "Stylelint",
+      type: 'frontend',
+      title: 'Stylelint',
+      text: 'Stylelint',
       url: 'https://stylelint.io/',
-      img: "https://cdn.svgporn.com/logos/stylelint.svg",
+      img: 'https://cdn.svgporn.com/logos/stylelint.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "React-spring",
-      text: "react-spring",
+      type: 'frontend',
+      title: 'React-spring',
+      text: 'react-spring',
       url: 'https://react-spring.io/',
-      img: "https://cdn.svgporn.com/logos/react-spring.svg",
+      img: 'https://cdn.svgporn.com/logos/react-spring.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Webpack",
-      text: "Webpack",
+      type: 'frontend',
+      title: 'Webpack',
+      text: 'Webpack',
       url: 'https://webpack.github.io/',
-      img: "https://cdn.svgporn.com/logos/webpack.svg",
+      img: 'https://cdn.svgporn.com/logos/webpack.svg',
       height: 100
     },
     {
-      type: "version-control",
-      title: "Git",
-      text: "Git",
+      type: 'version-control',
+      title: 'Git',
+      text: 'Git',
       url: 'https://git-scm.com/',
-      img: "https://cdn.svgporn.com/logos/git-icon.svg",
+      img: 'https://cdn.svgporn.com/logos/git-icon.svg',
       height: 100
     },
     {
-      type: "tools",
-      title: "Dimer",
-      text: "Dimer",
+      type: 'tools',
+      title: 'Dimer',
+      text: 'Dimer',
       url: 'https://dimerapp.com/',
-      img: "https://cdn.svgporn.com/logos/dimer.svg",
+      img: 'https://cdn.svgporn.com/logos/dimer.svg',
       height: 100
     },
     {
-      type: "tools",
-      title: "Passport",
-      text: "passportjs",
+      type: 'tools',
+      title: 'Passport',
+      text: 'passportjs',
       url: 'https://passportjs.org/',
-      img: "https://cdn.svgporn.com/logos/passport.svg",
+      img: 'https://cdn.svgporn.com/logos/passport.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Npm",
-      text: "npm",
+      type: 'frontend',
+      title: 'Npm',
+      text: 'npm',
       url: 'https://npmjs.com/',
-      img: "https://cdn.svgporn.com/logos/npm-icon.svg",
+      img: 'https://cdn.svgporn.com/logos/npm-icon.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Yarn",
-      text: "yarn",
+      type: 'frontend',
+      title: 'Yarn',
+      text: 'yarn',
       url: 'https://yarnpkg.com/',
-      img: "https://cdn.svgporn.com/logos/yarn.svg",
+      img: 'https://cdn.svgporn.com/logos/yarn.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Bower",
-      text: "Bower",
+      type: 'frontend',
+      title: 'Bower',
+      text: 'Bower',
       url: 'https://bower.io/',
-      img: "https://cdn.svgporn.com/logos/bower.svg",
+      img: 'https://cdn.svgporn.com/logos/bower.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Gulp",
-      text: "Gulp",
+      type: 'frontend',
+      title: 'Gulp',
+      text: 'Gulp',
       url: 'https://gulpjs.com/',
-      img: "https://cdn.svgporn.com/logos/gulp.svg",
+      img: 'https://cdn.svgporn.com/logos/gulp.svg',
       height: 100
     },
     {
-      type: "frontend",
-      title: "Grunt",
-      text: "Grunt",
+      type: 'frontend',
+      title: 'Grunt',
+      text: 'Grunt',
       url: 'https://gruntjs.com/',
-      img: "https://cdn.svgporn.com/logos/grunt.svg",
+      img: 'https://cdn.svgporn.com/logos/grunt.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "Composer",
-      text: "Composer",
+      type: 'backend',
+      title: 'Composer',
+      text: 'Composer',
       url: 'https://getcomposer.org/',
-      img: "https://cdn.svgporn.com/logos/composer.svg",
+      img: 'https://cdn.svgporn.com/logos/composer.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "Nodejs",
-      text: "Nodejs",
+      type: 'backend',
+      title: 'Nodejs',
+      text: 'Nodejs',
       url: 'https://nodejs.org/en/',
-      img: "https://cdn.svgporn.com/logos/nodejs-icon.svg",
+      img: 'https://cdn.svgporn.com/logos/nodejs-icon.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "Express",
-      text: "Express",
+      type: 'backend',
+      title: 'Express',
+      text: 'Express',
       url: 'https://expressjs.com/',
-      img: "https://cdn.svgporn.com/logos/express.svg",
+      img: 'https://cdn.svgporn.com/logos/express.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "WebSocket",
-      text: "Websocket",
+      type: 'backend',
+      title: 'WebSocket',
+      text: 'Websocket',
       url: 'https://w3.org/TR/websockets/',
-      img: "https://cdn.svgporn.com/logos/websocket.svg",
+      img: 'https://cdn.svgporn.com/logos/websocket.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "Socket io",
-      text: "socket.io",
+      type: 'backend',
+      title: 'Socket io',
+      text: 'socket.io',
       url: 'https://socket.io/',
-      img: "https://cdn.svgporn.com/logos/socket.io.svg",
+      img: 'https://cdn.svgporn.com/logos/socket.io.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "REST API",
-      text: "REST API",
+      type: 'backend',
+      title: 'REST API',
+      text: 'REST API',
       url: 'https://wikiwand.com/uk/REST',
-      img: "https://terifash.pro/images/skills-icon/rest-api.svg",
+      img: 'https://terifash.pro/images/skills-icon/rest-api.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "AJAX",
-      text: "AJAX",
+      type: 'backend',
+      title: 'AJAX',
+      text: 'AJAX',
       url: 'https://developer.mozilla.org/ru/docs/Web/Guide/AJAX',
-      img: "https://terifash.pro/images/skills-icon/ajax.svg",
+      img: 'https://terifash.pro/images/skills-icon/ajax.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "Firebase",
-      text: "Firebase",
+      type: 'backend',
+      title: 'Firebase',
+      text: 'Firebase',
       url: 'https://firebase.google.com/',
-      img: "https://cdn.svgporn.com/logos/firebase.svg",
+      img: 'https://cdn.svgporn.com/logos/firebase.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "GraphQL",
-      text: "graphql",
+      type: 'backend',
+      title: 'GraphQL',
+      text: 'graphql',
       url: 'https://graphql.org/',
-      img: "https://cdn.svgporn.com/logos/graphql.svg",
+      img: 'https://cdn.svgporn.com/logos/graphql.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "Apollo",
-      text: "apollo",
+      type: 'backend',
+      title: 'Apollo',
+      text: 'apollo',
       url: 'https://apollographql.com/',
-      img: "https://cdn.svgporn.com/logos/apollostack.svg",
+      img: 'https://cdn.svgporn.com/logos/apollostack.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "Postman",
-      text: "postman",
+      type: 'backend',
+      title: 'Postman',
+      text: 'postman',
       url: 'https://postman.com/',
-      img: "https://cdn.svgporn.com/logos/postman.svg",
+      img: 'https://cdn.svgporn.com/logos/postman.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "Digital-ocean",
-      text: "Digital-ocean",
+      type: 'backend',
+      title: 'Digital-ocean',
+      text: 'Digital-ocean',
       url: 'https://digitalocean.com/',
-      img: "https://cdn.svgporn.com/logos/digital-ocean.svg",
+      img: 'https://cdn.svgporn.com/logos/digital-ocean.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "Heroku",
-      text: "Heroku",
+      type: 'backend',
+      title: 'Heroku',
+      text: 'Heroku',
       url: 'https://heroku.com/',
-      img: "https://cdn.svgporn.com/logos/heroku-icon.svg",
+      img: 'https://cdn.svgporn.com/logos/heroku-icon.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "Surge",
-      text: "Surge",
+      type: 'backend',
+      title: 'Surge',
+      text: 'Surge',
       url: 'https://surge.sh/',
-      img: "https://cdn.svgporn.com/logos/surge.svg",
+      img: 'https://cdn.svgporn.com/logos/surge.svg',
       height: 100
     },
     {
-      type: "backend",
-      title: "Docker",
-      text: "docker",
+      type: 'backend',
+      title: 'Docker',
+      text: 'docker',
       url: 'https://docker.com/',
-      img: "https://cdn.svgporn.com/logos/docker-icon.svg",
+      img: 'https://cdn.svgporn.com/logos/docker-icon.svg',
       height: 100
-    },
-    
+    }
   ],
   soft: [
     {
-      type: "version-control",
-      title: "GitHub",
-      text: "GitHub",
+      type: 'version-control',
+      title: 'GitHub',
+      text: 'GitHub',
       url: 'https://github.com/',
-      img: "https://cdn.svgporn.com/logos/github-octocat.svg"
+      img: 'https://cdn.svgporn.com/logos/github-octocat.svg'
     },
     {
-      type: "version-control",
-      title: "Bitbucket",
-      text: "Bitbucket",
+      type: 'version-control',
+      title: 'Bitbucket',
+      text: 'Bitbucket',
       url: 'https://bitbucket.org/product/',
-      img: "https://cdn.svgporn.com/logos/bitbucket.svg"
+      img: 'https://cdn.svgporn.com/logos/bitbucket.svg'
     },
     {
-      type: "version-control",
-      title: "Gitlab",
-      text: "Gitlab",
+      type: 'version-control',
+      title: 'Gitlab',
+      text: 'Gitlab',
       url: 'https://about.gitlab.com/',
-      img: "https://cdn.svgporn.com/logos/gitlab.svg"
+      img: 'https://cdn.svgporn.com/logos/gitlab.svg'
     },
     {
-      type: "tools",
-      title: "Figma",
-      text: "Figma",
+      type: 'tools',
+      title: 'Figma',
+      text: 'Figma',
       url: 'https://figma.com/',
-      img: "https://cdn.svgporn.com/logos/figma.svg"
+      img: 'https://cdn.svgporn.com/logos/figma.svg'
     },
     {
-      type: "tools",
-      title: "Zeplin",
-      text: "Zeplin",
+      type: 'tools',
+      title: 'Zeplin',
+      text: 'Zeplin',
       url: 'https://zeplin.io/',
-      img: "https://cdn.svgporn.com/logos/zeplin.svg"
+      img: 'https://cdn.svgporn.com/logos/zeplin.svg'
     },
     {
-      type: "tools",
-      title: "Invision",
-      text: "Invision",
+      type: 'tools',
+      title: 'Invision',
+      text: 'Invision',
       url: 'https://invisionapp.com/',
-      img: "https://cdn.svgporn.com/logos/invision-icon.svg"
+      img: 'https://cdn.svgporn.com/logos/invision-icon.svg'
     },
     {
-      type: "tools",
-      title: "WebStorm",
-      text: "Webstorm",
+      type: 'tools',
+      title: 'WebStorm',
+      text: 'Webstorm',
       url: 'https://jetbrains.com/webstorm/',
-      img: "https://cdn.svgporn.com/logos/webstorm.svg"
+      img: 'https://cdn.svgporn.com/logos/webstorm.svg'
     },
     {
-      type: "tools",
-      title: "PHPStorm",
-      text: "phpstorm",
+      type: 'tools',
+      title: 'PHPStorm',
+      text: 'phpstorm',
       url: 'https://jetbrains.com/phpstorm/',
-      img: "https://cdn.svgporn.com/logos/phpstorm.svg"
+      img: 'https://cdn.svgporn.com/logos/phpstorm.svg'
     },
     {
-      type: "tools",
-      title: "Visual studio code",
-      text: "Visual-studio-code",
+      type: 'tools',
+      title: 'Visual studio code',
+      text: 'Visual-studio-code',
       url: 'https://code.visualstudio.com/',
-      img: "https://cdn.svgporn.com/logos/visual-studio-code.svg"
+      img: 'https://cdn.svgporn.com/logos/visual-studio-code.svg'
     },
     {
-      type: "tools",
-      title: "Atom",
-      text: "atom",
+      type: 'tools',
+      title: 'Atom',
+      text: 'atom',
       url: 'https://atom.io/',
-      img: "https://cdn.svgporn.com/logos/atom-icon.svg"
+      img: 'https://cdn.svgporn.com/logos/atom-icon.svg'
     },
     {
-      type: "tools",
-      title: "SublimeText",
-      text: "sublimetext",
+      type: 'tools',
+      title: 'SublimeText',
+      text: 'sublimetext',
       url: 'https://sublimetext.com/',
-      img: "https://cdn.svgporn.com/logos/sublimetext-icon.svg"
+      img: 'https://cdn.svgporn.com/logos/sublimetext-icon.svg'
     },
     {
-      type: "tools",
-      title: "GitKraken",
-      text: "gitkraken",
+      type: 'tools',
+      title: 'GitKraken',
+      text: 'gitkraken',
       url: 'https://gitkraken.com/',
-      img: "https://cdn.svgporn.com/logos/gitkraken.svg"
+      img: 'https://cdn.svgporn.com/logos/gitkraken.svg'
     }
   ],
-  managment: [
+  management: [
     {
-      type: "managment",
-      title: "Jira",
-      text: "Jira",
+      type: 'management',
+      title: 'Jira',
+      text: 'Jira',
       url: 'https://atlassian.com/ru/software/jira',
-      img: "https://cdn.svgporn.com/logos/jira.svg"
+      img: 'https://cdn.svgporn.com/logos/jira.svg'
     },
     {
-      type: "managment",
-      title: "Confluence",
-      text: "Confluence",
+      type: 'management',
+      title: 'Confluence',
+      text: 'Confluence',
       url: 'https://atlassian.com/ru/software/confluence',
-      img: "https://cdn.svgporn.com/logos/confluence.svg"
+      img: 'https://cdn.svgporn.com/logos/confluence.svg'
     },
     {
-      type: "managment",
-      title: "Trello",
-      text: "Trello",
+      type: 'management',
+      title: 'Trello',
+      text: 'Trello',
       url: 'https://trello.com/',
-      img: "https://cdn.svgporn.com/logos/trello.svg"
+      img: 'https://cdn.svgporn.com/logos/trello.svg'
     },
     {
-      type: "managment",
-      title: "Slack",
-      text: "Slack",
+      type: 'management',
+      title: 'Slack',
+      text: 'Slack',
       url: 'https://slack.com/',
-      img: "https://cdn.svgporn.com/logos/slack-icon.svg"
+      img: 'https://cdn.svgporn.com/logos/slack-icon.svg'
     },
     {
-      type: "managment",
-      title: "Todoist",
-      text: "Todoist",
+      type: 'management',
+      title: 'Todoist',
+      text: 'Todoist',
       url: 'https://todoist.com/',
-      img: "https://cdn.svgporn.com/logos/todoist-icon.svg"
+      img: 'https://cdn.svgporn.com/logos/todoist-icon.svg'
     },
     {
-      type: "managment",
-      title: "Hubspot",
-      text: "Hubspot",
+      type: 'management',
+      title: 'Hubspot',
+      text: 'Hubspot',
       url: 'https://hubspot.com/',
-      img: "https://cdn.svgporn.com/logos/hubspot.svg"
+      img: 'https://cdn.svgporn.com/logos/hubspot.svg'
     },
     {
-      type: "managment",
-      title: "Redmine",
-      text: "Redmine",
+      type: 'management',
+      title: 'Redmine',
+      text: 'Redmine',
       url: 'https://redmine.org/',
-      img: "https://terifash.pro/images/skills-icon/redmine.png"
+      img: 'https://terifash.pro/images/skills-icon/redmine.png'
     },
     {
-      type: "managment",
-      title: "Mattermost",
-      text: "mattermost",
+      type: 'management',
+      title: 'Mattermost',
+      text: 'mattermost',
       url: 'https://mattermost.org/',
-      img: "https://cdn.svgporn.com/logos/mattermost-icon.svg"
+      img: 'https://cdn.svgporn.com/logos/mattermost-icon.svg'
     }
-  ],
-}
-const devData = {}
-export { devData, skills }
+  ]
+};
+const devData = {};
+export { devData, skills };

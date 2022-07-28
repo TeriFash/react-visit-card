@@ -1,5 +1,5 @@
-import React, { Component, createRef } from "react";
-import ReactDOM from "react-dom";
+import React, { Component, createRef } from 'react';
+import ReactDOM from 'react-dom';
 
 // import './MainContainer.scss'
 
@@ -11,7 +11,7 @@ class MainContainer extends Component {
     this.playword_2 = createRef();
     this.state = {
       pos: { x: 0, y: 0 },
-      shadow: true,
+      shadow: true
     };
   }
 
@@ -19,20 +19,20 @@ class MainContainer extends Component {
     this.setState({
       pos: {
         x: e.pageX,
-        y: e.pageY,
-      },
+        y: e.pageY
+      }
     });
 
     this.CreateShadow();
   }
 
   CreateShadow() {
-    if ("ontouchstart" in window === false && this.state.shadow) {
+    if ('ontouchstart' in window === false && this.state.shadow) {
       let [moveX, moveY] = [this.state.pos.x / -100, this.state.pos.y / -120];
       let [wrapperWord, firstWord, secondWord] = [
         ReactDOM.findDOMNode(this.sectionMain.current),
         ReactDOM.findDOMNode(this.playword_1.current),
-        ReactDOM.findDOMNode(this.playword_2.current),
+        ReactDOM.findDOMNode(this.playword_2.current)
       ];
 
       firstWord.style.transform = `translate3d(${moveX / 2}px, ${moveY}px, 0)`;
@@ -56,12 +56,12 @@ class MainContainer extends Component {
         onMouseMove={this.onMouseMove.bind(this)}
         style={sectionStyle}
       >
-        <h1 className="Main-text" ref={this.sectionMain}>
+        <h1 className='Main-text' ref={this.sectionMain}>
           Teri
-          <span className="bold" ref={this.playword_1} style={boldStyle}>
+          <span className='bold' ref={this.playword_1} style={boldStyle}>
             Fash
           </span>
-          <span className="bold" ref={this.playword_2} style={boldStyle}></span>
+          <span className='bold' ref={this.playword_2} style={boldStyle}></span>
         </h1>
         {this.props.children}
       </section>

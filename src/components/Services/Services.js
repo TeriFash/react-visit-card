@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 // import './Services.scss'
 
@@ -11,7 +11,7 @@ class Services extends Component {
   render() {
     return (
       <>
-        <section className="Services-page page-wrapper">
+        <section className='Services-page page-wrapper'>
           <h1>Services</h1>
           {this.props.children}
         </section>

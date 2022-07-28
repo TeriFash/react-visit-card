@@ -1,16 +1,16 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 const ThemeContext = React.createContext();
 const ThemeConsumer = ThemeContext.Consumer;
 
 class ThemeProvider extends Component {
-  toggleTheme = (evt) => {
-    this.setState({ theme: evt.target.checked ? "App-light" : "App-dark" });
+  toggleTheme = evt => {
+    this.setState({ theme: evt.target.checked ? 'App-light' : 'App-dark' });
   };
 
   state = {
-    theme: "App-light",
-    toggleTheme: this.toggleTheme,
+    theme: 'App-light',
+    toggleTheme: this.toggleTheme
   };
 
   render() {
@@ -25,17 +25,17 @@ class ThemeProvider extends Component {
 class Slider extends Component {
   render() {
     return (
-      <label className="Theme-switch">
+      <label className='Theme-switch'>
         <ThemeConsumer>
           {({ toggleTheme, theme }) => (
             <input
               onChange={toggleTheme}
-              type="checkbox"
-              checked={theme === "App-light"}
+              type='checkbox'
+              checked={theme === 'App-light'}
             />
           )}
         </ThemeConsumer>
-        <span className="Theme-slider Theme-round" />
+        <span className='Theme-slider Theme-round' />
       </label>
     );
   }

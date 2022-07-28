@@ -1,29 +1,30 @@
-import React from "react";
-import FlipperСard from "components/FlipperСard";
-import { skills } from "store/data.js";
+import React from 'react';
+import FlipperCard from 'components/FlipperCard';
+import { skills } from 'store/data.js';
 
-const { managment, soft, hard} = skills;
-const dataList = [{
-  title: 'Technology',
-  data: hard
-},
-{
-  title: 'Tools',
-  data: soft
-},
-{
-  title: 'Managment',
-  data: managment
-}]
+const { management, soft, hard } = skills;
+const dataList = [
+  {
+    title: 'Technology',
+    data: hard
+  },
+  {
+    title: 'Tools',
+    data: soft
+  },
+  {
+    title: 'Managment',
+    data: management
+  }
+];
 
 const Development = () => {
-    return (
-      <section className="Development-page page-wrapper">
-        {dataList.map((item) =>
-          <FlipperСard title={item.title} key={item.title} data={item.data} />
-        )}
-      </section>
-    );
-}
+  const dataListSet = dataList.map(item => (
+    <FlipperCard title={item.title} key={item.title} data={item.data} />
+  ));
+  return (
+    <section className='development-page page-wrapper'>{dataListSet}</section>
+  );
+};
 
 export default Development;

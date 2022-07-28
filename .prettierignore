@@ -7,6 +7,10 @@ CHANGELOG.md
 .cache
 babel.js
 index.js
+.vscode/**
+.vscode/
+.build/**
+.build/
 **/.cache
 **/public
 client/static
