@@ -23,4 +23,5 @@ config/certification-settings.js
 client/i18n/**/*.json
 docs/i18n
 **/package-lock.json
+.eslintrc.js
 tools/scripts/build/ensure-env.js
