@@ -15,7 +15,11 @@ class ThemeSwitcher extends Component {
   componentDidMount() {
     const input = this.state.inputRef.current;
 
-    if (input.value === 'dark' && !input.hasAttribute('checked')) {
+    if (
+      (window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches) ||
+      (input.value === 'dark' && !input.hasAttribute('checked'))
+    ) {
       input.setAttribute('checked', true);
     }
 

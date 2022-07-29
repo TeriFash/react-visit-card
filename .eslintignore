@@ -8,6 +8,7 @@ build/**
 babel.js
 index.js
 deploy.js
+.prettierrc
 jsconfig.json
 .ftpconfig
 src/service-worker.js

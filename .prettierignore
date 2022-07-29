@@ -11,6 +11,7 @@ index.js
 .vscode/
 .build/**
 .build/
+.prettierrc
 **/.cache
 **/public
 client/static
