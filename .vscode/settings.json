@@ -20,5 +20,12 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.enableFiletypes": ["!json", "!jsonc", "!swift"]
+  "cSpell.enableFiletypes": [
+    "!json",
+    "!jsonc",
+    "!swift"
+  ],
+  "conventionalCommits.scopes": [
+    "style"
+  ]
 }
