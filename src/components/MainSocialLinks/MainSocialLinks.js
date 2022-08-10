@@ -14,9 +14,7 @@ const MainSocialLinksItem = props => {
 const MainSocialLinks = props => {
   const { data } = props;
 
-  const dataSet = data.map(item => (
-    <MainSocialLinksItem key={item.link} value={item} />
-  ));
+  const dataSet = data.map(item => <MainSocialLinksItem key={item.link} value={item} />);
 
   return <ul className='main-social-link'>{dataSet}</ul>;
 };

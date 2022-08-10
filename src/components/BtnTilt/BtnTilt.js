@@ -3,10 +3,12 @@ import MoveTilt from 'components/MoveTilt';
 import CvLink from 'components/CvLink';
 import BtnUpload from 'components/BtnUpload';
 import { settings } from 'store/settings.js';
+import { useTranslation } from 'react-i18next';
 
 // import './BtnTilt.scss'
 
 const BtnTilt = () => {
+  const { t } = useTranslation('main');
   const cvData = settings.cvLinks;
   const options = {
     scale: 1.1,
@@ -19,10 +21,10 @@ const BtnTilt = () => {
   return (
     <>
       <MoveTilt options={options}>
-        <CvLink {...cvData.typeTwo} className='btn-tilt' />
+        <CvLink {...cvData.typeTwo} title={t('btnGoMyBio')} className='btn-tilt' />
       </MoveTilt>
 
-      <CvLink {...cvData.typeOne} className='btn-upload-wrapper'>
+      <CvLink {...cvData.typeOne} title={t('btnDownloadCV')} className='btn-upload-wrapper'>
         <BtnUpload />
       </CvLink>
     </>

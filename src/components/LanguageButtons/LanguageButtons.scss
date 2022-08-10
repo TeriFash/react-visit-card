@@ -1,0 +1,77 @@
+.language-buttons {
+  position: absolute;
+  left: 40px;
+  top: 48px;
+  z-index: 5;
+  display: flex;
+  // padding-right: 10px;
+  background-color: transparent;
+
+  &::before {
+    // opacity: 0.3;
+    position: absolute;
+    content: '';
+    left: 10px;
+    top: 0px;
+    min-width: 60px;
+    width: 70px;
+    min-height: 34px;
+    max-height: 34px;
+    background-color: rgba($black, 0.16);
+    transition: 0.4s;
+    z-index: -1;
+  }
+
+  &__select {
+    cursor: pointer;
+    background-color: transparent;
+    opacity: 0.4;
+    min-width: 70px;
+    min-height: 34px;
+    max-height: 34px;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    color: $light;
+    transition: 0.4s;
+    margin-left: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-visible,
+    &:visited {
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 54px;
+    top: 10px;
+    z-index: 5;
+    max-width: 15px;
+    max-height: 15px;
+    cursor: pointer;
+  }
+
+  &__option {
+    // background: transparent;
+    cursor: pointer;
+    margin-left: 20px;
+    // background-color: transparent;
+    min-width: 70px;
+  }
+}
+#ddlProducts * {
+  background-color: rgba($black, 0.3);
+
+  height: 34px;
+  max-height: 34px;
+}
+.language-buttons__option {
+}

@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 // import './MainLink.scss'
 
@@ -31,22 +32,27 @@ import { Link } from "react-router-dom";
 // </ul>
 
 class MainLink extends Component {
+  t = useTranslation('main');
   constructor(props) {
     super(props);
+
     this.state = {};
   }
-
   render() {
     return (
-      <ul className="Main-Link">
+      <ul className='main-Link'>
         <li>
-          <a href="#" className="is-disabled" title="partition in development">Development</a>
+          <a href='#' className='is-disabled' title='partition in development'>
+            {this.t('titleDevelopment')}
+          </a>
         </li>
         <li>
-          <a href="#" className="is-disabled" title="partition in development">Services</a>
+          <a href='#' className='is-disabled' title='partition in development'>
+            {this.t('titleServices')}
+          </a>
         </li>
         <li>
-          <Link to="me/story">About</Link>
+          <Link to='me/story'>{this.t('titleAbout')}</Link>
         </li>
       </ul>
     );

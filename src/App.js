@@ -1,5 +1,6 @@
 import React from 'react'; // useState, useEffect
 import { Routes, Route } from 'react-router-dom'; // useParams
+
 import {
   // About,
   // Services,
@@ -10,13 +11,16 @@ import {
 } from './utilities/navigation/routes.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas, faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
+
 // import Firebase from "firebase/app";
 // import "firebase/firestore";
 // import firebaseConfig from "./utilities/data/firebase";
 // import postData from "./store/articles/post-data";
 // import ArticleListItem from "./components/ArticleListItem";
+import LanguageButtons from './components/LanguageButtons';
 
-library.add(fab);
+library.add(fab, fas, faArrowUp, faArrowDown);
 
 // const DetailedPost = () => {
 //   const { id } = useParams();
@@ -39,6 +43,7 @@ function App() {
 
   return (
     <div className='App'>
+      <LanguageButtons />
       {/* <header className="App-header">
         <nav className="App-navigator navigation-container">
           <Link to="dev">Development</Link> |{' '}

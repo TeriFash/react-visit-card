@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 // import './LayoutBase.scss'
 
@@ -8,7 +8,7 @@ class LayoutBase extends Component {
     this.state = {
       page: this.props.page || null,
       title: this.props.title || null,
-      back: this.props.back || null,
+      back: this.props.back || null
     };
   }
 
@@ -19,9 +19,7 @@ class LayoutBase extends Component {
     let headerBlock;
 
     if (isTitle) {
-      headerBlock = (
-        <span className={`${page}-header`}>{this.props.headerSlot}</span>
-      );
+      headerBlock = <span className={`${page}-header`}>{this.props.headerSlot}</span>;
     } else {
       headerBlock = <h1 className={`${page}-text`}>{this.title}</h1>;
     }
