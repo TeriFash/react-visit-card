@@ -26,3 +26,5 @@ docs/i18n
 **/package-lock.json
 .eslintrc.js
 tools/scripts/build/ensure-env.js
+src/service-worker.js
+src/serviceWorkerRegistration.js

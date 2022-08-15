@@ -12,6 +12,7 @@ deploy.js
 jsconfig.json
 .ftpconfig
 src/service-worker.js
+src/serviceWorkerRegistration.js
 babel.config.js
 client/.cache/**
 client/static/**

@@ -1,11 +1,5 @@
 import React, { useState, useRef } from 'react';
-import {
-  useTransition,
-  useSpring,
-  useChain,
-  config,
-  animated
-} from 'react-spring';
+import { useTransition, useSpring, useChain, config, animated } from 'react-spring';
 
 // import './FlipperCard.scss'
 
@@ -25,23 +19,16 @@ const FlipperCard = props => {
   });
 
   const transRef = useRef();
-  const transitions = useTransition(
-    open ? props.data : [],
-    item => item.title,
-    {
-      ref: transRef,
-      unique: true,
-      trail: 200 / props.data.length,
-      from: { opacity: 0, transform: 'scale(0)' },
-      enter: { opacity: 1, transform: 'scale(1)' },
-      leave: { opacity: 0, transform: 'scale(0)' }
-    }
-  );
+  const transitions = useTransition(open ? props.data : [], item => item.title, {
+    ref: transRef,
+    unique: true,
+    trail: 200 / props.data.length,
+    from: { opacity: 0, transform: 'scale(0)' },
+    enter: { opacity: 1, transform: 'scale(1)' },
+    leave: { opacity: 0, transform: 'scale(0)' }
+  });
 
-  useChain(open ? [springRef, transRef] : [transRef, springRef], [
-    0,
-    open ? 0.1 : 0.6
-  ]);
+  useChain(open ? [springRef, transRef] : [transRef, springRef], [0, open ? 0.1 : 0.6]);
 
   return (
     <>
@@ -52,11 +39,7 @@ const FlipperCard = props => {
         onClick={() => set(open => !open)}
       >
         {transitions.map(({ item, key, props }) => (
-          <animated.div
-            className='item flipper-card-item'
-            key={key}
-            style={{ ...props, background: item.css }}
-          >
+          <animated.div className='item flipper-card-item' key={key} style={{ ...props, background: item.css }}>
             <a
               title={item.title}
               href={item.url}

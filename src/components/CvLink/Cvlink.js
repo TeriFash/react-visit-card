@@ -7,13 +7,7 @@ const CvLink = props => {
   const slot = look ? title : props.children;
 
   return (
-    <a
-      rel='noopener noreferrer'
-      href={link[lang]}
-      {...rest}
-      download={!look}
-      target={type}
-    >
+    <a rel='noopener noreferrer' href={link[lang]} {...rest} download={!look} target={type}>
       {slot}
     </a>
   );

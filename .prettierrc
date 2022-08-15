@@ -3,8 +3,9 @@
   "semi": true,
   "singleQuote": true,
   "jsxSingleQuote": true,
+  "eslintIntegration": false,
   "tabWidth": 2,
   "trailingComma": "none",
-  "endOfLine": "lf",
+  "endOfLine": "auto",
   "arrowParens": "avoid"
 }
