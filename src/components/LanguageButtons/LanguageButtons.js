@@ -6,26 +6,7 @@ import Select from 'react-dropdown-select';
 import { languages } from './../../utilities/options';
 
 const LanguageButtons = function () {
-  // const languages = [
-  //   {
-  //     id: 1,
-  //     value: 'uah',
-  //     label: 'UA'
-  //   },
-  //   {
-  //     id: 2,
-  //     value: 'en',
-  //     label: 'EN'
-  //   },
-  //   {
-  //     id: 3,
-  //     value: 'ru',
-  //     label: 'RU'
-  //   }
-  // ];
-
   const { i18n } = useTranslation();
-
   const [value, setValue] = useState(
     () => languages.find(opt => opt.value === i18n.resolvedLanguage)?.label || 'Select'
   );
@@ -38,6 +19,8 @@ const LanguageButtons = function () {
       setFild(event);
     }
   };
+
+  // setFild(languages.find(opt => opt.value === i18n.resolvedLanguage));
 
   return (
     <div className='language-buttons'>

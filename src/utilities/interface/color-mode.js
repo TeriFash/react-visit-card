@@ -14,11 +14,7 @@ class ThemeProvider extends Component {
   };
 
   render() {
-    return (
-      <ThemeContext.Provider value={this.state}>
-        {this.props.children}
-      </ThemeContext.Provider>
-    );
+    return <ThemeContext.Provider value={this.state}>{this.props.children}</ThemeContext.Provider>;
   }
 }
 
@@ -27,13 +23,7 @@ class Slider extends Component {
     return (
       <label className='Theme-switch'>
         <ThemeConsumer>
-          {({ toggleTheme, theme }) => (
-            <input
-              onChange={toggleTheme}
-              type='checkbox'
-              checked={theme === 'App-light'}
-            />
-          )}
+          {({ toggleTheme, theme }) => <input onChange={toggleTheme} type='checkbox' checked={theme === 'App-light'} />}
         </ThemeConsumer>
         <span className='Theme-slider Theme-round' />
       </label>
