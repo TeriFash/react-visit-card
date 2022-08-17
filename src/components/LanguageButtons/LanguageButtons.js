@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Select from 'react-dropdown-select';
-import { languages } from './../../utilities/options';
+import { languages } from 'utilities/options';
 
 const LanguageButtons = function () {
   const { i18n } = useTranslation();

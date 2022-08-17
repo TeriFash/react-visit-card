@@ -31,8 +31,6 @@ const UploadImage = () => {
 };
 
 const BtnUpload = ({ title }) => {
-  console.log('✅ 🧊 ~ props', title);
-  const { t } = useTranslation('main');
   const [loading, setLoading] = useState(false);
   const titleRef = useRef();
 
@@ -53,7 +51,7 @@ const BtnUpload = ({ title }) => {
   return (
     <div ref={titleRef} className='Btn-upload' onClick={handleClick}>
       <UploadImage />
-      <span className='info-text'>{t('btnDownloadCV')}</span>
+      <span className='info-text'>{title}</span>
     </div>
   );
 };
