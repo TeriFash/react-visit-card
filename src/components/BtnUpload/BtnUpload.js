@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
 
 const UploadImage = () => {
   return (
@@ -49,7 +48,7 @@ const BtnUpload = ({ title }) => {
   };
 
   return (
-    <div ref={titleRef} className='Btn-upload' onClick={handleClick}>
+    <div ref={titleRef} className='btn-upload' onClick={handleClick}>
       <UploadImage />
       <span className='info-text'>{title}</span>
     </div>

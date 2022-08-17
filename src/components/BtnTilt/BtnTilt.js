@@ -2,7 +2,7 @@ import React from 'react';
 import MoveTilt from 'components/MoveTilt';
 import CvLink from 'components/CvLink';
 import BtnUpload from 'components/BtnUpload';
-import { settings } from 'store/settings';
+import { cvLinks } from 'store/settings';
 import { btnTiltOptions } from 'utilities/options';
 import { useTranslation } from 'react-i18next';
 
@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next';
 const BtnTilt = () => {
   const { t, i18n } = useTranslation('main');
   const lang = i18n.resolvedLanguage || 'en';
-  const { typeShow, typeDownload } = settings.cvLinks;
+  const { typeShow, typeDownload } = cvLinks;
 
   return (
     <>

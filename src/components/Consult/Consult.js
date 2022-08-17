@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 // import './Consult.scss'
 
@@ -11,7 +11,7 @@ class Consult extends Component {
   render() {
     return (
       <>
-        <section className="Consult-page page-wrapper">
+        <section className='Consult-page page-wrapper'>
           <h1>Consult</h1>
         </section>
       </>

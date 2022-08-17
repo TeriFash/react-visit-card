@@ -32,7 +32,7 @@
 
 // const [firstLoad, setLoaded] = useState(false);
 // useEffect(() => {
-//   document.querySelector('.Btn-upload-wrapper').classList.add('is-down')
+//   document.querySelector('.btn-upload-wrapper').classList.add('is-down')
 //   setPosition()
 // }, []);
 

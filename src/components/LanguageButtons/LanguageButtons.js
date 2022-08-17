@@ -1,21 +1,13 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Select from 'react-dropdown-select';
 import { languages } from 'utilities/options';
 
-const LanguageButtons = function () {
+const LanguageButtons = () => {
   const { i18n } = useTranslation();
   const [fild, setFild] = useState({});
-
-  // useEffect(() => {
-  //   setFild(lang);
-  // }, [setFild]);
-
-  // const getCourses = () => {
-  //   return setFild(languag);
-  // };
 
   const setValues = values => {
     const [value] = values;

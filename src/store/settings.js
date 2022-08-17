@@ -1,39 +1,50 @@
-// settings
-
 // eslint-disable-next-line import/no-anonymous-default-export
-export const settings = {
-  cvLinks: {
-    typeDownload: {
-      type: '_self',
-      title: 'btnDownloadCV', //'Download CV',
-      link: {
-        en: 'https://docs.google.com/document/d/1QUN8eLY4xA-7wuqlNIEfFJyETuEGKz9e4DqD8incN-8/export?format=pdf',
-        ru: 'https://docs.google.com/document/d/1-wco4u22lsKdYxYPDjzX-7awq_xub0Yla-ooK6EBfQI/export?format=pdf',
-        uah: 'https://docs.google.com/document/d/1-wco4u22lsKdYxYPDjzX-7awq_xub0Yla-ooK6EBfQI/export?format=pdf'
-      }
-    },
-    typeShow: {
-      type: '_blank',
-      title: 'btnGoMyBio', //'Go My Bio',
-      link: {
-        en: 'https://docs.google.com/document/d/1QUN8eLY4xA-7wuqlNIEfFJyETuEGKz9e4DqD8incN-8/edit?usp=sharing',
-        ru: 'https://docs.google.com/document/d/1-wco4u22lsKdYxYPDjzX-7awq_xub0Yla-ooK6EBfQI/edit?usp=sharing',
-        uah: 'https://docs.google.com/document/d/1-wco4u22lsKdYxYPDjzX-7awq_xub0Yla-ooK6EBfQI/edit?usp=sharing'
-      }
-    },
-    en: {
-      view: 'https://docs.google.com/document/d/1QUN8eLY4xA-7wuqlNIEfFJyETuEGKz9e4DqD8incN-8/edit?usp=sharing',
-      download: 'https://docs.google.com/document/d/1QUN8eLY4xA-7wuqlNIEfFJyETuEGKz9e4DqD8incN-8/export?format=pdf'
-    },
-    ru: {
-      view: 'https://docs.google.com/document/d/1-wco4u22lsKdYxYPDjzX-7awq_xub0Yla-ooK6EBfQI/edit?usp=sharing',
-      download: 'https://docs.google.com/document/d/1-wco4u22lsKdYxYPDjzX-7awq_xub0Yla-ooK6EBfQI/export?format=pdf'
-    },
-    uah: {
-      view: 'https://docs.google.com/document/d/1-wco4u22lsKdYxYPDjzX-7awq_xub0Yla-ooK6EBfQI/edit?usp=sharing',
-      download: 'https://docs.google.com/document/d/1-wco4u22lsKdYxYPDjzX-7awq_xub0Yla-ooK6EBfQI/export?format=pdf'
+
+const langs = {
+  en: '1QUN8eLY4xA-7wuqlNIEfFJyETuEGKz9e4DqD8incN-8',
+  ru: '1-wco4u22lsKdYxYPDjzX-7awq_xub0Yla-ooK6EBfQI',
+  uah: '1ogNvMtCi30a2fMR0Tivwj_REHYURQ7n8Nm5cgCR7P0c'
+};
+
+const urlParserString = (param, show = false) => {
+  const format = show ? 'edit?usp=sharing' : 'export?format=pdf';
+  return `https://docs.google.com/document/d/${langs[param]}/${format}`;
+};
+
+export const cvLinks = {
+  typeDownload: {
+    type: '_self',
+    title: 'btnDownloadCV',
+    link: {
+      en: urlParserString('en'),
+      ru: urlParserString('ru'),
+      uah: urlParserString('uah')
     }
   },
+  typeShow: {
+    type: '_blank',
+    title: 'btnGoMyBio',
+    link: {
+      en: urlParserString('en', true),
+      ru: urlParserString('ru', true),
+      uah: urlParserString('uah', true)
+    }
+  },
+  en: {
+    view: urlParserString('en', true),
+    download: urlParserString('en')
+  },
+  ru: {
+    view: urlParserString('ru', true),
+    download: urlParserString('ru')
+  },
+  uah: {
+    view: urlParserString('uah', true),
+    download: urlParserString('uah')
+  }
+};
+
+export const settings = {
   goSkillLink: {
     url: 'https://terifash.github.io/cv-skills-board/'
   },
