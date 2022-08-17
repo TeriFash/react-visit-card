@@ -7,13 +7,10 @@
   background-color: transparent;
 
   input.react-dropdown-select-input {
-    // height: 32px;
-    // padding-bottom: 10px;
-    // display: flex !important;
     max-height: 22px;
     margin-left: 0px;
     margin-right: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     & > * {
       line-height: 22px;
       max-height: 22px;
@@ -21,21 +18,15 @@
 
     &::placeholder,
     &::-webkit-input-placeholder {
-      // margin-left: 5px;
-      // line-height: 32px;
-      color: $global-text-color;
+      color: $lang-dropdown-color;
       font-size: 18px;
       font-weight: 800;
       width: 24px;
-      margin-bottom: 5px;
-      // margin-top: -5px;
-      // display: flex !important;
+      margin-bottom: 6px;
     }
   }
 
   .react-dropdown-select-input {
-    // min-height: 32px;
-    // max-height: 32px;
     display: flex;
     align-items: center;
   }
@@ -60,9 +51,9 @@
       min-height: 32px;
       max-height: 32px;
       font-size: 18px;
-      margin-top: 4px;
-      padding-top: 4px;
-      padding-bottom: 4px;
+      padding-top: 3px;
+      padding-left: 2px;
+      padding-bottom: 1px;
       font-weight: 800;
     }
   }
@@ -71,14 +62,14 @@
     min-height: 34px;
     max-height: 34px;
     padding: 0 5px;
-    background-color: rgba($black, 0.16);
-    color: $global-text-color;
+    background-color: $lang-dropdown-background;
+    color: $lang-dropdown-color;
     box-shadow: none;
     outline: none;
 
     &:hover,
     &:focus-within {
-      border-color: rgba($black, 0.4);
+      border-color: $lang-dropdown-border;
       transition: 0.4s;
     }
 
@@ -104,25 +95,28 @@
 
   .react-dropdown-select-item {
     min-height: 34px;
-    background-color: rgba($black, 0.16) !important;
-    font-size: 16px;
+    background-color: $lang-dropdown-background;
+    font-size: 18px;
     transition: 0.4s;
-    font-weight: 600;
-    color: $global-text-color;
+    font-weight: 800;
+    color: $lang-dropdown-color;
     padding: 5px;
     cursor: pointer;
     text-align: center;
-    border-bottom: 1px solid rgba($black, 0.4) !important;
+    border-bottom: 1px solid $lang-dropdown-border !important;
 
     &:hover {
       transition: 0.4s;
-      color: rgba($global-text-color, 0.3);
-      background-color: rgba($black, 0.3) !important;
+      color: $lang-dropdown-color;
+      background-color: $lang-dropdown-background;
+      opacity: 0.9;
     }
 
     &.react-dropdown-select-item-selected {
-      color: rgba($global-text-color, 0.5);
-      background-color: rgba($black, 0.31) !important;
+      color: $lang-dropdown-color;
+      background-color: $lang-dropdown-background !important;
+      opacity: 0.5;
+      cursor: not-allowed;
     }
   }
 
