@@ -7,31 +7,46 @@ import { languages } from './../../utilities/options';
 
 const LanguageButtons = function () {
   const { i18n } = useTranslation();
-  const [value, setValue] = useState(
-    () => languages.find(opt => opt.value === i18n.resolvedLanguage)?.label || 'Select'
-  );
   const [fild, setFild] = useState({});
 
-  const handleCurrentFild = event => {
-    if (event.value !== i18n.resolvedLanguage) {
-      i18n.changeLanguage(event.value);
-      setValue(event.value);
-      setFild(event);
+  // useEffect(() => {
+  //   setFild(lang);
+  // }, [setFild]);
+
+  // const getCourses = () => {
+  //   return setFild(languag);
+  // };
+
+  const setValues = values => {
+    const [value] = values;
+
+    if (value.value !== i18n.resolvedLanguage) {
+      setFild({ ...values });
+      i18n.changeLanguage(value.value);
     }
   };
 
-  // setFild(languages.find(opt => opt.value === i18n.resolvedLanguage));
+  // const handleCurrentClose = event => {
+  //   const trim = (str, chars) => str.split(chars).filter(Boolean).join(chars).toLowerCase();
+  //   const currentLang = trim(event.target.ariaLabel, ' ');
+
+  //   if (fild.value !== i18n.resolvedLanguage) {
+  //     i18n.changeLanguage(fild.value);
+  //     setFild(fild);
+  //   }
+  // };
 
   return (
     <div className='language-buttons'>
       <Select
-        placeholder={value}
+        placeholder={[languages.find(opt => opt.value === i18n.resolvedLanguage)].label}
         options={languages}
         searchable={false}
         multi={false}
+        values={[languages.find(opt => opt.value === i18n.resolvedLanguage)]}
         labelField={fild.label}
         valueField={fild.value}
-        onChange={handleCurrentFild}
+        onChange={setValues}
         noDataLabel='No matches found'
       />
     </div>

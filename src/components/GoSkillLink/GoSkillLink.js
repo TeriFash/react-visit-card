@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 // import { Link } from "react-router-dom";
 
 const GoSkillLink = () => {
-  const slot = 'Show skills...';
+  const { t } = useTranslation('main');
+  const slot = t('titleShowSkills');
   const [isHovered, setIsHovered] = useState(false);
 
   return (

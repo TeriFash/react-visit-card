@@ -8,7 +8,8 @@ import { useTranslation } from 'react-i18next';
 // import './BtnTilt.scss'
 
 const BtnTilt = () => {
-  const { t } = useTranslation('main');
+  // eslint-disable-next-line no-unused-vars
+  const { t, i18n } = useTranslation('main');
   const cvData = settings.cvLinks;
   const options = {
     scale: 1.1,

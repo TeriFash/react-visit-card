@@ -20,7 +20,10 @@ i18n
         main: mainRU
       }
     },
+    // lng: 'en',
     fallbackLng: 'en',
+    // returnEmptyString: false,
+    // keySeparator: false,
     interpolation: {
       escapeValue: false
     }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const UploadImage = () => {
   return (
@@ -30,6 +31,7 @@ const UploadImage = () => {
 };
 
 const BtnUpload = () => {
+  const { t } = useTranslation('main');
   const [loading, setLoading] = useState(false);
   const titleRef = useRef();
 
@@ -50,9 +52,7 @@ const BtnUpload = () => {
   return (
     <div ref={titleRef} className='Btn-upload' onClick={handleClick}>
       <UploadImage />
-      <span className='info-text'>
-        Download <span> CV</span>
-      </span>
+      <span className='info-text'>{t('btnDownloadCV')}</span>
     </div>
   );
 };
