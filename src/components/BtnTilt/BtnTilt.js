@@ -2,31 +2,25 @@ import React from 'react';
 import MoveTilt from 'components/MoveTilt';
 import CvLink from 'components/CvLink';
 import BtnUpload from 'components/BtnUpload';
-import { settings } from 'store/settings.js';
+import { settings } from 'store/settings';
+import { btnTiltOptions } from 'utilities/options';
 import { useTranslation } from 'react-i18next';
 
 // import './BtnTilt.scss'
 
 const BtnTilt = () => {
-  // eslint-disable-next-line no-unused-vars
   const { t, i18n } = useTranslation('main');
-  const cvData = settings.cvLinks;
-  const options = {
-    scale: 1.1,
-    speed: 3000,
-    max: 25,
-    glare: true,
-    'max-glare': 0.5
-  };
+  const lang = i18n.resolvedLanguage || 'en';
+  const { typeShow, typeDownload } = settings.cvLinks;
 
   return (
     <>
-      <MoveTilt options={options}>
-        <CvLink {...cvData.typeTwo} title={t('btnGoMyBio')} className='btn-tilt' />
+      <MoveTilt options={btnTiltOptions}>
+        <CvLink {...typeShow} lang={lang} title={t(typeShow.title)} className='btn-tilt' />
       </MoveTilt>
 
-      <CvLink {...cvData.typeOne} title={t('btnDownloadCV')} className='btn-upload-wrapper'>
-        <BtnUpload />
+      <CvLink {...typeDownload} lang={lang} className='btn-upload-wrapper'>
+        <BtnUpload title={t(typeDownload.title)} />
       </CvLink>
     </>
   );

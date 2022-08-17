@@ -15,3 +15,11 @@ export const languages = [
     label: 'RU'
   }
 ];
+
+export const btnTiltOptions = {
+  scale: 1.1,
+  speed: 3000,
+  max: 25,
+  glare: true,
+  'max-glare': 0.5
+};

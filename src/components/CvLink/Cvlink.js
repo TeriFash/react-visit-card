@@ -1,9 +1,8 @@
 import React from 'react';
 
 const CvLink = props => {
-  const { type, link, title, ...rest } = props;
+  const { type, link, lang, title, ...rest } = props;
   const look = type === '_blank';
-  const lang = 'en';
   const slot = look ? title : props.children;
 
   return (

@@ -30,7 +30,8 @@ const UploadImage = () => {
   );
 };
 
-const BtnUpload = () => {
+const BtnUpload = ({ title }) => {
+  console.log('✅ 🧊 ~ props', title);
   const { t } = useTranslation('main');
   const [loading, setLoading] = useState(false);
   const titleRef = useRef();
