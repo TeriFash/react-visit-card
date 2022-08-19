@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import MainSocialLinks from 'components/MainSocialLinks';
 // import MainLink from "../MainLink";
-import { settings } from 'store/settings.js';
+import { socialLinks, goSkillLink } from 'data';
 import MainContainer from 'components/MainContainer';
 import BtnTilt from 'components/BtnTilt';
 import GoSkillLink from 'components/GoSkillLink';
@@ -12,11 +12,12 @@ import GoSkillLink from 'components/GoSkillLink';
 
 class Home extends Component {
   constructor(props) {
+    // const { socialLinks, goSkillLink } = settings;
     super(props);
     this.state = {
       data: null,
-      socialLinks: settings.socialLinks,
-      goSkillLink: settings.goSkillLink,
+      socialLinks,
+      goSkillLink,
       term: '',
       active: 0
     };
@@ -33,16 +34,14 @@ class Home extends Component {
   render() {
     const { socialLinks, goSkillLink } = this.state;
     return (
-      <>
-        <MainContainer className='Home-page page-wrapper'>
-          {/*<MainLink />*/}
-          <BtnTilt />
-          <div className='Link-wrapper'>
-            <MainSocialLinks data={socialLinks} />
-            <GoSkillLink data={goSkillLink} />
-          </div>
-        </MainContainer>
-      </>
+      <MainContainer className='home-page page-wrapper'>
+        {/*<MainLink />*/}
+        <BtnTilt />
+        <div className='link-wrapper'>
+          <MainSocialLinks data={socialLinks} />
+          <GoSkillLink data={goSkillLink} />
+        </div>
+      </MainContainer>
     );
   }
 }

@@ -1,6 +1,6 @@
 // eslint-disable prettier/prettier
 
-const path = require('path');
+// const path = require('path');
 const FtpDeploy = require('ftp-deploy');
 const ftpDeploy = new FtpDeploy();
 
@@ -21,7 +21,7 @@ const config = {
   user: FTP_USER,
   password: FTP_PASSWORD,
   port: FTP_PORT,
-  localRoot:  path.join(__dirname, FTP_DEPLOY_LOCAL_ROOT),
+  localRoot:  __dirname + FTP_DEPLOY_LOCAL_ROOT,
   remoteRoot: FTP_DEPLOY_REMOTE_ROOT,
   include: ['*', '**/*'], // include: ["*", "**/*"],      // this would upload everything except dot files
   exclude: [
@@ -34,36 +34,41 @@ const config = {
 };
 
 const callbackFtpDeploySwitcher = (type, data) => {
-console.groupCollapsed("This is deploy statuses 🟦 🟧 🟥 🟩");
+// console.groupCollapsed("This is deploy statuses 🟦 🟧 🟥 🟩");
   switch (type) {
     case 'uploading':
-      console.groupCollapsed("🟦 Uploading files to host");
-      console.dir(data);
-      console.groupEnd();
+      console.log("🟦 Uploading files to host");
+      // console.groupCollapsed("🟦 Uploading files to host");
+      // console.dir(data);
+      // console.groupEnd();
       break;
     case 'uploaded':
-      console.groupCollapsed("🟧 Uploaded files to host");
-      console.dir(data);
-      console.groupEnd();
+      console.log("🟧 Uploaded files to host");
+      // console.groupCollapsed("🟧 Uploaded files to host");
+      // console.dir(data);
+      // console.groupEnd();
       break;
     case 'upload-error':
     case 'error':
-      console.groupCollapsed("🟥 Error deploying");
-      console.dir(data);
-      console.groupEnd();
+      console.log("🟥 Error deploying", data);
+      // console.groupCollapsed("🟥 Error deploying");
+      // console.dir(data);
+      // console.groupEnd();
       break;
     case 'finished':
-      console.groupCollapsed("🟩 Finished deploying");
-      console.info(type);
-      console.dir(data);
-      console.groupEnd();
+      console.log("🟩 Finished deploying");
+      // console.groupCollapsed("🟩 Finished deploying");
+      // console.info(type);
+      // console.dir(data);
+      // console.groupEnd();
       break;
     case 'log':
     default:
-      console.groupCollapsed("🟦 Log deploying");
-      console.info(type);
-      console.dir(data);
-      console.groupEnd();
+      console.log("🟦 Log deploying");
+      // console.groupCollapsed("🟦 Log deploying");
+      // console.info(type);
+      // console.dir(data);
+      // console.groupEnd();
       break;
   }
   console.groupEnd();

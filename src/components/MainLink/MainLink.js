@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 // function FnMainLink() {
 //   return (
-//     <ul className="About-text">
+//     <ul className="about-text">
 //         <Link to="dev">Development</Link> |{' '}
 //         <Link to="services">Services</Link>
 //         <Link to="story">About</Link>
@@ -18,7 +18,7 @@ import { useTranslation } from 'react-i18next';
 //   <Link {...props} />
 // )
 
-// <ul className="Main-Link">
+// <ul className="main-Link">
 //   <li>
 //     <Link to="me/dev">Development</Link>
 //     {""}
@@ -42,14 +42,14 @@ class MainLink extends Component {
     return (
       <ul className='main-Link'>
         <li>
-          <a href='#' className='is-disabled' title='partition in development'>
+          <Link href='#' className='is-disabled' title='partition in development' rel='noopener noreferrer'>
             {this.t('titleDevelopment')}
-          </a>
+          </Link>
         </li>
         <li>
-          <a href='#' className='is-disabled' title='partition in development'>
+          <Link href='#' className='is-disabled' title='partition in development' rel='noopener noreferrer'>
             {this.t('titleServices')}
-          </a>
+          </Link>
         </li>
         <li>
           <Link to='me/story'>{this.t('titleAbout')}</Link>

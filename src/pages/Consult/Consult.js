@@ -10,11 +10,9 @@ class Consult extends Component {
 
   render() {
     return (
-      <>
-        <section className='Consult-page page-wrapper'>
-          <h1>Consult</h1>
-        </section>
-      </>
+      <section className='consult-page page-wrapper'>
+        <h1>Consult</h1>
+      </section>
     );
   }
 }

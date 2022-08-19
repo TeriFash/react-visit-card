@@ -1,8 +1,11 @@
 {
+  "titleNotFound": "Not Found 404 page",
   "titleDevelopment": "Development",
   "titleServices": "Services",
   "titleAbout": "About",
   "titleShowSkills": "Show skills...",
+  "titleNoMatchesFound": "No matches found",
+  "btnGoHome": "Go Home",
   "btnGoMyBio": "Go My Bio",
   "btnDownloadCV": "Download CV"
 }

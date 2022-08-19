@@ -2,7 +2,7 @@ import React from 'react';
 import MoveTilt from 'components/MoveTilt';
 import CvLink from 'components/CvLink';
 import BtnUpload from 'components/BtnUpload';
-import { cvLinks } from 'store/settings';
+import { cvLinks } from 'data';
 import { btnTiltOptions } from 'utilities/options';
 import { useTranslation } from 'react-i18next';
 

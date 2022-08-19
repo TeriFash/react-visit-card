@@ -13,7 +13,7 @@ class About extends Component {
 
   render() {
     return (
-      <section className='About-page page-wrapper'>
+      <section className='about-page page-wrapper'>
         {/* <BtnBack /> */}
         <h1>About me</h1>
         <BtnTilt />

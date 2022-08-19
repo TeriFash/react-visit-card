@@ -1,13 +1,13 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import HomeComponent from '../../components/Home';
-import DevComponent from '../../components/Development';
-import ServicesComponent from '../../components/Services';
-import AboutComponent from '../../components/About';
+import HomeComponent from 'pages/Home';
+import DevComponent from 'pages/Development';
+import ServicesComponent from 'pages/Services';
+import AboutComponent from 'pages/About';
 
-import BtnHome from '../../components/BtnHome';
-// import ArticleList from "components/ArticleList";
-import ThemeSwitcher from '../../components/ThemeSwitcher';
+import BtnHome from 'components/BtnHome';
+import HeaderNav from 'components/HeaderNav';
 
 // const Main = () => <h1> Main page</h1>;
 // const Home = () => <h1> Home page</h1>;
@@ -118,16 +118,8 @@ function Main() {
 
   return (
     <>
-      {/* <header className="App-header">
-       <h1>Welcome to the app!</h1>
-      </header>
-      <nav className="App-navigator navigation-container">
-        <Link to="dev">Development</Link> |{' '}
-        <Link to="services">Services</Link>
-        <Link to="story">About</Link>
-      </nav> */}
-
-      <main className={`App-wrapper content-container ${locationMarc}`}>
+      <HeaderNav main={true} home={false} />
+      <main className={`app-wrapper content-container ${locationMarc}`}>
         <BtnHome />
         <Outlet />
       </main>
@@ -138,13 +130,10 @@ function Main() {
 function Home() {
   return (
     <>
-      <main className='App-wrapper'>
-        <ThemeSwitcher />
+      <HeaderNav main={false} />
+      <main className='app-wrapper'>
         <HomeComponent />
       </main>
-      {/* <nav>
-        <Link to="about">Home</Link>
-      </nav> */}
     </>
   );
 }
@@ -187,17 +176,14 @@ function About() {
 }
 
 function NotFound() {
+  const { t } = useTranslation();
   return (
-    <main className='App-wrapper'>
-      {/* <h2>Who are we?</h2> */}
-      <section className='Not-found-page page-wrapper'>
-        <h1>NotFound 404 page</h1>
+    <main className='app-wrapper'>
+      <section className='not-found-page page-wrapper'>
+        <h1>{t('titleNotFound')}</h1>
 
-        <Link to='/'>Go Home</Link>
+        <Link to='/'>{t('btnGoHome')}</Link>
       </section>
-      {/* <nav>
-        <Link to="/">Home</Link>
-      </nav> */}
     </main>
   );
 }

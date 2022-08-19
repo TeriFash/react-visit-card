@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,800,900&display=swap&subset=latin-ext');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;800&display=swap');
 // Color system
 
 $white: #fff !default;
@@ -46,15 +46,17 @@ $theme-colors: (
 $regular: 400 !default;
 $semi-bold: 500 !default;
 $bold: 500 !default;
+$strong-bold: 800 !default;
 
 $opacity-1: 0.1 !default;
 $opacity-2: 0.2 !default;
 $opacity-3: 0.3 !default;
+$opacity-5: 0.5 !default;
 $opacity-9: 0.9 !default;
 
 $shadow: 0px 4px 10px rgba($gray, 0.05) !default;
 
-$global-font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Ubuntu', 'sans-serif' !default;
+$global-font-family: 'Poppins', 'Nunito', 'Segoe UI', 'Roboto', 'Ubuntu', 'sans-serif' !default;
 $global-text-color: var(--dark) !default;
 $global-font-size: 16px !default;
 $global-font-weight: $regular !default;

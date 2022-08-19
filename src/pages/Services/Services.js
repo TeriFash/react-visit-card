@@ -10,12 +10,10 @@ class Services extends Component {
 
   render() {
     return (
-      <>
-        <section className='Services-page page-wrapper'>
-          <h1>Services</h1>
-          {this.props.children}
-        </section>
-      </>
+      <section className='services-page page-wrapper'>
+        <h1>Services</h1>
+        {this.props.children}
+      </section>
     );
   }
 }

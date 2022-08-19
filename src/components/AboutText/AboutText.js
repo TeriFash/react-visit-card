@@ -59,7 +59,7 @@
 // };
 
 // return (
-//   <div className={`About-text ${valueClass}`} ref={containerRef}>
+//   <div className={`about-text ${valueClass}`} ref={containerRef}>
 //     <h4>{items.title}</h4>
 //     <TextBlock items={items.text} fallback={"Loading..."} />
 //     {!items || items.length === 0 || (

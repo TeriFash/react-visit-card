@@ -10,7 +10,7 @@ const LayoutRouterAnimation = () => (
   <Router>
     <Route
       render={({ location, ...rest }) => (
-        <main className='App-wrapper Router-animated'>
+        <main className='app-wrapper Router-animated'>
           <Route exact path='/' render={() => <AppHome />} />
           <Transition
             native

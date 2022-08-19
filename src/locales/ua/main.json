@@ -1,8 +1,10 @@
 {
+  "titleNotFound": "404 Сторінку не знайдено",
   "titleDevelopment": "Розвиток",
   "titleServices": "Послуги",
   "titleAbout": "Про мене",
   "titleShowSkills": "Показати всі навички...",
+  "btnGoHome": "На Головну",
   "btnGoMyBio": "Моя біографія",
   "btnDownloadCV": "Завантажити CV"
 }

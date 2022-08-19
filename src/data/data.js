@@ -93,7 +93,7 @@ const skills = {
       text: 'Javascript',
       url: 'https://tc39.es/ecma262/',
       img: 'https://cdn.svgporn.com/logos/javascript.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -101,7 +101,7 @@ const skills = {
       text: 'React',
       url: 'https://reactjs.org/',
       img: 'https://cdn.svgporn.com/logos/react.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -109,7 +109,7 @@ const skills = {
       text: 'Vue',
       url: 'https://vuejs.org/',
       img: 'https://cdn.svgporn.com/logos/vue.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -117,7 +117,7 @@ const skills = {
       text: 'Vuetify',
       url: 'https://vuetifyjs.com/en/',
       img: 'https://cdn.svgporn.com/logos/vuetifyjs.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -125,7 +125,7 @@ const skills = {
       text: 'Nuxt',
       url: 'https://nuxtjs.org/',
       img: 'https://cdn.svgporn.com/logos/nuxt-icon.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -133,7 +133,7 @@ const skills = {
       text: 'Next',
       url: 'https://github.com/vercel/next.js',
       img: 'https://cdn.svgporn.com/logos/nextjs.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -141,7 +141,7 @@ const skills = {
       text: 'gatsby',
       url: 'https://gatsbyjs.com/',
       img: 'https://cdn.svgporn.com/logos/gatsby.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -149,7 +149,7 @@ const skills = {
       text: 'Cordova',
       url: 'https://cordova.apache.org/',
       img: 'https://cdn.svgporn.com/logos/cordova.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -157,7 +157,7 @@ const skills = {
       text: 'D3',
       url: 'https://d3js.org/',
       img: 'https://cdn.svgporn.com/logos/d3.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -165,7 +165,7 @@ const skills = {
       text: 'Lodash',
       url: 'https://lodash.com/',
       img: 'https://cdn.svgporn.com/logos/lodash.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -173,7 +173,7 @@ const skills = {
       text: 'Babel',
       url: 'https://babeljs.io/',
       img: 'https://cdn.svgporn.com/logos/babel.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -181,7 +181,7 @@ const skills = {
       text: 'MomentJs',
       url: 'https://momentjs.com/',
       img: 'https://cdn.svgporn.com/logos/momentjs.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -189,7 +189,7 @@ const skills = {
       text: 'Sass',
       url: 'https://sass-lang.com/',
       img: 'https://cdn.svgporn.com/logos/sass.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -197,7 +197,7 @@ const skills = {
       text: 'PostCSS',
       url: 'https://github.com/postcss/postcss',
       img: 'https://cdn.svgporn.com/logos/postcss.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -205,7 +205,7 @@ const skills = {
       text: 'Less',
       url: 'https://lesscss.org/',
       img: 'https://cdn.svgporn.com/logos/less.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -213,7 +213,7 @@ const skills = {
       text: 'Styled components',
       url: 'https://styled-components.com/',
       img: 'https://terifash.pro/images/skills-icon/styled-components.png',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -221,7 +221,7 @@ const skills = {
       text: 'pug',
       url: 'https://github.com/pugjs/pug',
       img: 'https://cdn.svgporn.com/logos/pug.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -229,7 +229,7 @@ const skills = {
       text: 'Bootstrap',
       url: 'https://getbootstrap.com/',
       img: 'https://cdn.svgporn.com/logos/bootstrap.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -237,7 +237,7 @@ const skills = {
       text: 'tailwindcss',
       url: 'https://tailwindcss.com/',
       img: 'https://cdn.svgporn.com/logos/tailwindcss-icon.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -245,7 +245,7 @@ const skills = {
       text: 'Materialize',
       url: 'https://materializecss.com/',
       img: 'https://cdn.svgporn.com/logos/materializecss.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -253,7 +253,7 @@ const skills = {
       text: 'Material-ui',
       url: 'https://material-ui.com/',
       img: 'https://cdn.svgporn.com/logos/material-ui.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -261,7 +261,7 @@ const skills = {
       text: 'Element',
       url: 'https://element.eleme.io/#/en-US',
       img: 'https://cdn.svgporn.com/logos/element.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -269,7 +269,7 @@ const skills = {
       text: 'Ionic',
       url: 'https://ionicframework.com/',
       img: 'https://cdn.svgporn.com/logos/ionic.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -277,7 +277,7 @@ const skills = {
       text: 'flat-ui',
       url: 'https://designmodo.github.io/Flat-UI/',
       img: 'https://cdn.svgporn.com/logos/flat-ui.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -285,7 +285,7 @@ const skills = {
       text: 'Bulma',
       url: 'https://bulma.io/',
       img: 'https://cdn.svgporn.com/logos/bulma.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -293,7 +293,7 @@ const skills = {
       text: 'Uikit',
       url: 'https://getuikit.com/',
       img: 'https://cdn.svgporn.com/logos/uikit.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -301,7 +301,7 @@ const skills = {
       text: 'pixijs',
       url: 'https://pixijs.com/',
       img: 'https://cdn.svgporn.com/logos/pixijs.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -309,7 +309,7 @@ const skills = {
       text: 'semantic-ui',
       url: 'https://semantic-ui.com/',
       img: 'https://cdn.svgporn.com/logos/semantic-ui.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -317,7 +317,7 @@ const skills = {
       text: 'Eslint',
       url: 'https://eslint.org/',
       img: 'https://cdn.svgporn.com/logos/eslint.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -325,7 +325,7 @@ const skills = {
       text: 'prettier',
       url: 'https://prettier.io/',
       img: 'https://cdn.svgporn.com/logos/prettier.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -333,7 +333,7 @@ const skills = {
       text: 'Stylelint',
       url: 'https://stylelint.io/',
       img: 'https://cdn.svgporn.com/logos/stylelint.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -341,7 +341,7 @@ const skills = {
       text: 'react-spring',
       url: 'https://react-spring.io/',
       img: 'https://cdn.svgporn.com/logos/react-spring.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -349,7 +349,7 @@ const skills = {
       text: 'Webpack',
       url: 'https://webpack.github.io/',
       img: 'https://cdn.svgporn.com/logos/webpack.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'version-control',
@@ -357,7 +357,7 @@ const skills = {
       text: 'Git',
       url: 'https://git-scm.com/',
       img: 'https://cdn.svgporn.com/logos/git-icon.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'tools',
@@ -365,7 +365,7 @@ const skills = {
       text: 'Dimer',
       url: 'https://dimerapp.com/',
       img: 'https://cdn.svgporn.com/logos/dimer.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'tools',
@@ -373,7 +373,7 @@ const skills = {
       text: 'passportjs',
       url: 'https://passportjs.org/',
       img: 'https://cdn.svgporn.com/logos/passport.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -381,7 +381,7 @@ const skills = {
       text: 'npm',
       url: 'https://npmjs.com/',
       img: 'https://cdn.svgporn.com/logos/npm-icon.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -389,7 +389,7 @@ const skills = {
       text: 'yarn',
       url: 'https://yarnpkg.com/',
       img: 'https://cdn.svgporn.com/logos/yarn.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -397,7 +397,7 @@ const skills = {
       text: 'Bower',
       url: 'https://bower.io/',
       img: 'https://cdn.svgporn.com/logos/bower.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -405,7 +405,7 @@ const skills = {
       text: 'Gulp',
       url: 'https://gulpjs.com/',
       img: 'https://cdn.svgporn.com/logos/gulp.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'frontend',
@@ -413,7 +413,7 @@ const skills = {
       text: 'Grunt',
       url: 'https://gruntjs.com/',
       img: 'https://cdn.svgporn.com/logos/grunt.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -421,7 +421,7 @@ const skills = {
       text: 'Composer',
       url: 'https://getcomposer.org/',
       img: 'https://cdn.svgporn.com/logos/composer.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -429,7 +429,7 @@ const skills = {
       text: 'Nodejs',
       url: 'https://nodejs.org/en/',
       img: 'https://cdn.svgporn.com/logos/nodejs-icon.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -437,7 +437,7 @@ const skills = {
       text: 'Express',
       url: 'https://expressjs.com/',
       img: 'https://cdn.svgporn.com/logos/express.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -445,7 +445,7 @@ const skills = {
       text: 'Websocket',
       url: 'https://w3.org/TR/websockets/',
       img: 'https://cdn.svgporn.com/logos/websocket.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -453,7 +453,7 @@ const skills = {
       text: 'socket.io',
       url: 'https://socket.io/',
       img: 'https://cdn.svgporn.com/logos/socket.io.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -461,7 +461,7 @@ const skills = {
       text: 'REST API',
       url: 'https://wikiwand.com/uk/REST',
       img: 'https://terifash.pro/images/skills-icon/rest-api.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -469,7 +469,7 @@ const skills = {
       text: 'AJAX',
       url: 'https://developer.mozilla.org/ru/docs/Web/Guide/AJAX',
       img: 'https://terifash.pro/images/skills-icon/ajax.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -477,7 +477,7 @@ const skills = {
       text: 'Firebase',
       url: 'https://firebase.google.com/',
       img: 'https://cdn.svgporn.com/logos/firebase.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -485,7 +485,7 @@ const skills = {
       text: 'graphql',
       url: 'https://graphql.org/',
       img: 'https://cdn.svgporn.com/logos/graphql.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -493,7 +493,7 @@ const skills = {
       text: 'apollo',
       url: 'https://apollographql.com/',
       img: 'https://cdn.svgporn.com/logos/apollostack.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -501,7 +501,7 @@ const skills = {
       text: 'postman',
       url: 'https://postman.com/',
       img: 'https://cdn.svgporn.com/logos/postman.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -509,7 +509,7 @@ const skills = {
       text: 'Digital-ocean',
       url: 'https://digitalocean.com/',
       img: 'https://cdn.svgporn.com/logos/digital-ocean.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -517,7 +517,7 @@ const skills = {
       text: 'Heroku',
       url: 'https://heroku.com/',
       img: 'https://cdn.svgporn.com/logos/heroku-icon.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -525,7 +525,7 @@ const skills = {
       text: 'Surge',
       url: 'https://surge.sh/',
       img: 'https://cdn.svgporn.com/logos/surge.svg',
-      height: 100,
+      height: 100
     },
     {
       type: 'backend',
@@ -533,8 +533,8 @@ const skills = {
       text: 'docker',
       url: 'https://docker.com/',
       img: 'https://cdn.svgporn.com/logos/docker-icon.svg',
-      height: 100,
-    },
+      height: 100
+    }
   ],
   soft: [
     {
@@ -542,85 +542,85 @@ const skills = {
       title: 'GitHub',
       text: 'GitHub',
       url: 'https://github.com/',
-      img: 'https://cdn.svgporn.com/logos/github-octocat.svg',
+      img: 'https://cdn.svgporn.com/logos/github-octocat.svg'
     },
     {
       type: 'version-control',
       title: 'Bitbucket',
       text: 'Bitbucket',
       url: 'https://bitbucket.org/product/',
-      img: 'https://cdn.svgporn.com/logos/bitbucket.svg',
+      img: 'https://cdn.svgporn.com/logos/bitbucket.svg'
     },
     {
       type: 'version-control',
       title: 'Gitlab',
       text: 'Gitlab',
       url: 'https://about.gitlab.com/',
-      img: 'https://cdn.svgporn.com/logos/gitlab.svg',
+      img: 'https://cdn.svgporn.com/logos/gitlab.svg'
     },
     {
       type: 'tools',
       title: 'Figma',
       text: 'Figma',
       url: 'https://figma.com/',
-      img: 'https://cdn.svgporn.com/logos/figma.svg',
+      img: 'https://cdn.svgporn.com/logos/figma.svg'
     },
     {
       type: 'tools',
       title: 'Zeplin',
       text: 'Zeplin',
       url: 'https://zeplin.io/',
-      img: 'https://cdn.svgporn.com/logos/zeplin.svg',
+      img: 'https://cdn.svgporn.com/logos/zeplin.svg'
     },
     {
       type: 'tools',
       title: 'Invision',
       text: 'Invision',
       url: 'https://invisionapp.com/',
-      img: 'https://cdn.svgporn.com/logos/invision-icon.svg',
+      img: 'https://cdn.svgporn.com/logos/invision-icon.svg'
     },
     {
       type: 'tools',
       title: 'WebStorm',
       text: 'Webstorm',
       url: 'https://jetbrains.com/webstorm/',
-      img: 'https://cdn.svgporn.com/logos/webstorm.svg',
+      img: 'https://cdn.svgporn.com/logos/webstorm.svg'
     },
     {
       type: 'tools',
       title: 'PHPStorm',
       text: 'phpstorm',
       url: 'https://jetbrains.com/phpstorm/',
-      img: 'https://cdn.svgporn.com/logos/phpstorm.svg',
+      img: 'https://cdn.svgporn.com/logos/phpstorm.svg'
     },
     {
       type: 'tools',
       title: 'Visual studio code',
       text: 'Visual-studio-code',
       url: 'https://code.visualstudio.com/',
-      img: 'https://cdn.svgporn.com/logos/visual-studio-code.svg',
+      img: 'https://cdn.svgporn.com/logos/visual-studio-code.svg'
     },
     {
       type: 'tools',
       title: 'Atom',
       text: 'atom',
       url: 'https://atom.io/',
-      img: 'https://cdn.svgporn.com/logos/atom-icon.svg',
+      img: 'https://cdn.svgporn.com/logos/atom-icon.svg'
     },
     {
       type: 'tools',
       title: 'SublimeText',
       text: 'sublimetext',
       url: 'https://sublimetext.com/',
-      img: 'https://cdn.svgporn.com/logos/sublimetext-icon.svg',
+      img: 'https://cdn.svgporn.com/logos/sublimetext-icon.svg'
     },
     {
       type: 'tools',
       title: 'GitKraken',
       text: 'gitkraken',
       url: 'https://gitkraken.com/',
-      img: 'https://cdn.svgporn.com/logos/gitkraken.svg',
-    },
+      img: 'https://cdn.svgporn.com/logos/gitkraken.svg'
+    }
   ],
   management: [
     {
@@ -628,58 +628,95 @@ const skills = {
       title: 'Jira',
       text: 'Jira',
       url: 'https://atlassian.com/ru/software/jira',
-      img: 'https://cdn.svgporn.com/logos/jira.svg',
+      img: 'https://cdn.svgporn.com/logos/jira.svg'
     },
     {
       type: 'management',
       title: 'Confluence',
       text: 'Confluence',
       url: 'https://atlassian.com/ru/software/confluence',
-      img: 'https://cdn.svgporn.com/logos/confluence.svg',
+      img: 'https://cdn.svgporn.com/logos/confluence.svg'
     },
     {
       type: 'management',
       title: 'Trello',
       text: 'Trello',
       url: 'https://trello.com/',
-      img: 'https://cdn.svgporn.com/logos/trello.svg',
+      img: 'https://cdn.svgporn.com/logos/trello.svg'
     },
     {
       type: 'management',
       title: 'Slack',
       text: 'Slack',
       url: 'https://slack.com/',
-      img: 'https://cdn.svgporn.com/logos/slack-icon.svg',
+      img: 'https://cdn.svgporn.com/logos/slack-icon.svg'
     },
     {
       type: 'management',
       title: 'Todoist',
       text: 'Todoist',
       url: 'https://todoist.com/',
-      img: 'https://cdn.svgporn.com/logos/todoist-icon.svg',
+      img: 'https://cdn.svgporn.com/logos/todoist-icon.svg'
     },
     {
       type: 'management',
       title: 'Hubspot',
       text: 'Hubspot',
       url: 'https://hubspot.com/',
-      img: 'https://cdn.svgporn.com/logos/hubspot.svg',
+      img: 'https://cdn.svgporn.com/logos/hubspot.svg'
     },
     {
       type: 'management',
       title: 'Redmine',
       text: 'Redmine',
       url: 'https://redmine.org/',
-      img: 'https://terifash.pro/images/skills-icon/redmine.png',
+      img: 'https://terifash.pro/images/skills-icon/redmine.png'
     },
     {
       type: 'management',
       title: 'Mattermost',
       text: 'mattermost',
       url: 'https://mattermost.org/',
-      img: 'https://cdn.svgporn.com/logos/mattermost-icon.svg',
-    },
-  ],
+      img: 'https://cdn.svgporn.com/logos/mattermost-icon.svg'
+    }
+  ]
 };
-const devData = {};
-export { devData, skills };
+
+const sortSkils = value => {
+  const types = Object.keys(value);
+  let list = [];
+
+  types.forEach(item => {
+    switch (item) {
+      case 'hard':
+        list.push({
+          title: 'Technology',
+          data: skills[item]
+        });
+        break;
+      case 'soft':
+        list.push({
+          title: 'Tools',
+          data: skills[item]
+        });
+        break;
+      case 'management':
+        list.push({
+          title: 'Managment',
+          data: skills[item]
+        });
+        break;
+      default:
+        list.push({
+          title: 'Other',
+          data: skills[item]
+        });
+        break;
+    }
+  });
+
+  return list;
+};
+
+export const skillsList = sortSkils(skills);
+export { skills };

@@ -22,4 +22,4 @@ const postData = [
   }
 ];
 
-export default postData;
+export { postData };

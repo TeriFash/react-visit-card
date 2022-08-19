@@ -1,8 +1,10 @@
 {
+  "titleNotFound": "404 Страница не найдена",
   "titleDevelopment": "Разработка",
   "titleServices": "Услуги",
   "titleAbout": "Обо мне",
   "titleShowSkills": "Показать все навыки...",
+  "btnGoHome": "На Главную",
   "btnGoMyBio": "Моя биография",
   "btnDownloadCV": "Скачать CV"
 }

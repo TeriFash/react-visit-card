@@ -25,7 +25,7 @@ class LayoutBase extends Component {
     }
 
     return (
-      <section className={`App-wrapper ${page}`}>
+      <section className={`app-wrapper ${page}`}>
         {/* {!isBackShow && <BtnBack />} */}
         {headerBlock}
         {this.props.children}

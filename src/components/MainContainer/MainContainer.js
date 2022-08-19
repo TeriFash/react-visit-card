@@ -52,11 +52,11 @@ class MainContainer extends Component {
 
     return (
       <section
-        className={`Main-container ${this.props.className || ''}`}
+        className={`main-container ${this.props.className || ''}`}
         onMouseMove={this.onMouseMove.bind(this)}
         style={sectionStyle}
       >
-        <h1 className='Main-text' ref={this.sectionMain}>
+        <h1 className='main-text' ref={this.sectionMain}>
           Teri
           <span className='bold' ref={this.playword_1} style={boldStyle}>
             Fash

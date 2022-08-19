@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 // import './Support.scss'
 
@@ -10,11 +10,9 @@ class Support extends Component {
 
   render() {
     return (
-      <>
-        <section className="Support-page page-wrapper">
-          <h1 className="page-child">Support</h1>
-        </section>
-      </>
+      <section className='Support-page page-wrapper'>
+        <h1 className='page-child'>Support</h1>
+      </section>
     );
   }
 }

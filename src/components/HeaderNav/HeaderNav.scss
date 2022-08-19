@@ -1,0 +1,17 @@
+.header-nav {
+  &--home {
+    // overflow-y: auto;
+    // overflow-x: hidden;
+    min-width: 100%;
+    min-height: 36px;
+    padding: 0 40px;
+    display: flex;
+    position: fixed;
+    top: 40px;
+    align-items: center;
+    justify-content: space-between;
+    // flex-direction: column;
+    right: 0;
+    left: 0;
+  }
+}
