@@ -16,7 +16,6 @@ import HeaderNav from 'components/HeaderNav';
 // import Main from 'components/MainContainer';
 
 const lang = i18n.language;
-console.log('✅ 🧊 ~ lang', lang);
 // eslint-disable-next-line no-unused-vars
 const history = createBrowserHistory();
 
@@ -39,10 +38,9 @@ const history = createBrowserHistory();
 // };
 
 function Main(props) {
-  console.log('✅ 🧊 ~ props', props);
-  const location = useLocation().pathname.split('/');
+  const location = useLocation().pathname.split(`/`);
   const locationMarc = location[location.length - 1];
-  console.log('✅ 🧊 ~ locationMarc', locationMarc);
+  console.log('✅ 🧊 ~ locationMarc', props);
   let { locale } = useParams();
   const localLang = locale || locationMarc;
   const changeLanguage = lng => {
@@ -55,9 +53,10 @@ function Main(props) {
     console.log(i18n.language, lang, 'here ');
 
     if (lang !== locale) {
-      console.log('yesss nope right');
-      // changeLanguage(lang);
-      //history.push(generateLanguage(lang, location));
+      changeLanguage(lang);
+      // history.push(generateLanguage(lang, location));
+    } else {
+      changeLanguage(lang);
     }
   }
 
@@ -103,8 +102,8 @@ const Router = () => {
 
   return (
     <Routes>
-      <Route path={`/`} render={<Navigate state={{ from: location }} to={`/${lang}`} replace />} />
-      <Route exact path={`/`} history={history} element={<Main {...location} />}>
+      <Route path={`/`} render={<Navigate state={{ from: location }} to={`/${lang}`} />} />
+      <Route exact path={``} history={history} element={<Main {...location} />}>
         <Route path={`${lang}/`} element={<Home />} />
         <Route path={`${lang}/about`} element={<About />} />
         <Route path={`${lang}/me`} element={<Main />} />
