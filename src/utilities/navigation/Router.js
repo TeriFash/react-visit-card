@@ -2,13 +2,12 @@
 import React, { useEffect } from 'react';
 // import { render } from 'react-dom';
 // eslint-disable-next-line no-unused-vars
-import { Route, Routes, Outlet, useLocation, Navigate, useParams } from 'react-router-dom';
+import { Route, Routes, Outlet, useLocation, useParams, useNavigate } from 'react-router-dom';
 // import { ConnectedRouter, routerReducer } from 'react-router-redux';
 import { createBrowserHistory } from 'history';
 // import PathToRegexp, { compile } from 'path-to-regexp';
 
 import i18n from 'config/i18next-config';
-
 import About from 'pages/About';
 import Home from 'pages/Home';
 // import BtnHome from 'components/BtnHome';
@@ -38,25 +37,35 @@ const history = createBrowserHistory();
 // };
 
 function Main(props) {
+  let navigate = useNavigate();
+
   const location = useLocation().pathname.split(`/`);
   const locationMarc = location[location.length - 1];
-  console.log('✅ 🧊 ~ locationMarc', props);
+
+  console.log('✅ 🧊 ~ locationMarc', locationMarc);
+  console.log('✅ 🧊 ~ lang', lang);
   let { locale } = useParams();
+
   const localLang = locale || locationMarc;
+  console.log('✅ 🧊 ~ localLang', localLang);
   const changeLanguage = lng => {
     i18n.changeLanguage(lng);
   };
 
+  if (props.pathname !== `/${lang}`) {
+    navigate({ to: `/${lang}` });
+  }
+
   if (lang !== localLang) {
-    changeLanguage(localLang);
+    changeLanguage(lang);
+    navigate({ to: `/${lang}` });
 
     console.log(i18n.language, lang, 'here ');
 
     if (lang !== locale) {
       changeLanguage(lang);
+
       // history.push(generateLanguage(lang, location));
-    } else {
-      changeLanguage(lang);
     }
   }
 
@@ -71,47 +80,52 @@ function Main(props) {
   );
 }
 
-const Router = () => {
-  // console.log('match', { match, location });
+// const AppRoutes = () => {
+//   // console.log('match', { match, location });
 
-  // const shouldRedirect = true;
-  // let navigate = this.useOutletContext();
-  let location = useLocation();
-  // let match = generateLanguage(lang, location);
-  // let match = useRouteMatch({ path: locationPatch });
-  // console.log('✅ 🧊 ~ navigate', navigate(), match);
-  // console.log('location', location);
+//   // const shouldRedirect = true;
+//   // let navigate = this.useOutletContext();
+//   let location = useLocation();
+//   // let match = generateLanguage(lang, location);
+//   // let match = useRouteMatch({ path: locationPatch });
+//   // console.log('✅ 🧊 ~ navigate', navigate(), match);
+//   // console.log('location', location);
 
-  // useEffect(() => {
-  //   // if (shouldRedirect) {
-  //   return this.useOutletContext();
-  //   // }
-  // }, [navigate]);
+//   // useEffect(() => {
+//   //   // if (shouldRedirect) {
+//   //   return this.useOutletContext();
+//   //   // }
+//   // }, [navigate]);
 
-  // if (lang !== match.params.locale) {
-  //   changeLanguage(match.params.locale);
+//   // if (lang !== match.params.locale) {
+//   //   changeLanguage(match.params.locale);
 
-  //   console.log(i18n.language, lang, 'here ');
+//   //   console.log(i18n.language, lang, 'here ');
 
-  //   if (lang !== match.params.locale) {
-  //     console.log('yesss nope right');
-  //     changeLanguage(lang);
-  //     history.push(generateLanguage(lang, location));
-  //   }
-  // }
+//   //   if (lang !== match.params.locale) {
+//   //     console.log('yesss nope right');
+//   //     changeLanguage(lang);
+//   //     history.push(generateLanguage(lang, location));
+//   //   }
+//   // }
 
-  return (
-    <Routes>
-      <Route path={`/`} render={<Navigate state={{ from: location }} to={`/${lang}`} />} />
-      <Route exact path={``} history={history} element={<Main {...location} />}>
-        <Route path={`${lang}/`} element={<Home />} />
-        <Route path={`${lang}/about`} element={<About />} />
-        <Route path={`${lang}/me`} element={<Main />} />
-      </Route>
-    </Routes>
-  );
-};
+//   return (
+//     <Routes>
+//       <Route
+//         path={`/`}
+//         element={<Main {...location} />}
+//         render={() => <Redirect state={{ from: location }} to={`/${lang}`} />}
+//       />
+//       <Route exact path={`/`} element={<Main {...location} />}>
+//         <Route path={`${lang}`} element={<Home />} />
+//         <Route path={`${lang}/about`} element={<About />} />
+//         <Route path={`${lang}/me`} element={<Main />} />
+//       </Route>
+//     </Routes>
+//   );
+// };
 
-export default Router;
+// export default AppRoutes;
+export { About, Main, Home, history };
 
 // render(<BasicExample history={history} />, document.body);

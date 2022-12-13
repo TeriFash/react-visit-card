@@ -5,6 +5,7 @@ import { resources } from 'locales';
 
 const storeLng = window.localStorage.getItem('i18nextLng');
 const lng = storeLng || 'en';
+// const availableLanguages = ['en', 'ru', 'ua'];
 
 i18n
   .use(LanguageDetector)
@@ -16,11 +17,16 @@ i18n
     // returnEmptyString: false,
     keySeparator: false,
     interpolation: {
-      escapeValue: false
+      escapeValue: false,
+      formatSeparator: '.'
     },
+    // whitelist: availableLanguages,
     defaultNS: ['main'],
     // detection: {
     //   order: ['path', 'navigator']
+    // },
+    // detection: {
+    //   checkWhitelist: true
     // },
     preload: true,
     debug: process.env.NODE_ENV === 'development', // true,
