@@ -1,7 +1,7 @@
 {
   "createReactComponent.functionType": "expression",
   "createReactComponent.language": "javascript",
-  "editor.fontSize": 12,
+  "editor.fontSize": 14,
   "sftp.downloadWhenOpenInRemoteExplorer": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   // "files.autoSave": "onFocusChange", // optional but recommended
