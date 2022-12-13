@@ -4,5 +4,6 @@
   "jsxSingleQuote": true,
   "tabWidth": 2,
   "trailingComma": "none",
+  "endOfLine":"auto",
   "arrowParens": "avoid"
 }
