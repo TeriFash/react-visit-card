@@ -1,17 +1,23 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect } from 'react';
-// import { render } from 'react-dom';
-// eslint-disable-next-line no-unused-vars
-import { Route, Routes, Outlet, useLocation, useParams, useNavigate } from 'react-router-dom';
-// import { ConnectedRouter, routerReducer } from 'react-router-redux';
-import { createBrowserHistory } from 'history';
-// import PathToRegexp, { compile } from 'path-to-regexp';
+import React from 'react';
 
-import i18n from 'config/i18next-config';
-import About from 'pages/About';
-import Home from 'pages/Home';
 // import BtnHome from 'components/BtnHome';
 import HeaderNav from 'components/HeaderNav';
+// import PathToRegexp, { compile } from 'path-to-regexp';
+import i18n from 'config/i18next-config';
+// import { ConnectedRouter, routerReducer } from 'react-router-redux';
+import { createBrowserHistory } from 'history';
+import About from 'pages/About';
+import Home from 'pages/Home';
+// import { render } from 'react-dom';
+// eslint-disable-next-line no-unused-vars
+import {
+  Outlet,
+  useLocation,
+  useNavigate,
+  useParams
+} from 'react-router-dom';
+
 // import Main from 'components/MainContainer';
 
 const lang = i18n.language;
@@ -82,7 +88,6 @@ function Main(props) {
 
 // const AppRoutes = () => {
 //   // console.log('match', { match, location });
-
 //   // const shouldRedirect = true;
 //   // let navigate = this.useOutletContext();
 //   let location = useLocation();
@@ -90,25 +95,20 @@ function Main(props) {
 //   // let match = useRouteMatch({ path: locationPatch });
 //   // console.log('✅ 🧊 ~ navigate', navigate(), match);
 //   // console.log('location', location);
-
 //   // useEffect(() => {
 //   //   // if (shouldRedirect) {
 //   //   return this.useOutletContext();
 //   //   // }
 //   // }, [navigate]);
-
 //   // if (lang !== match.params.locale) {
 //   //   changeLanguage(match.params.locale);
-
 //   //   console.log(i18n.language, lang, 'here ');
-
 //   //   if (lang !== match.params.locale) {
 //   //     console.log('yesss nope right');
 //   //     changeLanguage(lang);
 //   //     history.push(generateLanguage(lang, location));
 //   //   }
 //   // }
-
 //   return (
 //     <Routes>
 //       <Route
@@ -124,8 +124,7 @@ function Main(props) {
 //     </Routes>
 //   );
 // };
-
 // export default AppRoutes;
-export { About, Main, Home, history };
+export { About, history, Home, Main };
 
 // render(<BasicExample history={history} />, document.body);

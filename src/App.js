@@ -1,19 +1,27 @@
 import React from 'react'; // useState, useEffect
-import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
-// import {
-//   // About,
-//   // Services,
-//   Development,
-//   Home,
-//   Main,
-//   NotFound
-// } from './utilities/navigation/routes.js';
 
-import { Main, Home, About } from 'utilities/navigation/Router.js';
+import i18n from 'config/i18next-config';
+import {
+  Navigate,
+  Route,
+  Routes,
+  useLocation
+} from 'react-router-dom';
+
+// import { Main, Home, About } from 'utilities/navigation/Router.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { fas, faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import i18n from 'config/i18next-config';
+import {
+  faArrowDown,
+  faArrowUp,
+  fas
+} from '@fortawesome/free-solid-svg-icons';
+
+import {
+  About,
+  Home,
+  Main
+} from './utilities/navigation/routes.js';
 
 library.add(fab, fas, faArrowUp, faArrowDown);
 const lang = i18n.language;

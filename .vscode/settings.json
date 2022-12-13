@@ -4,17 +4,22 @@
   "editor.fontSize": 14,
   "sftp.downloadWhenOpenInRemoteExplorer": true,
   "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
   // "files.autoSave": "onFocusChange", // optional but recommended
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
   },
   "[javascript]": {
+    "editor.formatOnSave": false
     // "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
     // "editor.defaultFormatter": "SimonSiefke.prettier-vscode",
     // "editor.formatOnPaste": false, // required 
     // "editor.formatOnType": false, // required
