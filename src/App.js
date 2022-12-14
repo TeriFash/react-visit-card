@@ -1,6 +1,7 @@
-import { useRoutes } from 'react-router-dom';
-
-// import { Main, Home, About } from 'utilities/navigation/Router.js';
+import {
+  Route,
+  Routes,
+} from 'react-router-dom';
 // import { library } from '@fortawesome/fontawesome-svg-core';
 // import { fab } from '@fortawesome/free-brands-svg-icons';
 // import {
@@ -8,16 +9,52 @@ import { useRoutes } from 'react-router-dom';
 //   faArrowUp,
 //   fas,
 // } from '@fortawesome/free-solid-svg-icons';
-import { router } from './utilities/navigation/routes.js';
+import {
+  About,
+  Development,
+  Home,
+  Layout,
+  NoMatch,
+  Services,
+} from 'utilities/navigation/routes.js';
 
 // library.add(fab, fas, faArrowUp, faArrowDown);
-// const lang = i18n.language;
+
+
 
 export default function App() {
-  // let location = useLocation();
-  let element = useRoutes(router);
+  const setClass = () => {
+   document.getElementById('root').classList.add('App');
+  }
+
+  setClass();
+
   return (
-    <>{element}</>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="development" element={<Development />} />
+          <Route path="services" element={<Services />} />
+          <Route path="*" element={<NoMatch  />} />
+        </Route>
+      </Routes>
+  );
+}
+
+// {/* <Routes>
+// <Route path='/' element={<Home />} />
+// <Route path='me' element={<Main />}>
+//   <Route path='dev' element={<Development />} />
+//   {/*<Route path="services" element={<Services />} />
+//   <Route path="services/:id" element={<DetailedPost />} />
+//   <Route path="story" element={<About />} />*/}
+// </Route>
+// {/* <Route path="home" redirectTo="/" /> */}
+// <Route path='*' element={<NotFound />} />
+// </Routes> */}
+
+
     // <Routes>
     //   <Route path={`/`} element={<Main {...location} />} render={<Navigate to={`/${lang}`} replace />} />
     //   <Route exact path={`/`} element={<Main {...location} />}>
@@ -36,17 +73,3 @@ export default function App() {
     //   </Route>
     //   <Route path='*' element={<NotFound />} />
     // </Routes>
-  );
-}
-
-// {/* <Routes>
-// <Route path='/' element={<Home />} />
-// <Route path='me' element={<Main />}>
-//   <Route path='dev' element={<Development />} />
-//   {/*<Route path="services" element={<Services />} />
-//   <Route path="services/:id" element={<DetailedPost />} />
-//   <Route path="story" element={<About />} />*/}
-// </Route>
-// {/* <Route path="home" redirectTo="/" /> */}
-// <Route path='*' element={<NotFound />} />
-// </Routes> */}

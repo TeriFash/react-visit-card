@@ -10,6 +10,7 @@ export const languages = Object.keys(langsType).map((item, i) => ({
   label: langsType[item].toUpperCase()
 }));
 
+
 export const btnTiltOptions = {
   scale: 1.1,
   speed: 3000,

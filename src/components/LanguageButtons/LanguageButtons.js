@@ -1,7 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+
 import Select from 'react-dropdown-select';
+import { useTranslation } from 'react-i18next';
 import { languages } from 'utilities/options';
 
 const LanguageButtons = () => {

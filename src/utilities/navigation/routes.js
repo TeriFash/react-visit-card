@@ -8,36 +8,10 @@ import HomeComponent from 'pages/Home';
 import ServicesComponent from 'pages/Services';
 import { useTranslation } from 'react-i18next';
 import {
-  createBrowserRouter,
   Link,
   Outlet,
   useLocation,
-  useNavigation,
 } from 'react-router-dom';
-
-// const Main = () => <h1> Main page</h1>;
-// const Home = () => <h1> Home page</h1>;
-// const Development = () => <h1> Development page</h1>;
-// const Support = () => <h1> Support page</h1>;
-// const Services = () => <h1> Services page</h1>;
-// const Consult = () => <h1> Consult page</h1>;
-// const About = () => <h1> About page</h1>;
-// const MainIndex = () => <h1> MainIndex page</h1>;
-// const MainId = () => <h1> MainId page</h1>;
-// const MainBase = () => <h1> MainBase page</h1>;
-// const NotFound = () => <h1> NotFound 404 page</h1>;
-
-// function Home() {
-
-//   return (
-//     <div>
-//       <HomePage />
-//       <nav>
-//         <Link to="/">Home</Link> | <Link to="about">About</Link>
-//       </nav>
-//     </div>
-//   );
-// }
 
 // function Declarative() {
 //   return <Navigate to="/home" replace state={state} />;
@@ -83,22 +57,6 @@ import {
 //   { path: "*", element: <NotFound /> },
 // ];
 
-// Code for example
-// function Dashboard() {
-//   return (
-//     <div>
-//       <p>Look, more routes!</p>
-//       <Routes>
-//         <Route path="/" element={<DashboardGraphs />} />
-//         <Route path="invoices" element={<InvoiceList />} />
-//       </Routes>
-//       <Outlet />
-//     </div>
-//   );
-// }
-
-// Code for example start
-
 // function Declarative() {
 //   return <Navigate to="/home" replace state={state} />;
 // }
@@ -116,28 +74,17 @@ import {
 //   );
 // }
 
-// Code for example end
-
-// function Layout() {
-//   return (
-//     <div>
-//       <Outlet />
-//     </div>
-//   );
-// }
-
 function Layout() {
-  let navigation = useNavigation();
+  const name = useLocation().pathname
+  const home = (name === '/' || name === '/home') 
   const location = useLocation().pathname.split('/');
   const locationMarc = location[location.length - 1];
 
-  console.log(':arrow:🌄', navigation);
-
   return (
     <>
-      <HeaderNav main={true} home={false} />
+      <HeaderNav main={!home} home={home} />
       <main className={`app-wrapper content-container ${locationMarc}`}>
-        <BtnHome />
+        {!home ? <BtnHome /> : ''}
         <Outlet />
       </main>
     </>
@@ -147,10 +94,7 @@ function Layout() {
 function Home() {
   return (
     <>
-      <HeaderNav main={false} />
-      <main className='app-wrapper'>
-        <HomeComponent />
-      </main>
+      <HomeComponent />
     </>
   );
 }
@@ -192,7 +136,7 @@ function About() {
   );
 }
 
-function NotFound() {
+function NoMatch() {
   const { t } = useTranslation();
   return (
     <main className='app-wrapper'>
@@ -205,47 +149,11 @@ function NotFound() {
   );
 }
 
-async function getArrayLoader() {
-  await new Promise((r) => setTimeout(r, 1000));
-  return {
-    arr: new Array(100).fill(null).map((_, i) => i),
-  };
-}
+// async function getArrayLoader() {
+//   await new Promise((r) => setTimeout(r, 1000));
+//   return {
+//     arr: new Array(100).fill(null).map((_, i) => i),
+//   };
+// }
 
-
-let router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        index: true,
-        element: <Home />
-      },
-      {
-        path: "dev",
-        loader: getArrayLoader,
-        element: <Development />,
-      },
-      {
-        path: "services",
-        loader: getArrayLoader,
-        element: <Services />,
-        handle: { scrollMode: "pathname" },
-      },
-      {
-        path: "about",
-        loader: getArrayLoader,
-        element: <About />,
-      },
-      {
-        path: "*",
-        element: <NotFound />,
-      }
-    ],
-  },
-]);
-
-export { router };
-
-// export { About, Development, Home, Main, NotFound, Services };
+export { About, Development, Home, Layout, NoMatch, Services };
