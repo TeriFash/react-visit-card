@@ -1,7 +1,8 @@
 {
   "createReactComponent.functionType": "expression",
   "createReactComponent.language": "javascript",
-  "editor.fontSize": 14,
+  "editor.peekWidgetDefaultFocus": "editor",
+  "editor.fontSize": 16,
   "sftp.downloadWhenOpenInRemoteExplorer": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   "prettier.singleQuote": true,
