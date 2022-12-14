@@ -26,11 +26,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <I18nextProvider i18n={i18n}>
     <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <I18nextProvider i18n={i18n}>
+      
+        <App />
+      
     </I18nextProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

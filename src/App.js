@@ -19,26 +19,23 @@ import {
 } from 'utilities/navigation/routes.js';
 
 // library.add(fab, fas, faArrowUp, faArrowDown);
-
-
+const setClass = () => {
+  document.getElementById('root').classList.add('App');
+}
 
 export default function App() {
-  const setClass = () => {
-   document.getElementById('root').classList.add('App');
-  }
-
   setClass();
 
   return (
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="development" element={<Development />} />
-          <Route path="services" element={<Services />} />
-          <Route path="*" element={<NoMatch  />} />
-        </Route>
-      </Routes>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="development" element={<Development />} />
+        <Route path="services" element={<Services />} />
+        <Route path="*" element={<NoMatch  />} />
+      </Route>
+    </Routes>
   );
 }
 
