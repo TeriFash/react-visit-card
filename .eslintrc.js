@@ -60,7 +60,7 @@ module.exports = {
     "browser": true,
     "node": true,
   },
-  extends: ['react-app', 'prettier', 'prettier/react'],
+  extends: ['react-app', 'prettier'],
   plugins: ['prettier'],
   rules: {
     // "prettier/prettier": "error",

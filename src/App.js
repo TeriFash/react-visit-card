@@ -1,11 +1,8 @@
 import React from 'react'; // useState, useEffect
 
-import i18n from 'config/i18next-config';
 import {
-  Navigate,
   Route,
-  Routes,
-  useLocation
+  Routes
 } from 'react-router-dom';
 
 // import { Main, Home, About } from 'utilities/navigation/Router.js';
@@ -18,24 +15,32 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
-  About,
+  Development,
   Home,
   Main
 } from './utilities/navigation/routes.js';
 
 library.add(fab, fas, faArrowUp, faArrowDown);
-const lang = i18n.language;
+// const lang = i18n.language;
 
 export default function App() {
-  let location = useLocation();
+  // let location = useLocation();
 
   return (
-    <Routes>
-      <Route path={`/`} element={<Main {...location} />} render={<Navigate to={`/${lang}`} replace />} />
-      <Route exact path={`/`} element={<Main {...location} />}>
-        <Route path={`${lang}`} element={<Home />} />
-        <Route path={`${lang}/about`} element={<About />} />
-        <Route path={`${lang}/me`} element={<Main />} />
+    // <Routes>
+    //   <Route path={`/`} element={<Main {...location} />} render={<Navigate to={`/${lang}`} replace />} />
+    //   <Route exact path={`/`} element={<Main {...location} />}>
+    //     <Route path={`${lang}`} element={<Home />} />
+    //     <Route path={`${lang}/about`} element={<About />} />
+    //     <Route path={`${lang}/me`} element={<Main />} />
+    //   </Route>
+    // </Routes>
+
+    <Routes className='App'>
+      <Route path='/' element={<Home />} />
+      <Route path='me' element={<Main />}>
+        <Route path='dev' element={<Development />} />
+        {/* <Route path="story" element={<About /> } /> */}
       </Route>
     </Routes>
   );

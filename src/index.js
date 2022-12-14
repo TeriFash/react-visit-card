@@ -1,13 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { I18nextProvider } from "react-i18next";
-import { BrowserRouter } from 'react-router-dom';
-import i18n from 'config/i18next-config';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
 import './index.css';
 import './styles/main.scss';
+
+import React from 'react';
+
+import i18n from 'config/i18next-config';
+import ReactDOM from 'react-dom/client';
+import { I18nextProvider } from 'react-i18next';
+import { BrowserRouter } from 'react-router-dom';
+
 import App from './App';
+import reportWebVitals from './reportWebVitals';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

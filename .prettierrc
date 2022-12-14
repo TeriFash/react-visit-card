@@ -1,11 +1,12 @@
 {
   "printWidth": 120,
+  "bracketSpacing": true,
+  "jsxBracketSameLine": true,
   "semi": true,
   "singleQuote": true,
   "jsxSingleQuote": true,
-  "eslintIntegration": false,
+  "eslintIntegration": true,
   "tabWidth": 2,
-  "trailingComma": "none",
-  "endOfLine": "auto",
+  "trailingComma": "all",
   "arrowParens": "avoid"
 }

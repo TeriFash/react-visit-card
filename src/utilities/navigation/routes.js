@@ -1,13 +1,17 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Outlet, Link, useLocation } from 'react-router-dom';
-import HomeComponent from 'pages/Home';
-import DevComponent from 'pages/Development';
-import ServicesComponent from 'pages/Services';
-import AboutComponent from 'pages/About';
 
 import BtnHome from 'components/BtnHome';
 import HeaderNav from 'components/HeaderNav';
+import AboutComponent from 'pages/About';
+import DevComponent from 'pages/Development';
+import HomeComponent from 'pages/Home';
+import ServicesComponent from 'pages/Services';
+import { useTranslation } from 'react-i18next';
+import {
+  Link,
+  Outlet,
+  useLocation,
+} from 'react-router-dom';
 
 // const Main = () => <h1> Main page</h1>;
 // const Home = () => <h1> Home page</h1>;
@@ -129,12 +133,12 @@ function Main() {
 
 function Home() {
   return (
-    <>
+    <div className='App'>
       <HeaderNav main={false} />
       <main className='app-wrapper'>
         <HomeComponent />
       </main>
-    </>
+    </div>
   );
 }
 
@@ -188,4 +192,4 @@ function NotFound() {
   );
 }
 
-export { About, Services, Development, Home, Main, NotFound };
+export { About, Development, Home, Main, NotFound, Services };

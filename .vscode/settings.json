@@ -4,6 +4,11 @@
   "editor.fontSize": 14,
   "sftp.downloadWhenOpenInRemoteExplorer": true,
   "typescript.tsdk": "node_modules/typescript/lib",
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  // "prettier.requireConfig": false,
+  "prettier.eslintIntegration": true,
+  // "editor.formatOnType": false,
   "editor.formatOnSave": true,
   // "files.autoSave": "onFocusChange", // optional but recommended
   "[typescript]": {
@@ -17,6 +22,7 @@
     "editor.formatOnSave": false
   },
   "[javascript]": {
+    "editor.tabSize": 2,
     "editor.formatOnSave": false
     // "editor.tabSize": 2,
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -25,7 +31,6 @@
     // "editor.formatOnType": false, // required
     // "editor.formatOnSave": true, // optional 
     // "editor.formatOnSaveMode": "file", // required to format on save
-    
     // "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
   "[json]": {

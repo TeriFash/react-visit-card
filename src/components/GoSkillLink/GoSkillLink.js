@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+
 import { useTranslation } from 'react-i18next';
+
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 // import { Link } from "react-router-dom";
 
 const GoSkillLink = () => {
@@ -12,7 +15,7 @@ const GoSkillLink = () => {
   return (
     <a
       target='_blank'
-      className={`Skill-link ${isHovered ? 'Skill-link--hover' : ''}`}
+      className={`Skill-link ${isHovered ? 'Skill-link--hover' : 'Skill-link--hover-off'}`}
       href='https://terifash.github.io/cv-skills-board/'
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
