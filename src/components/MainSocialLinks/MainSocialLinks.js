@@ -14,7 +14,7 @@ const MainSocialLinksItem = ({className, value}) => {
 
 const MainSocialLinks = ({data}) => {
   const last = data.length - 1;
-  const dataSet = data.map((item, i) => <MainSocialLinksItem className={(last === i) && 'is-last'} key={item.link} value={item} />);
+  const dataSet = data.map((item, i) => <MainSocialLinksItem className={(last === i) ? 'is-last' : ''} key={item.link} value={item} />);
 
   return <ul className='main-social-link'>{dataSet}</ul>;
 };

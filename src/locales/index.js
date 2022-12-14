@@ -1,17 +1,10 @@
-import mainUA from './ua/main.json';
-import mainEN from './en/main.json';
-import mainRU from './ru/main.json';
+import en from './en/main.json';
+import ru from './ru/main.json';
+import ua from './ua/main.json';
 
-const resources = {
-  ua: {
-    main: mainUA
-  },
-  en: {
-    main: mainEN
-  },
-  ru: {
-    main: mainRU
-  }
-};
+let resources = {};
+const list = {ua, en, ru};
 
-export { mainUA, mainRU, mainEN, resources }
+Object.keys(list).forEach((item) => (resources[item] = {main: list[item]}));
+
+export { resources };

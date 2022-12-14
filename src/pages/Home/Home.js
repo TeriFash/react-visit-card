@@ -1,11 +1,13 @@
 // eslint-disable-next-line
-import React, { Component } from "react";
-import MainSocialLinks from 'components/MainSocialLinks';
-// import MainLink from "../MainLink";
-import { socialLinks, goSkillLink } from 'data';
-import MainContainer from 'components/MainContainer';
+import React, { Component } from 'react';
+
 import BtnTilt from 'components/BtnTilt';
 import GoSkillLink from 'components/GoSkillLink';
+import MainContainer from 'components/MainContainer';
+import MainSocialLinks from 'components/MainSocialLinks';
+// import MainLink from "../MainLink";
+import { socialLinks } from 'data/index.js';
+
 // import url from "utilities/data/load.js";
 
 // import './Home.scss'
@@ -16,8 +18,8 @@ class Home extends Component {
     super(props);
     this.state = {
       data: null,
-      socialLinks,
-      goSkillLink,
+      socialLinks: socialLinks,
+      goSkillLink: socialLinks,
       term: '',
       active: 0
     };

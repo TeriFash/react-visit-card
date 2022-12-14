@@ -1,4 +1,7 @@
-import React, { Component, createRef } from 'react';
+import React, {
+  Component,
+  createRef,
+} from 'react';
 import ReactDOM from 'react-dom';
 
 // import './MainContainer.scss'
@@ -42,6 +45,7 @@ class MainContainer extends Component {
   }
 
   render() {
+    const className = this.props?.className ? `main-container ${this.props.className}` : 'main-container';
     let sectionStyle = {
       // backgroundColor: this.state.background,
       // color: this.state.text
@@ -52,7 +56,7 @@ class MainContainer extends Component {
 
     return (
       <section
-        className={`main-container ${this.props.className || ''}`}
+        className={className}
         onMouseMove={this.onMouseMove.bind(this)}
         style={sectionStyle}
       >

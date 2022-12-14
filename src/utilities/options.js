@@ -1,20 +1,14 @@
-export const languages = [
-  {
-    id: 1,
-    value: 'ua',
-    label: 'UA'
-  },
-  {
-    id: 2,
-    value: 'en',
-    label: 'EN'
-  },
-  {
-    id: 3,
-    value: 'ru',
-    label: 'RU'
-  }
-];
+export const langsType = {
+  ua: 'ua',
+  en: 'en',
+  ru: 'ru'
+}
+
+export const languages = Object.keys(langsType).map((item, i) => ({
+  id: i+1,
+  value: langsType[item],
+  label: langsType[item].toUpperCase()
+}));
 
 export const btnTiltOptions = {
   scale: 1.1,

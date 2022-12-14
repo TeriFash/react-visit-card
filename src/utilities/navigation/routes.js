@@ -8,9 +8,11 @@ import HomeComponent from 'pages/Home';
 import ServicesComponent from 'pages/Services';
 import { useTranslation } from 'react-i18next';
 import {
+  createBrowserRouter,
   Link,
   Outlet,
   useLocation,
+  useNavigation,
 } from 'react-router-dom';
 
 // const Main = () => <h1> Main page</h1>;
@@ -116,9 +118,20 @@ import {
 
 // Code for example end
 
-function Main() {
+// function Layout() {
+//   return (
+//     <div>
+//       <Outlet />
+//     </div>
+//   );
+// }
+
+function Layout() {
+  let navigation = useNavigation();
   const location = useLocation().pathname.split('/');
   const locationMarc = location[location.length - 1];
+
+  console.log(':arrow:🌄', navigation);
 
   return (
     <>
@@ -192,4 +205,47 @@ function NotFound() {
   );
 }
 
-export { About, Development, Home, Main, NotFound, Services };
+async function getArrayLoader() {
+  await new Promise((r) => setTimeout(r, 1000));
+  return {
+    arr: new Array(100).fill(null).map((_, i) => i),
+  };
+}
+
+
+let router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />
+      },
+      {
+        path: "dev",
+        loader: getArrayLoader,
+        element: <Development />,
+      },
+      {
+        path: "services",
+        loader: getArrayLoader,
+        element: <Services />,
+        handle: { scrollMode: "pathname" },
+      },
+      {
+        path: "about",
+        loader: getArrayLoader,
+        element: <About />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+      }
+    ],
+  },
+]);
+
+export { router };
+
+// export { About, Development, Home, Main, NotFound, Services };
