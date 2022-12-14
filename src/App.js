@@ -2,7 +2,7 @@ import React from 'react'; // useState, useEffect
 
 import {
   Route,
-  Routes
+  Routes,
 } from 'react-router-dom';
 
 // import { Main, Home, About } from 'utilities/navigation/Router.js';
@@ -11,13 +11,14 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import {
   faArrowDown,
   faArrowUp,
-  fas
+  fas,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
   Development,
   Home,
-  Main
+  Main,
+  NotFound,
 } from './utilities/navigation/routes.js';
 
 library.add(fab, fas, faArrowUp, faArrowDown);
@@ -36,12 +37,13 @@ export default function App() {
     //   </Route>
     // </Routes>
 
-    <Routes className='App'>
+    <Routes>
       <Route path='/' element={<Home />} />
       <Route path='me' element={<Main />}>
         <Route path='dev' element={<Development />} />
         {/* <Route path="story" element={<About /> } /> */}
       </Route>
+      <Route path='*' element={<NotFound />} />
     </Routes>
   );
 }
