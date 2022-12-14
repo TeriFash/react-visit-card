@@ -7,6 +7,7 @@ html {
   &.theme-transition {
     @extend .is-theme-transition;
 
+    body,
     .App,
     .app-wrapper {
       @extend .is-theme-transition;
@@ -19,6 +20,7 @@ html {
     // }
   }
 }
+
 
 html {
   @each $color, $value in $colors {

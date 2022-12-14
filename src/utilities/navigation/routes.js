@@ -133,12 +133,12 @@ function Main() {
 
 function Home() {
   return (
-    <div className='App'>
+    <>
       <HeaderNav main={false} />
       <main className='app-wrapper'>
         <HomeComponent />
       </main>
-    </div>
+    </>
   );
 }
 

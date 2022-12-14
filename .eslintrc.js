@@ -55,10 +55,10 @@ const prettierOptions = JSON.parse(
 );
 
 module.exports = {
-  "env": {
-    "es6": true,
-    "browser": true,
-    "node": true,
+  env: {
+    es6: true,
+    browser: true,
+    node: true,
   },
   extends: ['react-app', 'prettier'],
   plugins: ['prettier'],
@@ -69,7 +69,7 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.js?(x)'],
-      rules: { 'prettier/prettier': ['warn', prettierOptions] }
+      rules: { 'prettier/prettier': ['off', prettierOptions] }
     }
   ],
   globals: {

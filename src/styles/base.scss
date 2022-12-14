@@ -38,7 +38,8 @@ a {
 .App {
   position: relative;
   overflow: hidden;
-  background-color: $global-background;
+  background-color: var(--dark);
+  // background-color: $global-background;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -46,7 +47,7 @@ a {
   justify-content: center;
   font-size: calc(16px + 2vmin);
   padding: 10px;
-
+  min-width: 100%;
   color: $global-text-color;
 }
 
@@ -85,4 +86,6 @@ a {
 }
 
 .not-found-page {
+    // overflow-y: auto;
+    overflow-x: hidden;
 }

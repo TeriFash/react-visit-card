@@ -1,18 +1,31 @@
 $height-size: 35px;
 
 .Skill-link {
-  margin-left: 10px;
+  padding-left: 20px;
   display: flex;
   position: relative;
   align-items: center;
   height: $height-size;
   min-width: 120px;
 
-  span {
+  &--hover-unset,
+  &:hover {
+    cursor: default;
+  }
+
+  &--hover {
+    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    height: $height-size;
+    line-height: $height-size;
     display: inline-flex;
     width: fit-content;
     align-items: center;
-    height: 100%;
     font-size: 16px;
     font-weight: 600;
     z-index: 2;
@@ -21,53 +34,49 @@ $height-size: 35px;
       transition: transform 0.5s ease-in, left 0.5s ease-in, background-color 750ms ease-in-out 0;
       z-index: 4;
       background-color: $global-background-secondary;
-      width: calc(100% + 20px);
+      width: calc(100% + 30px);
       content: '';
       display: block;
       height: $height-size;
       top: 0;
-      left: -12px;
+      left: 0px;
       position: absolute;
     }
-  }
 
-  svg {
-    transition: transform 0.4s ease-in, left 0.4s ease-in, color 0.4s ease-in;
-    top: 50%;
-    position: absolute;
-    transform: translateY(-50%);
-    left: 0;
-    z-index: 5;
-  }
+    &--hover {
+      transition:  left 0.3s ease-out 0.5s;
 
-  &--hover {
-    svg {
-      transition: transform 0.4s ease-out 0.4s, left 0.4s ease-out 0.1s, color 0.4s ease-out 0.2s;
-      transition-duration: 1s;
-      color: $purple;
-      left: 100%;
-    }
-
-    span {
       &::after {
         transition: transform 0.3s ease-out 0.5s, left 0.3s ease-out 0.5s;
         transition-duration: 1.5s;
         left: 100%;
       }
     }
+
+    &--hover-unset {
+      &::after {
+        left: 0px;
+      }
+    }
   }
 
-  &--hover-off {
-    svg {
-      transition: transform 0.4s ease-in, left 0.4s ease-in, color 0.4s ease-in;
-      left: 0;
+  &__icon {
+    transition: transform 0.4s ease-in, left 0.4s ease-in, color 0.4s ease-in;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    left: 20px;
+    z-index: 5;
+
+    &--hover {
+      transition: transform 0.4s ease-out 0.4s, left 0.4s ease-out 0.1s, color 0.4s ease-out 0.2s;
+      transition-duration: 1s;
+      color: $purple;
+      left: 100%;
     }
 
-    span {
-      &::after {
-        transition: transform 0.5s ease-in, left 0.5s ease-in, background-color 750ms ease-in-out 0;
-        left: -12px;
-      }
+    &--hover-unset {
+      left: 20px;
     }
   }
 }

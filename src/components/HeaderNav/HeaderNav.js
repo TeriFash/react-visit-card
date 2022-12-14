@@ -1,11 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import ThemeSwitcher from 'components/ThemeSwitcher';
-import LanguageButtons from 'components/LanguageButtons';
 import './HeaderNav.scss';
 
+import React from 'react';
+
+import LanguageButtons from 'components/LanguageButtons';
+import ThemeSwitcher from 'components/ThemeSwitcher';
+import { Link } from 'react-router-dom';
+
 const HeaderNav = ({ main = false, home = true }) => {
-  const classes = `app-header header-nav ${main && 'header-nav--main'} ${home && 'header-nav--home'}`;
+  const classMain = main ? 'header-nav--main' : '';
+  const classHome = home ? 'header-nav--home' : '';
+  const classes = `app-header header-nav ${classMain} ${classHome}`;
   return (
     <header className={classes}>
       {main && (

@@ -1,19 +1,20 @@
 import React from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const MainSocialLinksItem = props => {
+const MainSocialLinksItem = ({className, value}) => {
   return (
-    <li>
-      <a rel='noopener noreferrer' target='_blanck' href={props.value.link}>
-        <FontAwesomeIcon icon={['fab', props.value.icon]} />
+    <li className={className}>
+      <a rel='noopener noreferrer' target='_blanck' href={value.link}>
+        <FontAwesomeIcon icon={['fab', value.icon]} />
       </a>
     </li>
   );
 };
 
-const MainSocialLinks = props => {
-  const { data } = props;
-  const dataSet = data.map(item => <MainSocialLinksItem key={item.link} value={item} />);
+const MainSocialLinks = ({data}) => {
+  const last = data.length - 1;
+  const dataSet = data.map((item, i) => <MainSocialLinksItem className={(last === i) && 'is-last'} key={item.link} value={item} />);
 
   return <ul className='main-social-link'>{dataSet}</ul>;
 };

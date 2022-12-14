@@ -9,20 +9,39 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const GoSkillLink = () => {
   const { t } = useTranslation('main');
-  const slot = t('titleShowSkills');
-  const [isHovered, setIsHovered] = useState(false);
+  const text = t('titleShowSkills');
+  const name = 'Skill-link';
+  const [isHovered, setIsHover] = useState(false);
+
+  const handleMouseEnter = () => {
+    setTimeout(() => {
+      setIsHover(true);
+    }, 300);
+  };
+
+  const handleMouseLeave = () => {
+    setTimeout(() => {
+      setIsHover(false);
+    }, 300);
+  };
+
+  const classNameBox = {
+    link: `${name} ${name}--${isHovered ? 'hover' : 'hover-unset'}`,
+    text: `${name}__text ${name}__text--${isHovered ? 'hover' : 'hover-unset'}`,
+    icon: `${name}__icon ${name}__icon--${isHovered ? 'hover' : 'hover-unset'}`
+  }
 
   return (
     <a
       target='_blank'
-      className={`Skill-link ${isHovered ? 'Skill-link--hover' : 'Skill-link--hover-off'}`}
+      className={classNameBox.link}
       href='https://terifash.github.io/cv-skills-board/'
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       rel='noreferrer'
     >
-      <span>{slot}</span>
-      <FontAwesomeIcon icon={faChevronRight} />
+      <span className={classNameBox.text}>{text}</span>
+      <FontAwesomeIcon className={classNameBox.icon} icon={faChevronRight} />
     </a>
   );
 };
