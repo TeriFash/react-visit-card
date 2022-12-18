@@ -5,8 +5,8 @@
   "editor.fontSize": 16,
   "sftp.downloadWhenOpenInRemoteExplorer": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "prettier.singleQuote": true,
-  "prettier.semi": false,
+  // "prettier.singleQuote": true,
+  // "prettier.semi": false,
   // "prettier.requireConfig": false,
   "prettier.eslintIntegration": true,
   // "editor.formatOnType": false,
@@ -20,11 +20,11 @@
     // "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true
   },
   "[javascript]": {
     "editor.tabSize": 2,
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true
     // "editor.tabSize": 2,
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
     // "editor.defaultFormatter": "SimonSiefke.prettier-vscode",

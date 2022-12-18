@@ -56,6 +56,7 @@ const prettierOptions = JSON.parse(
 
 module.exports = {
   env: {
+    jest: true,
     es6: true,
     browser: true,
     node: true,

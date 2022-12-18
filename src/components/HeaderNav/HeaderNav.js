@@ -14,7 +14,9 @@ const HeaderNav = ({ main = false, home = true }) => {
     <header className={classes}>
       {main && (
         <nav className='app-navigator navigation-container'>
-          <Link to='dev'>Development</Link> | <Link to='services'>Services</Link> | <Link to='story'>About</Link>
+          <Link to={{pathname: '/dev', state: { fromHeader: true }}}>Development</Link> | 
+          <Link to={{pathname: '/services', state: { fromHeader: true }}}>Services</Link> | 
+          <Link to={{pathname: '/story', state: { fromHeader: true }}}>About</Link>
         </nav>
       )}
 

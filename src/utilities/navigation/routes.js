@@ -11,6 +11,7 @@ import {
   Link,
   Outlet,
   useLocation,
+  useMatch,
 } from 'react-router-dom';
 
 // function Declarative() {
@@ -75,10 +76,12 @@ import {
 // }
 
 function Layout() {
-  const name = useLocation().pathname
-  const home = (name === '/' || name === '/home') 
+  const name = useLocation().pathname;
+  const home = name === '/' || name === '/home';
   const location = useLocation().pathname.split('/');
   const locationMarc = location[location.length - 1];
+  const match = useMatch(name);
+  console.log('🚀 ~ file: routes.js:84 ~ Layout ~ match', match);
 
   return (
     <>
@@ -100,27 +103,11 @@ function Home() {
 }
 
 function Development() {
-  return (
-    <>
-      <DevComponent />
-
-      {/* <nav>
-        <Link to="about">Home</Link>
-      </nav> */}
-    </>
-  );
+  return <DevComponent />;
 }
 
 function Services() {
-  return (
-    <>
-      <ServicesComponent>{/* <ArticleList /> */}</ServicesComponent>
-
-      {/* <nav>
-        <Link to="about">Home</Link>
-      </nav> */}
-    </>
-  );
+  return <ServicesComponent>{/* <ArticleList /> */}</ServicesComponent>;
 }
 
 function About() {
